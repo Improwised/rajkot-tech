@@ -1,6 +1,6 @@
 <template>
-	<div>
-	<header class="lg:px-20 px-4 absolute top-0 left-0 w-full z-50 bg-headerdark">
+    <div>
+        <header class="lg:px-20 px-4 absolute top-0 left-0 w-full z-50 bg-headerdark">
     <div class="hidden xl:flex justify-between items-center py-2 border-b text-sm" style="border-color: rgba(255,255,255,.25)">
       <div class="">
         <ul class="flex text-white">
@@ -55,101 +55,90 @@
       <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
         <nav>
           <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-            <li><nuxt-link class="md:p-3 text-white font-medium opacity-75 hover:opacity-100" to="/past-events">Past Events</nuxt-link></li>
+                          <li><a class="md:p-3 text-white font-medium opacity-75 hover:opacity-100" href="/home">Home</a></li>
+            <li><a class="md:p-3 text-white font-medium opacity-75 hover:opacity-100" href="/home/past-events">Past Events</a></li>
             <li><a class="md:p-3 text-white font-medium opacity-75 hover:opacity-100" href="https://forms.gle/DHHBgtPjTd5Gm4hL6" target="_blank">Submit a Talk</a></li>
             <li><a class="md:p-3 text-white font-medium opacity-75 hover:opacity-100" href="https://forms.gle/R1P5nUsSZVWVThwx7" target="_blank">Request a Talk / Workshop</a></li>
-            </li>
-            <!-- <li><a class="md:p-3 text-white font-medium opacity-75 hover:opacity-100 lg:mb-0 mb-2" href="#">Contact Us</a></li> -->
-            <!-- <li class="hidden xl:block"><a
-                class="font-semibold bg-laracolor hover:bg-laracolor text-white px-3 py-2 rounded-lg shadow-md hover:shadow-lg ml-4"
-                href="https://allevents.in/rajkot/docker-from-scratch/80001055575168" target="_blank">Book Tickets</a></li> -->
+            <li><a class="md:p-3 text-white font-medium opacity-75 hover:opacity-100 lg:mb-0 mb-2" href="#">FAQS</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-	<section class="relative bg-blue-700 mt-48 px-4 lg:px-20 flex flex-wrap items-center text-center justify-center content-center">
-			    <div class="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3" v-for="(event, index) in pastevent" :key="index">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col" style="max-height: 700px; min-height: 700px;">
-              <iframe :src="event.coverimage" class="h-48"></iframe>
-              <div class="p-4 flex flex-col" style="">
-                <span class="mb-4 w-1/2 md:w-1/3 text-left font-bold bg-headerdark text-white text-center rounded-full p-2 text-sm">{{$moment(new Date(event.date)).format('Do MMMM YYYY')}}</span>
-                <div class="mb-4 text-grey-darker text-sm flex flex-col"">
-                  <p class="text-left text-xl text-headerdark mb-2">Agenda: </p>
-                  <div v-for="(talk,keytalks) in event.agenda" :key="keytalks" >
-                      <div class="bg-headerdark text-white p-2 rounded-lg shadow-md mb-2">
-                        <div class="row w-full flex flex-row mb-2">
-                            <div class="w-2/3 text-lg text-left font-bold">
-                              {{talk.title}}
-                          </div>
-                        <div class="w-1/3  text-right">
-                         <span class="bg-laracolor text-white p-1 rounded-full mt-2">{{talk.type}}</span>
-                        </div>
-                        </div>
-                        <div class="row w-full flex flex-row">
-                          <div class="w-1/6">
-                           <img :src="'//avatars.io/twitter/' + twitterProfile(talk.speaker)" class="mx-2 h-16 w-16 p-2 rounded-full">
-                        </div>
-
-                        <div class="w-5/6 text-left text-base">
-                         <a :href="'https://twitter.com/' + twitterProfile(talk.speaker)" target="_blank"> {{getName(talk.speaker)}}</a>
-                         <br/>
-                        </div>
-                        </div>
-                        
-                      </div>
-                   
-                    
-                   
-                  
-                  </div>
-                  <div class="row w-full flex flex-row">
-                    <div class="w-full p-2">
-                     <span class="text-left"> Venue: </span> <br/>
-                       <a :href="'https://twitter.com/' + twitterProfile(event.venue)" target="_blank" class="text-base"> {{getName(event.venue)}}</a>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>  
-          </div>
-
-   
-    
-
-	</section>
-</div>
+  </div>
 </template>
 <script>
-  import events from '../plugins/events.js';
-	export default {
-    created(){
-        this.pastevent = events.reverse();
-    },
-    methods:{
-        twitterProfile (speaker) {
-          const matches = /<@([^>]+)>/.exec(speaker)
-
-          if (matches) return matches[1]
-        },
-      getName(speaker){
-      return speaker.replace(/<[^>]+>/, '');
-      }
-    },
-    data(){
-      return{
-        pastevent:[]
-      }
-    },
-    head () {
-    return {
-      title: 'Laravel Rajkot',
-    }
-   }
-	}
+export default {
+  
+}
 </script>
 <style>
- 
+    #menu-toggle:checked+#menu {
+      display: block;
+    }
+    #dropdown-toggle:checked+#dropdown {
+      display: block;
+    }
+    a,
+    span {
+      position: relative;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    a.arrow,
+    span.arrow {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    a.arrow .arrow_icon,
+    span.arrow .arrow_icon {
+      position: relative;
+      margin-left: 0.5em;
+    }
+    a.arrow .arrow_icon svg,
+    span.arrow .arrow_icon svg {
+      transition: transform 0.3s 0.02s ease;
+      margin-right: 1em;
+    }
+    a.arrow .arrow_icon::before,
+    span.arrow .arrow_icon::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #38b2ac;
+      transform: translateY(-50%);
+      transition: width 0.3s ease;
+    }
+    a.arrow:hover .arrow_icon::before,
+    span.arrow:hover .arrow_icon::before {
+      width: 1em;
+    }
+    a.arrow:hover .arrow_icon svg,
+    span.arrow:hover .arrow_icon svg {
+      transform: translateX(0.75em);
+    }
+  .avatar {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
+  .dotted:after {
+    content:"";
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    height: 100%;
+    height: inherit;
+    border-left: 2px dotted white;
+}
 
-</style>
+.dotted {
+    position: relative;
+}
+  </style>

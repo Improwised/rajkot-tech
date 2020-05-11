@@ -1,0 +1,32 @@
+{
+    "id": 4,
+    "date": "June 23, 2019",
+    "categories": ["laravel"],
+    "name": "Laravel: Chapter 4",
+    "registrations": 29,
+    "attendies":22,
+    "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
+    "live":false,
+    "fileName": "laravel-4",
+    "coverimage": "https://drive.google.com/file/d/1qZkPS9AnTk8Su18zfoD0pXxZkxS7BPpc/preview",
+    "agenda": [
+      {
+        "title": "Dependency Injection and Containers",
+        "type": "talk",
+        "speaker": "Gaurav Makheca"
+      },
+      {
+        "title": "Laravel Vapor: Serverless Magic for PHP",
+        "type": "talk",
+        "speaker": "Chirag Lathiya"
+      },
+        {
+        "title": "Laravel Vapor: Serverless Magic for PHP",
+        "type": "talk",
+        "speaker": "Shailesh Darava"
+      }
+    ],
+    "venue": "Improwised Technologies Private Limited., 322 Landmark, Astron Chowk, Sardarnagar, Rajkot, Gujarat 360001, India, Rajkot, India",
+    "organizers": [
+    ]
+  }

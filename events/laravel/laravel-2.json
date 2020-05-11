@@ -1,0 +1,32 @@
+{
+  "id": 2,
+  "date": "Oct 20, 2019",
+  "categories": ["laravel"],
+  "name": "laravel: Chapter 2",
+  "registrations": 25,
+  "attendies":19,
+  "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
+  "live":false,
+  "fileName": "laravel-2",
+  "coverimage": "https://drive.google.com/file/d/1qZkPS9AnTk8Su18zfoD0pXxZkxS7BPpc/preview",
+  "agenda": [
+    {
+      "title": "Introduction to VueJs",
+      "type": "talk",
+      "speaker": "Kunal Lathiya"
+    },
+    {
+      "title": "Advanced VueJs",
+      "type": "talk",
+      "speaker": "Chintan Banugaria"
+    },
+      {
+      "title": "Deploying your Laravel App to Digital Ocean",
+      "type": "talk",
+      "speaker": "Siddharth Ghedia"
+    }
+  ],
+  "venue": "RKU City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India, Rajkot, India",
+  "organizers": [
+  ]
+}

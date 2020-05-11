@@ -1,0 +1,27 @@
+{
+    "id": 1,
+    "date": "Feb 09, 2020",
+    "categories": ["seo"],
+    "name": "Introduction to Vue",
+    "registrations": 32,
+    "attendies":28,
+    "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
+    "live":false,
+    "fileName": "Introdution-to-vuejs",
+    "coverimage": "https://drive.google.com/file/d/1qZkPS9AnTk8Su18zfoD0pXxZkxS7BPpc/preview",
+    "agenda": [
+      {
+        "title": "Basic introduction of VueJS",
+        "type": "talk",
+        "speaker": "Vivek Sancheti"
+      },
+         {
+        "title": "NuxtJs, SSR and SPAs",
+        "type": "talk",
+        "speaker": "Boni Satani"
+      }
+    ],
+    "venue": "Rajkot, Rajkot, Gujarat, India, RK University City Campus Mota mava, 2nd Ring Rd, Rajkot 360005, Gujarat, India, India",
+    "organizers": [
+    ]
+  }

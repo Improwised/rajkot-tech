@@ -1,0 +1,22 @@
+{
+    "id": 1,
+    "date": "August 19, 2019",
+    "categories": ["laravel"],
+    "name": "Docker from scratch",
+    "registrations": 10,
+    "attendies":8,
+    "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
+    "live":false,
+    "fileName": "docker-from-scratch",
+    "coverimage": "https://drive.google.com/file/d/1qZkPS9AnTk8Su18zfoD0pXxZkxS7BPpc/preview",
+    "agenda": [
+      {
+        "title": "Basics of Docker and Containers",
+        "type": "talk",
+        "speaker": "Rakshit Menpara"
+      }
+    ],
+    "venue": "Improwised Technologies Private Limited., 322 Landmark, Astron Chowk, Sardarnagar, Rajkot, Gujarat 360001, India, Rajkot, India",
+    "organizers": [
+    ]
+  }

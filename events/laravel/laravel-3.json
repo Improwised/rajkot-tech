@@ -1,0 +1,32 @@
+{
+    "id": 3,
+    "date": "April 14, 2019",
+    "categories": ["laravel"],
+    "name": "laravel: Chapter 3",
+    "registrations": 22,
+    "attendies":19,
+    "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
+    "live":false,
+    "fileName": "laravel-3",
+    "coverimage": "https://drive.google.com/file/d/1qZkPS9AnTk8Su18zfoD0pXxZkxS7BPpc/preview",
+    "agenda": [
+      {
+        "title": "Use of Magic Methods in Eloquen",
+        "type": "talk",
+        "speaker": "Munir Khakhi"
+      },
+      {
+        "title": "Testing with Laravel Dusk",
+        "type": "talk",
+        "speaker": "Dharamvijay Patel"
+      },
+        {
+        "title": "Scaling Laravel Application",
+        "type": "talk",
+        "speaker": "Shailesh Darava"
+      }
+    ],
+    "venue": "Improwised Technologies Private Limited., 322 Landmark, Astron Chowk, Sardarnagar, Rajkot, Gujarat 360001, India, Rajkot, India",
+    "organizers": [
+    ]
+  }
