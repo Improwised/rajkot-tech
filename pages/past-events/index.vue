@@ -15,6 +15,10 @@ import Header from "~/layouts/header.vue";
 import { getPastEvents, getRoutes } from "~/static/js/events.js";
 import Chapter from "~/components/past-events/Layout/Chapter.vue";
 import Tab from '~/components/past-events/Layout/Tab.vue';
+import Header from "../../layouts/header.vue";
+import { getPastEvents, getRoutes } from "../../static/js/events.js";
+import Chapter from "../../components/past-events/Layout/Chapter.vue";
+import Tab from '../../components/past-events/Layout/Tab.vue';
 export default {
   components: {
     Header,

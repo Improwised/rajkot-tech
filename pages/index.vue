@@ -274,6 +274,8 @@
 <script>
 import Header from "~/layouts/header.vue";
 import { getLiveEvents } from '~/static/js/events.js'
+import Header from "../layouts/header.vue";
+import { getLiveEvents } from '../static/js/events.js'
 export default {
   components: {
     Header
