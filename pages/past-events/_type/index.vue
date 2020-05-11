@@ -11,10 +11,17 @@
   </div>
 </template>
 <script>
+<<<<<<< HEAD
 import Header from "~/layouts/header.vue";
 import { getAllEvents, getRoutes } from "~/static/js/events.js";
 import Chapter from "~/components/past-events/Layout/Chapter.vue";
 import Tab from '~/components/past-events/Layout/Tab.vue'
+=======
+import Header from "../../../layouts/header.vue";
+import { getAllEvents, getRoutes } from "../../../static/js/events.js";
+import Chapter from "../../../components/past-events/Layout/Chapter.vue";
+import Tab from '../../../components/past-events/Layout/Tab.vue'
+>>>>>>> 0c994b10b6cbb9cd202d615bb87bfcbb4d42a074
 export default {
   components: {
     Header,

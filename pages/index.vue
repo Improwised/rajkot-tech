@@ -272,8 +272,13 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import Header from "~/layouts/header.vue";
 import { getLiveEvents } from '~/static/js/events.js'
+=======
+import Header from "../layouts/header.vue";
+import { getLiveEvents } from '../static/js/events.js'
+>>>>>>> 0c994b10b6cbb9cd202d615bb87bfcbb4d42a074
 export default {
   components: {
     Header
@@ -286,6 +291,10 @@ export default {
   async asyncData({ app, store }) {
     if (process.server) {
       let events = await getLiveEvents();
+<<<<<<< HEAD
+=======
+      console.log('111111111111',events)
+>>>>>>> 0c994b10b6cbb9cd202d615bb87bfcbb4d42a074
       store.commit('liveEvents', events);
     }
   }

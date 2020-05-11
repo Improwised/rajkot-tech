@@ -3,7 +3,11 @@
     "date": "2019-06-23T00:00:00.000Z",
      "categories": ["laravel"],
     "name": "event",
+<<<<<<< HEAD
   "fileName": "introduction-to-seo",
+=======
+  "titleName": "introduction-to-seo",
+>>>>>>> 0c994b10b6cbb9cd202d615bb87bfcbb4d42a074
     "coverimage": "https://drive.google.com/file/d/1O-TU0mPAO_FJ1F_kjqjdl5jJZIRHxWSF/preview",
     "agenda": [
       {
