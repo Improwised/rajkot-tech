@@ -8,22 +8,25 @@
   "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
   "live":false,
   "fileName": "laravel-2",
-  "coverimage": "https://drive.google.com/file/d/1qZkPS9AnTk8Su18zfoD0pXxZkxS7BPpc/preview",
+  "coverimage": "",
   "agenda": [
     {
       "title": "Introduction to VueJs",
       "type": "talk",
-      "speaker": "Kunal Lathiya"
+      "speaker": "Kunal Lathiya",
+      "img_url": "https://pbs.twimg.com/profile_images/876941889873641472/PwEI69E1_400x400.jpg"
     },
     {
       "title": "Advanced VueJs",
       "type": "talk",
-      "speaker": "Chintan Banugaria"
+      "speaker": "Chintan Banugaria",
+      "img_url": "https://pbs.twimg.com/profile_images/636857179849388032/rWtzpXtN_400x400.jpg"
     },
       {
       "title": "Deploying your Laravel App to Digital Ocean",
       "type": "talk",
-      "speaker": "Siddharth Ghedia"
+      "speaker": "Siddharth Ghedia",
+      "img_url": "https://pbs.twimg.com/profile_images/1102889001130704898/VinLm56k_400x400.png"
     }
   ],
   "venue": "RKU City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India, Rajkot, India",

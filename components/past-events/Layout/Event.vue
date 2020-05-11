@@ -3,61 +3,82 @@
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 back-btn">
-          <a><nuxt-link
-                    :to="{
-            name: 'past-events-type',
-            params: { type: $route.params.type}
-          }"
-                  >Back</nuxt-link></a>
-        </div>
         <div class="col-sm-12">
-          <div class="events_list" v-if="data">
-            <div class="_event" v-for="(value, key, index) in data" :key="index">
-              <div class="bimage">
-                <img src="https://picsum.photos/300/300/?image=41" />
+          <div class="_event">
+            <b-carousel
+              id="carousel-1"
+              v-model="slide"
+              :interval="4000"
+              controls
+              indicators
+              background="#ababab"
+              img-width="1024"
+              img-height="100"
+              style="text-shadow: 1px 1px 2px #333;"
+              @sliding-start="onSlideStart"
+              @sliding-end="onSlideEnd"
+            >
+              <b-carousel-slide
+        caption="First slide"
+        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+        img-src="https://picsum.photos/1024/480/?image=52"
+      ></b-carousel-slide>
+            </b-carousel>
+            <div class="event-con" v-for="(value, key, index) in data" :key="index">
+              <div class="col-sm-12 title">
+                <h6>{{value.name}}</h6>
               </div>
-              <div class="event-con">
-                <span>
-                  <b>Title:</b>
-                </span>
-                <a>
-                  <nuxt-link
-                    :to="{
-            name: 'past-events-type-id',
-            params: { type: $route.params.type, id: value.fileName }
-          }"
-                  >{{value.name}}</nuxt-link>
-                </a>
-                <span class="date">{{$moment(new Date(value.date)).format('Do MMMM YYYY')}}</span>
-                <br />
-                <span>
-                  <b>Venue:</b>
-                </span>
-                {{value.venue}}
-                <span>
-                  <b>Agenda :</b>
-                </span>
-                <ul>
-                  <li v-for="(a, key, index) in value.agenda" :key="index">
-                    <div class="agenda">
-                      <b>Title:</b>
-                      {{a.title}}
-                      <br />
-                      <b>Speaker:</b>
-                      {{a.speaker}}
-                      <span class="ag-icons">{{a.type}}</span>
+              <div class="row body">
+                <div class="col-sm-12">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <label>{{value.venue}}</label>
+                </div>
+                <div class="col-sm-12">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                  <label>{{value.date}}</label>
+                </div>
+                <div class="col-sm-12">
+                  <i class="fa fa-address-book" aria-hidden="true"></i>
+                  <label>{{value.registrations}}</label>
+                </div>
+                <div class="col-sm-12">
+                  <i class="fa fa-street-view" aria-hidden="true"></i>
+                  <label>{{value.attendies}}</label>
+                </div>
+                <div class="col-sm-12 agendas" v-if="value.agenda">
+                  <label class="a-title">Agenda:</label>
+                  <div class="row">
+                    <div
+                      class="col-sm-6 agenda"
+                      v-for="(a, key, index) in value.agenda"
+                      :key="index"
+                    >
+                      <div class="row">
+                        <div class="col-sm-2">
+                          <img :src="getImage(a)" />
+                        </div>
+                        <div class="col-sm-8">
+                          <div>
+                            <label>
+                              <b>Title:</b>
+                            </label>
+                            <span>{{a.title}}</span>
+                            <br />
+                          </div>
+                          <div>
+                            <label>
+                              <b>Speaker</b>
+                            </label>
+                            <span>{{a.speaker}}</span>
+                          </div>
+                        </div>
+                        <div class="col-sm-2">
+                          <label class="type">{{a.type}}</label>
+                        </div>
+                      </div>
                     </div>
-                  </li>
-                </ul>
-                <span>
-                  <b>Organizers :</b>
-                </span>
-                <div
-                  class="org"
-                  v-for="(s, key, index) in value.organizers"
-                  :key="index"
-                >{{key + 1 }}. {{s}}</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -67,6 +88,8 @@
   </div>
 </template>
 <script>
+import { getPastEvents, getRoutes } from "~/static/js/events.js";
+
 export default {
   props: {
     name: {
@@ -78,18 +101,22 @@ export default {
       default: []
     }
   },
+  methods: {
+    getImage(img) {
+      if (img.img_url) {
+      return img.img_url;
+      } else {
+        return require('../../../assets/images/person.png')
+      }
+    }
+  }
 };
 </script>
 <style scoped>
-.back-btn {
-  background: #e7e7ed;
-    padding: -2px;
-    margin: -2px;
-    margin-left: -14px;
-    margin-right: 2px;
-    font-size: 18px;
-    font-style: unset;
-    font-weight: bold;
+.fa {
+  font-size: 19px;
+  font-weight: bold;
+  padding: 6px 12px 4px 7px;
 }
 .container {
   overflow: unset;
@@ -99,6 +126,15 @@ export default {
   width: 100%;
   min-width: 100%;
 }
+.type {
+  text-transform: capitalize;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background: #565d5d;
+  color: #fff;
+  padding: 2px 9px 1px 9px;
+  font-weight: bold;
+}
 .org {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -106,71 +142,48 @@ export default {
   border: 1px solid #d7d5cc;
   padding: 6px 10px 10px 10px;
 }
-.ag-icons {
-  float: right;
-  border: 1px solid #15192c;
-  border-radius: 14px;
-  color: white;
-  padding: 0px 10px 0px 10px;
-  font-weight: bold;
-  background-color: #15192c;
-}
-.date {
-  border: 1px solid #15192c;
-  color: #fff;
-  background: #15192c;
-  font-weight: bold;
-  border-radius: 12px;
-  padding: 2px 10px 1px 9px;
-  float: right;
-}
-.header-txt {
-  font-size: 31px;
-  text-align: center;
-  background: #bcd4e9;
-  margin-top: 138px;
-  margin-bottom: 20px;
-  padding-bottom: 31px;
-  padding-top: 31px;
-}
+
 .agenda {
-  margin-bottom: 10px;
-  margin-top: 10px;
-  background: #e7ecef;
-  border: 1px solid #d7d5cc;
-  padding: 6px 10px 10px 10px;
+  border: 1px solid #e2d8d8;
+  padding: 10px 7px 0px 10px;
+  background: #f7f5f4;
+  margin: 8px;
 }
-.events_list {
-  display: flex;
-  flex-wrap: wrap;
+.agendas {
+  padding: 15px 40px 0px 40px;
+}
+.a-title {
+  margin-left: -14px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 0px;
 }
 ._event {
-  width: 30.33%;
-  margin: 0.9375rem;
-  /* text-align: center; */
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
   border-radius: 3px;
   background-color: #fff;
   border: 1px solid #e2e1e1;
-  border-bottom: 3px solid #00cdc1;
+  min-height: 100vh;
 }
-.bimage {
-  height: auto;
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid #efefef;
+
+.title {
+  padding: 14px;
+  font-size: 25px;
+      text-transform: capitalize;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid #e2dfdb;
 }
-.img {
-  max-width: 100%;
-  width: 100%;
-  height: 200px;
+.body {
+  padding: 18px;
 }
-._event .event_info {
-  padding: 0.9375rem;
-  text-align: left;
+label {
+  font-size: 19px;
 }
-.event-con {
-  padding: 16px;
+img {
+      height: 86px;
+    border-radius: 62px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header></Header>
-    <div style="margin-top: 139px">
+    <div style="margin-top: 90px">
       <no-ssr>
     <Event :name="$route.params.id" :data="$store.getters.event"></Event>
       </no-ssr>

@@ -23,7 +23,11 @@ export function getPastEvents() {
     const content = fs.readFileSync(path.resolve(srcDir, file), "utf8");
     array.push(JSON.parse(content));
   });
-  return array;
+  array.sort(function(a, b){ 
+      
+    return new Date(a.date) - new Date(b.date); 
+}); 
+  return array.reverse();
 }
 
 // get live events

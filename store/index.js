@@ -3,7 +3,6 @@ import Vuex from 'vuex';
 import initialStates from '@/store/state';
 import mutationsObj from '@/store/mutations';
 import gettersObj from '@/store/getters';
-
 export const strict = false;
 
 export const state = initialStates;

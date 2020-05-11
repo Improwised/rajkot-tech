@@ -1,10 +1,11 @@
 <template>
   <div>
     <Header></Header>
-    <div style="margin-top: 139px;">
+    <div style="margin-top: 90px;">
+      <div class="title">Past Events</div>
       <no-ssr>
-      <Tab></Tab>
-      <Chapter :name="name" :data="$store.getters.pastEvents"></Chapter>
+        <Tab></Tab>
+        <Chapter :name="name" :data="$store.getters.pastEvents"></Chapter>
       </no-ssr>
     </div>
     <nuxt-child />
@@ -14,12 +15,12 @@
 import Header from "~/layouts/header.vue";
 import { getPastEvents, getRoutes } from "~/static/js/events.js";
 import Chapter from "~/components/past-events/Layout/Chapter.vue";
-import Tab from '~/components/past-events/Layout/Tab.vue';
+import Tab from "~/components/past-events/Layout/Tab.vue";
 export default {
   components: {
     Header,
     Tab,
-    Chapter,
+    Chapter
   },
   data() {
     return {
@@ -30,7 +31,7 @@ export default {
     if (process.server) {
       let pastEvents = await getPastEvents();
       store.commit("pastEvents", pastEvents);
-       let routes = await getRoutes();
+      let routes = await getRoutes();
       store.commit("routes", routes);
     }
   },
@@ -41,3 +42,12 @@ export default {
   }
 };
 </script>
+<style scoped>
+.title {
+  text-align: center;
+  background: #d6e5f3;
+  padding: 25px;
+  font-size: 25px;
+  font-weight: bold;
+}
+</style>

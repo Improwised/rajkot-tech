@@ -1,6 +1,5 @@
-
 import { generateAllRoutes } from "./static/js/events.js";
-module.exports =  {
+module.exports = {
   mode: "universal",
   /*
    ** Headers of the page
@@ -97,21 +96,21 @@ module.exports =  {
     base: "/home",
   },
   generate: {
-    routes: generateAllRoutes()
+    routes: generateAllRoutes(),
   },
   extend(config, ctx) {
-    config.devtool = 'source-map';
+    config.devtool = "source-map";
 
     // Run ESLint on save
     if (ctx.isDev && ctx.isClient) {
       config.module.rules.push({
-        enforce: 'pre',
+        enforce: "pre",
         test: /\.(js|vue)$/,
         exclude: /(node_modules)/,
         options: {
-          fix: true
-        }
+          fix: true,
+        },
       });
     }
-  }
+  },
 };

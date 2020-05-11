@@ -3,7 +3,13 @@
     <nuxt />
   </div>
 </template>
-
+<script>
+import 'font-awesome/css/font-awesome.min.css';
+import 'font-awesome-animation/dist/font-awesome-animation.min.css';
+export default {
+  
+}
+</script>
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

@@ -5,51 +5,45 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="events_list" v-if="data">
-            <div class="_event" v-for="(value, key, index) in data" :key="index">
-              <div class="bimage">
-                <img src="https://picsum.photos/300/300/?image=41" />
+            <div class="row _event" v-for="(value, key, index) in data" :key="index">
+              <div class="col-sm-3 bimage">
+                <img :src="getCoverImage(value.coverimage, value.categories[0])" />
               </div>
-              <div class="event-con">
-                <span>
-                  <b>Title:</b>
-                </span>
-                <a>
-                  <nuxt-link
-                    :to="{
-            name: 'past-events-type-id',
-            params: { type: $route.params.type, id: value.fileName }
-          }"
-                  >{{value.name}}</nuxt-link>
-                </a>
-                <span class="date">{{$moment(new Date(value.date)).format('Do MMMM YYYY')}}</span>
-                <br />
-                <span>
-                  <b>Venue:</b>
-                </span>
-                {{value.venue}}
-                <span>
-                  <b>Agenda :</b>
-                </span>
-                <ul>
-                  <li v-for="(a, key, index) in value.agenda" :key="index">
-                    <div class="agenda">
-                      <b>Title:</b>
-                      {{a.title}}
-                      <br />
-                      <b>Speaker:</b>
-                      {{a.speaker}}
-                      <span class="ag-icons">{{a.type}}</span>
-                    </div>
-                  </li>
-                </ul>
-                <span>
-                  <b>Organizers :</b>
-                </span>
-                <div
-                  class="org"
-                  v-for="(s, key, index) in value.organizers"
-                  :key="index"
-                >{{key + 1 }}. {{s}}</div>
+              <div class="col-sm-9 event-con">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <span class="date">
+                      <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                      {{value.date}}
+                    </span>
+                  </div>
+                </div>
+                <hr>
+                <div class="row" style="margin-top: 20px">
+                  <div class="col-sm-12">
+                    <b>Title:</b>
+                    <br />
+                    {{value.name}}
+                    <br />
+                    <span>
+                      <b>Venue:</b>
+                    </span>
+                    <br />
+                    {{value.venue}}
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-12">
+                    <a
+                      :href=" 'past-events/' + value.categories[0] + '/' + value.fileName"
+                      class="btn"
+                    >
+                      Read More
+                      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -59,6 +53,11 @@
   </div>
 </template>
 <script>
+import laravel from "../../../chapter/laravel.json";
+import seo from "../../../chapter/seo.json";
+import vue from "../../../chapter/vue.json";
+import docker from "../../../chapter/docker.json";
+
 export default {
   props: {
     name: {
@@ -69,10 +68,41 @@ export default {
       type: Array,
       default: []
     }
+  },
+  methods: {
+    getImage(img) {
+      return img.img_url
+        ? img.img_url
+        : require("../../../assets/images/person.png");
+    },
+    getCoverImage(img, category) {
+      if (img === "") {
+        switch (category) {
+          case "laravel":
+            return require(`../../../assets/images/` + laravel.default_img);
+          case "vue":
+            return require(`../../../assets/images/` + vue.default_img);
+          case "docker":
+            return require(`../../../assets/images/` + docker.default_img);
+          case "seo":
+            return require(`../../../assets/images/` + seo.default_img);
+        }
+      } else {
+        return img;
+      }
+    }
   }
 };
 </script>
-<style scoped>
+<style scoped >
+.btn {
+  color: #19294c;
+  padding: 6px 8px 5px 8px;
+  border: 1px solid #ccc9c5;
+  font-weight: bold;
+  margin-top: 12px;
+  float: right;
+}
 .container {
   overflow: unset;
   margin-top: 180;
@@ -98,13 +128,13 @@ export default {
   background-color: #15192c;
 }
 .date {
-  border: 1px solid #15192c;
-  color: #fff;
-  background: #15192c;
-  font-weight: bold;
-  border-radius: 12px;
-  padding: 2px 10px 1px 9px;
-  float: right;
+ color: #ffffff;
+    border: 1px solid #a29999;
+    font-weight: bold;
+    background: #233358;
+    font-size: 19px;
+    border-radius: 17px;
+    padding: 5px 13px 7px 16px;
 }
 .header-txt {
   font-size: 31px;
@@ -127,13 +157,13 @@ export default {
   flex-wrap: wrap;
 }
 ._event {
-  width: 30.33%;
+  width: 47%;
   margin: 0.9375rem;
   /* text-align: center; */
   border-radius: 3px;
+  font-size: 18px;
   background-color: #fff;
-  border: 1px solid #e2e1e1;
-  border-bottom: 3px solid #00cdc1;
+  border: 1px solid #f1e6e6;
 }
 .bimage {
   height: auto;
@@ -143,10 +173,10 @@ export default {
   justify-content: center;
   border-bottom: 1px solid #efefef;
 }
-.img {
+.bimage img {
   max-width: 100%;
-  width: 100%;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 ._event .event_info {
   padding: 0.9375rem;

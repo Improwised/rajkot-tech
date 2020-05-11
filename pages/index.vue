@@ -1,27 +1,21 @@
 <template>
   <div>
     <Header></Header>
-    <section
-      class="relative bg-blue-700 px-4 lg:px-20 overflow-hidden h-screen flex items-center content-center"
-    >
-      <div
-        class="bg-cover absolute top-0 left-0 z-0 w-full h-full"
-        style="background-image: url('images/cover-bg.jpg')"
-      ></div>
-      <div class="flex items-center content-center">
+    <div class="container">
+      <div class="body-container" style="background-image: url('images/cover-bg.jpg')"></div>
+      <div class="flex items-center content-center" v-if="$store.getters.liveEvents" v-for="(value, key, index) in $store.getters.liveEvents" :key="index">
         <div
           class="relative z-10 md:max-w-2xl px-6 py-4 rounded-lg text-center shadow-lg"
           style="background-color: rgba(252, 50, 43, .8)"
         >
           <h4 class="font-normal text-white text-xl leading-relaxed tracking-wider">Our next meetup</h4>
 
-          <span class="text-white text-3xl lg:text-4xl leading-relaxed tracking-wider">October'19</span>
           <br />
           <span class="font-normal text-white text-sm lg:text-base mt-8 tracking-none">
             on
             <span
               class="inline-block bg-white pl-4 pr-2 py-2 text-headerdark rounded-lg font-bold"
-            >20th October 2019</span>
+            >{{value.date}}</span>
             <br />at
             <span
               class="inline-block bg-white pl-4 pr-2 py-2 mt-2 text-headerdark rounded-lg font-bold"
@@ -30,7 +24,7 @@
                 href="https://www.google.com/maps?ll=22.262051,70.752845&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=10308873938467859809"
                 target="_blank"
                 class="tracking-wider"
-              >R. K. University City Campus</a>
+              >{{value.venue}}</a>
             </span>
             <br />from
             <span
@@ -60,7 +54,7 @@
           </a>
         </div>
       </div>
-      <div class="flex items-center content-center" v-if="!$store.getters.liveEvents">
+      <div class="flex items-center content-center" v-if="$store.getters.liveEvents === null" >
         <div
           class="relative z-10 md:max-w-2xl px-6 py-4 rounded-lg text-center shadow-lg"
           style="background-color: rgba(252, 50, 43, .8)"
@@ -72,7 +66,10 @@
           <br />
           <span class="font-normal text-white text-base lg:text-xl mt-6 mb-4">
             Meanwhile, if you want to speak on a topic or want to take workshop,
-            <a href="https://forms.gle/DHHBgtPjTd5Gm4hL6" target="_blank">
+            <a
+              href="https://forms.gle/DHHBgtPjTd5Gm4hL6"
+              target="_blank"
+            >
               <span
                 class="inline-block bg-white pl-4 pr-2 py-2 text-headerdark rounded-lg font-bold"
               >submit your proposal here</span>
@@ -82,7 +79,10 @@
           <br />
           <span class="font-normal text-white text-base lg:text-xl mt-6 mb-4">
             Else if you want to request a workshop or a talk on a specific topic,
-            <a href="https://forms.gle/R1P5nUsSZVWVThwx7" target="_blank">
+            <a
+              href="https://forms.gle/R1P5nUsSZVWVThwx7"
+              target="_blank"
+            >
               <span
                 class="inline-block bg-white pl-4 pr-2 py-2 text-headerdark rounded-lg font-bold"
               >let us know</span>
@@ -91,189 +91,56 @@
           <br />
         </div>
       </div>
-    </section>
-    <section class="relative flex flex-col lg:flex-row">
-      <div v-for="(value, key, index) in $store.getters.pastEvents"
-                :key="index"
-        class="w-full lg:w-3/4 flex flex-wrap bg-headerdark text-white py-20 px-4 lg:px-20 lg:flex-row"
-      >
-        <div class="w-full lg:w-1/2 lg:px-16" v-for="(a, key, index) in value.agenda"
-                :key="index">
-          <h6 class="uppercase text-sm text-gray-700 font-semibold tracking-wider" >
-            Our Next
-            <span class="text-laracolor">Meetup</span>
-          </h6>
-          <h2
-            class="text-3xl font-semibold leading-tight mt-6"
-          >{{a.title}}</h2>
-          <h2 class="text-xl font-medium leading-tight mt-6">
-            <img slot="icon" src="https://avatars.io/twitter/hardikdangar" class="avatar rounded" />
-            by
-            <a href="https://twitter.com/hardikdangar" target="_blank">{{a.speaker}}</a>
-          </h2>
-
-          <p
-            class="text-gray-700 mt-2 leading-relaxed text-justify"
-          >He is co-founder of SphereRays Technolabs Pvt. Ltd. He has 10+ years of experience of shaping core ideas into architectural development and implementation.He as authored a book called Learning Laravel 4 Application Development which includes the best practices in the Laravel application development.</p>
-        </div>
-
-        <!-- <div class="w-full lg:w-1/2 lg:px-16 mt-16 lg:mt-0">
-          <h6 class="uppercase text-sm text-gray-700 font-semibold tracking-wider">&nbsp;</h6>
-          <div class="w-full md:flex md:flex-row lg:flex-col md:-mx-4 lg:mx-0">
-            <h2
-              class="text-3xl font-semibold leading-tight mt-6"
-            >Laravel Vapor: Serverless magic for PHP</h2>
-            <h2 class="text-xl font-medium leading-tight mt-6">
-              <img slot="icon" src="https://avatars.io/twitter/diku_patel" class="avatar rounded" />
-              by
-              <a
-                href="https://twitter.com/diku_patel"
-                target="_blank"
-              >Chintan Banugaria</a>
-            </h2>
-
-            <p
-              class="text-gray-700 mt-2 leading-relaxed text-justify"
-            >He is full stack developer / director at Emrys Technologies having experience of more than 8+ years. He will talk about the newly introduce Laravel Vapor, a serverless platform for the Laravel applications. He will briefly introduce the core concepts of Serverless and deploy a demo application on the vapor.</p>
-          </div>
-        </div> -->
-        <div
-          class="flex w-full md:w-1/2 lg:w-full md:mx-4 lg:mx-0 mt-12 md:mt-0 lg:mt-12 text-center justify-center"
-        >
-          <a
-            href="https://allevents.in/rajkot/laravel-rajkot-meetup-october-2019/80002416250362"
-            class="inline-block bg-laracolor hover:bg-laracolor text-white pl-4 pr-2 py-2 lg:py-3 lg:pl-5 lg:pr-4 font-bold rounded-lg mt-8 shadow-md hover:shadow-lg"
-            style="height:max-content;"
-            target="_blank"
-          >
-            <div class="flex items-center">
-              <span>Book Tickets</span>
-              <div class="w-8 h-8 bg-white text-laracolor text-center rounded-lg p-1 ml-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6 fill-current"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M11.293 17.293L12.707 18.707 19.414 12 12.707 5.293 11.293 6.707 15.586 11 6 11 6 13 15.586 13z"
-                  />
-                </svg>
-              </div>
-            </div>
+    </div>
+    <div class="sub-title">Chapters</div>
+    <div class="events_list">
+      <div class="_event">
+        <div class="bimage">
+          <a href="past-events/laravel">
+            <img class="ch-img" src="../assets/images/laravel.svg" />
           </a>
         </div>
       </div>
-      <div
-        class="w-full lg:w-1/4 flex flex-wrap bg-laracolor text-white py-20 px-4 lg:px-10 lg:flex-row justify-center text-center"
-      >
-        <!-- <div class="w-full flex flex-col">
-          <h4
-            class="font-normal font-bold text-white text-xl leading-relaxed tracking-wider"
-          >Schedule</h4>
-          <div
-            class="flex items-center inline-block bg-white hover:bg-white text-laracolor py-3 pl-4 pr-2 lg:py-3 lg:pl-5 lg:pr-4 font-bold rounded-lg mt-6 shadow-md hover:shadow-lg text-center justify-center dotted"
-          >
-            <span>
-              09:00 am - 09:30 am
-              <br />
-              <span class="text-headerdark">Registration</span>
-            </span>
-          </div>
-
-          <div
-            class="flex items-center inline-block bg-white hover:bg-white text-laracolor py-3 pl-4 pr-2 lg:py-3 lg:pl-5 lg:pr-4 font-bold rounded-lg mt-6 shadow-md hover:shadow-lg text-center justify-center"
-          >
-            <span>
-              10:00 am - 11:00 am
-              <br />
-              <span class="text-headerdark">Laravel Core: Dependency Injections and Containers</span>
-            </span>
-          </div>
-          <div
-            class="flex items-center inline-block bg-white hover:bg-white text-laracolor py-3 pl-4 pr-2 lg:py-3 lg:pl-5 lg:pr-4 font-bold rounded-lg mt-6 shadow-md hover:shadow-lg text-center justify-center"
-          >
-            <span>
-              11:00 am - 11:30 am
-              <br />
-              <span class="text-headerdark">Break</span>
-            </span>
-          </div>
-          <div
-            class="flex items-center inline-block bg-white hover:bg-white text-laracolor py-3 pl-4 pr-2 lg:py-3 lg:pl-5 lg:pr-4 font-bold rounded-lg mt-6 shadow-md hover:shadow-lg text-center justify-center"
-          >
-            <span>
-              11:30 am - 12:30 am
-              <br />
-              <span class="text-headerdark">Laravel Vapor: Serverless magic for PHP</span>
-            </span>
-          </div>
-          <div
-            class="flex items-center inline-block bg-white hover:bg-white text-laracolor py-3 pl-4 pr-2 lg:py-3 lg:pl-5 lg:pr-4 font-bold rounded-lg mt-6 shadow-md hover:shadow-lg text-center justify-center"
-          >
-            <span>
-              12:30 am - 1:30 am
-              <br />
-              <span class="text-headerdark">Q and A (open house)</span>
-            </span>
-          </div>
-          <div
-            class="flex flex-col items-center inline-block text-white py-3 pl-4 pr-2 lg:py-3 lg:pl-5 lg:pr-4 font-bold rounded-lg mt-6 text-center justify-center"
-          >
-            <span class="pl-2 flex-row flex">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-map-pin align-text-top pr-2"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              RKU City Campus
-            </span>
-            2nd Ring Rd,
-            <br />Mota Mava,
-            <br />Rajkot, Gujarat 360005
-          </div>
-          <div
-            class="flex flex-col items-center inline-block text-white py-3 pl-4 pr-2 lg:py-3 lg:pl-5 lg:pr-4 font-bold rounded-lg mt-6 text-center justify-center"
-          >
-            <span class="pl-2 flex-row flex">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-map-pin align-text-top pr-2"
-              >
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                <line x1="16" y1="2" x2="16" y2="6" />
-                <line x1="8" y1="2" x2="8" y2="6" />
-                <line x1="3" y1="10" x2="21" y2="10" />
-              </svg>
-              Sunday, 20 October 2019
-            </span>
-          </div>
-        </div> -->
+      <div class="_event">
+        <div class="bimage">
+          <a href="past-events/vue">
+            <img class="ch-img" src="../assets/images/vue.png" />
+          </a>
+        </div>
       </div>
-    </section>
+      <div class="_event">
+        <div class="bimage">
+          <a href="past-events/docker">
+            <img class="ch-img" src="../assets/images/docker.jpeg" />
+          </a>
+        </div>
+      </div>
+      <div class="_event">
+        <div class="bimage">
+          <a href="past-events/laravel">
+            <img class="ch-img" src="../assets/images/seo.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row info">
+      <div class="col-sm-12 info-title">Vision</div>
+      <div class="col-sm-12 sub-info">Build a knowledge-exchange platform for all technology lovers.</div>
+      <div class="col-sm-12 info-title">Mission</div>
+      <div
+        class="col-sm-12 sub-info"
+      >Provide an opportunity to gain and share knowledge among software technology enthusiasts in the Rajkot.</div>
+      <div class="col-sm-12 info-title">About Us</div>
+      <div
+        class="col-sm-12 sub-info"
+      >We are a group of people who have successfully arranged various Laravel related Meetups in the Rajkot for the last one year. After all these Meetups we felt that technology Meetups can’t be restricted to one single technology. There should be no boundaries in technologies as technology is just a tool that can help to solve any real-world problem. We have come to an idea of this Rajkot.Tech.</div>
+    </div>
   </div>
 </template>
 
 <script>
 import Header from "~/layouts/header.vue";
-import { getLiveEvents } from '~/static/js/events.js'
+import { getLiveEvents } from "~/static/js/events.js";
 export default {
   components: {
     Header
@@ -286,13 +153,81 @@ export default {
   async asyncData({ app, store }) {
     if (process.server) {
       let events = await getLiveEvents();
-      store.commit('liveEvents', events);
+      store.commit("liveEvents", events);
     }
   }
 };
 </script>
 
-<style>
+<style scoped>
+.info {
+  background: #9a8e8e;
+  text-align: center;
+  color: white;
+}
+.info-title {
+  font-size: 2.4rem;
+}
+.sub-info {
+  font-size: 22px;
+  padding: 20px 250px 39px 250px;
+}
+.sub-title {
+  text-align: center;
+  padding: 20px 0px 27px 0px;
+  /* background: #d4d0d0; */
+  font-size: 28px;
+  font-weight: bold;
+  /* color: #fff; */
+}
+.container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  align-content: center;
+  display: flex;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  overflow: hidden !important;
+  min-width: 100%;
+  margin-top: 90px;
+}
+.body-container {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  height: 100%;
+}
+.events_list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 31px 17px 30px 320px;
+  width: 1555px;
+}
+._event {
+  width: 22.33%;
+  margin: 0.9375rem;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #e2e1e1;
+}
+.bimage {
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #efefef;
+}
+.ch-img {
+  max-width: 100%;
+  width: 12rem;
+  height: 12rem;
+}
+
 #menu-toggle:checked + #menu {
   display: block;
 }
