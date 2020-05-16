@@ -1,0 +1,7 @@
+{
+    "default_img": "docker.jpeg",
+    "font-weight": "bold",
+    "color": "#2e8bdc",
+    "text-transform": "capitalize",
+    "border": "2px solid #0a90e6"
+}

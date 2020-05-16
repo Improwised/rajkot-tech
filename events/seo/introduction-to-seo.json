@@ -1,0 +1,27 @@
+{
+  "id": 4,
+  "date": "February 09, 2020",
+  "categories": ["seo"],
+  "name": "Introduction to SEO",
+  "registrations": 29,
+  "attendies":22,
+  "fileName": "introduction-to-seo",
+  "coverimage": "",
+  "agenda": [
+    {
+      "title": "Demystifying the Laravel Magic",
+      "type": "talk",
+      "speaker": "Vivek Sancheti",
+      "img_url": "https://pbs.twimg.com/profile_images/1236336194666893312/1PWzvVie_400x400.jpg"
+    },
+    {
+      "title": "Introduction to GraphQL",
+      "type": "talk",
+      "speaker": "Boni Satani",
+      "img_url" : "https://pbs.twimg.com/profile_images/1223153756147073024/QxyvVKCp_400x400.jpg"
+    }
+  ],
+  "venue": "Improwised Technologies Pvt Ltd <@improwised>",
+  "organizers": [
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": 3,
+  "date": "Oct 21, 2018",
+  "categories": ["laravel"],
+  "name": "laravel: Chapter 1",
+  "registrations": 19,
+  "attendies":15,
+  "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
+  "live":false,
+  "fileName": "laravel-1",
+  "coverimage": "",
+  "agenda": [
+    {
+      "title": "Design Patterns in Laravel",
+      "type": "talk",
+      "speaker": "Siddharth Ghedia",
+      "img_url": "https://pbs.twimg.com/profile_images/1102889001130704898/VinLm56k_400x400.pn"
+    },
+    {
+      "title": " Laravel Package Development",
+      "type": "talk",
+      "speaker": "Vishal Sancheti",
+      "img_url": "https://pbs.twimg.com/profile_images/1236336194666893312/1PWzvVie_400x400.jpg"
+    },
+    {
+      "title": "API Development with Laravel",
+      "type": "talk",
+      "speaker": "Gaurav Makheca",
+      "img_url": "https://pbs.twimg.com/profile_images/1025750323774644225/ojZaE-4g_400x400.jpg"
+    }
+  ],
+  "venue": "EYUVA Internet Pvt Ltd, 404, Riverawave, Nr. McDonald's, Kalawad Road",
+  "organizers": [
+  ]
+}

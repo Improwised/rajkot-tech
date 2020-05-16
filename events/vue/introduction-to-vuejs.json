@@ -1,0 +1,29 @@
+{
+    "id": 1,
+    "date": "Deceber 15, 2019",
+    "categories": ["vue"],
+    "name": "Introduction to Vue",
+    "registrations": 32,
+    "attendies":28,
+    "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
+    "live":false,
+    "fileName": "introduction-to-vuejs",
+    "coverimage": "",
+    "agenda": [
+      {
+        "title": "Basic introduction of VueJS",
+        "type": "talk",
+        "speaker": "Harikrushna",
+        "img_url": "https://pbs.twimg.com/profile_images/1205817383568519168/ITjwDZGI_400x400.jpg"
+      },
+         {
+        "title": "NuxtJs, SSR and SPAs",
+        "type": "talk",
+        "speaker": "Nikunj Kanetiya",
+        "img_url": ""
+      }
+    ],
+    "venue": "RK University City Campus Mota mava, 2nd Ring Rd, Rajkot 360005, Gujarat, India",
+    "organizers": [
+    ]
+  }
