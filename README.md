@@ -1,12 +1,12 @@
-# laravelrajkotsite
+# rajkot-tech-latest
 
-> Official Site of Laravel Rajkot
+> rajkot-tech-latest
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
-$ npm run install
+$ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -17,6 +17,7 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+```
 
 # add new chapter and their events
 $ in '/events' directory add new chapter and events.

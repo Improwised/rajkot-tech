@@ -1,23 +1,46 @@
 {
     "id": 1,
     "date": "August 19, 2019",
+    "type": "meetup",
     "categories": ["docker"],
     "name": "Docker from scratch",
     "registrations": 10,
     "attendies":8,
     "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
     "live":false,
+    "about": [
+      "Lorem Ipsum is simply dummy text of the printing and typesetting",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting"
+    ],
     "fileName": "docker-from-scratch",
     "coverimage": "",
     "agenda": [
       {
         "title": "Basics of Docker and Containers",
         "type": "talk",
-        "speaker": "Rakshit Menpara",
-        "img_url": "https://pbs.twimg.com/profile_images/981611219592335361/-2PyZFL3_400x400.jpg"
+        "speaker": {
+          "name": "Rakshit Menpara",
+          "about": "A life student, and a Programmer. Inherently curious. Decision making and investments, self-improvement, distributed systems, and all things software."
+        } ,
+        "twitter": {
+          "image": "https://pbs.twimg.com/profile_images/981611219592335361/-2PyZFL3_400x400.jpg",
+          "profile": "https://twitter.com/deltasquare4"
+        },
+        "time": "10:00AM"
       }
     ],
-    "venue": "Improwised Technologies Private Limited., 322 Landmark, Astron Chowk, Sardarnagar, Rajkot, Gujarat 360001, India, Rajkot, India",
-    "organizers": [
+    "venue": {
+      "place": "Improwised Technologies Private Limited.",
+      "address": "322 Landmark, Astron Chowk, Sardarnagar, Rajkot, Gujarat 360001, India, Rajkot, India"
+    },
+    "volunteers": [
+      {
+        "name": "shailesh davara",
+        "twitter": {
+          "image": "https://pbs.twimg.com/profile_images/823882751682215936/d6YKCAGO_400x400.jpg",
+          "profile": "https://twitter.com/sdavara"
+        }
+      }
     ]
   }
