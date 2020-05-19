@@ -14,7 +14,8 @@
 </template>
 
 <script>
-import { getLiveMeetup } from '~/static/js/events.js'
+import { getEventDetails } from '~/static/js/events.js'
+
 import Social from '~/components/layout/Social.vue'
 import Navbar from '~/components/layout/Navbar.vue'
 import Footer from '~/components/layout/Footer.vue'
@@ -41,20 +42,23 @@ export default {
     Venue,
     Volunteers
   },
-  async asyncData({ app, store }) {
+  async asyncData({ app, store, params }) {
     if (process.server) {
-      const events = await getLiveMeetup()
-      store.commit('liveEvents', events.length ? events[0] : {})
+      store.commit('event', [])
+      const events = await getEventDetails(params)
+      store.commit('event', events.length ? events[0] : {})
     }
   },
   computed: {
     event() {
-      return this.$store.getters.liveEvents
+      return this.$store.getters.event
     }
   },
   head() {
     return {
-      title: 'Laravel Rajkot'
+      title: `${
+        this.event && this.event.name ? `${this.event.name} | ` : ''
+      }meetup | Laravel Rajkot`
     }
   }
 }

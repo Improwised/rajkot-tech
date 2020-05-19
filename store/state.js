@@ -1,9 +1,9 @@
 export default function() {
   return {
-    event: [],
+    event: {},
     pastEvents: [],
     events: [],
     routes: [],
-    liveEvents: []
-  };
+    liveEvents: {}
+  }
 }
