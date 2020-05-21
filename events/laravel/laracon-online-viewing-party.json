@@ -1,18 +1,21 @@
 {
-    "id": 6,
-    "date": "Feb 26, 2020",
-    "categories": ["laravel"],
-    "name": "Laracon online viewing party",
-    "registrations": 10,
-    "attendies":5,
-    "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
-    "live":false,
-    "fileName": "laracon-online-viewing-party",
-    "coverimage": "",
-    "agenda": [
-      
-    ],
-    "venue": "Improwised Technologies Private Limited., 304 - Pride Square, Pushkardham Main Rd, Nr. J, K. Chowk, Rajkot, Gujarat 360005, India, Rajkot, India",
-    "organizers": [
-    ]
-  }
+  "id": 1,
+  "date": "Februay 26, 2020",
+  "type": "meetup",
+  "categories": ["laravel"],
+  "name": "Laracon online viewing party",
+  "registrations": 10,
+  "attendies": 5,
+  "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
+  "live": false,
+  "about": [
+  ],
+  "fileName": "laracon-online-viewing-party",
+  "coverimage": "",
+  "agenda": [],
+  "venue": {
+    "place": "Improwised Technologies Private Limited.",
+    "address": "322 Landmark, Astron Chowk, Sardarnagar, Rajkot, Gujarat 360001, India, Rajkot, India"
+  },
+  "volunteers": []
+}

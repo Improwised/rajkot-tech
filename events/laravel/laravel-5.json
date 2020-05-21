@@ -1,29 +1,53 @@
 {
-    "id": 5,
-    "date": "August 11, 2019",
-    "categories": ["laravel"],
-    "name": "Laravel: Chapter 5",
-    "registrations": 31,
-    "attendies":27,
-    "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
-    "live":false,
-    "fileName": "laravel-5",
-    "coverimage": "",
-    "agenda": [
-      {
-        "title": "Demystifying Laravel Magic",
-        "type": "talk",
-        "speaker": "Hardik Dangar",
-        "img_url": ""
+  "id": 1,
+  "date": "August 11, 2019",
+  "type": "meetup",
+  "categories": ["laravel"],
+  "name": "Laravel: Chapter 5",
+  "registrations": 31,
+  "attendies": 27,
+  "gallery": "",
+  "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
+  "live": false,
+  "about": [
+    "Lorem Ipsum is simply dummy text of the printing and typesetting",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting"
+  ],
+  "fileName": "laravel-5",
+  "coverimage": "",
+  "agenda": [
+    {
+      "title": "Demystifying Laravel Magic",
+      "type": "talk",
+      "speaker": {
+        "name": "Hardik Dangar",
+        "about": "A life student, and a Programmer. Inherently curious. Decision making and investments, self-improvement, distributed systems, and all things software."
       },
-         {
-        "title": "Introduction to Graph QL",
-        "type": "talk",
-        "speaker": "Chintan Banugaria",
-        "img_url": "https://pbs.twimg.com/profile_images/636857179849388032/rWtzpXtN_400x400.jpg"
-      }
-    ],
-    "venue": "RKU City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India, Rajkot, India",
-    "organizers": [
-    ]
-  }
+      "twitter": {
+        "image": "",
+        "profile": ""
+      },
+      "time": "10:00AM"
+    },
+    {
+      "title": "Introduction to Graph QL",
+      "type": "talk",
+      "speaker": {
+        "name": "Chintan Banugaria",
+        "about": "Web Passionate, Founder of 92fiveapp"
+      },
+      "twitter": {
+        "image": "https://pbs.twimg.com/profile_images/636857179849388032/rWtzpXtN_400x400.jpg",
+        "profile": "https://twitter.com/diku_patel"
+      },
+      "time": "10:00AM"
+    }
+  ],
+  "venue": {
+    "place": "RKU City Campus",
+    "address": "RKU City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India, Rajkot, India"
+  },
+  "volunteers": [
+  ]
+}

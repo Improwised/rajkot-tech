@@ -6,7 +6,11 @@
         v-for="(agenda, index) in event.agenda"
         :key="index"
         :title="agenda.speaker && agenda.speaker.name"
-        :img-src="agenda.twitter && agenda.twitter.image"
+        :img-src="
+          agenda.twitter.image
+            ? agenda.twitter.image
+            : 'https://st2.depositphotos.com/1006318/5909/v/450/depositphotos_59094701-stock-illustration-businessman-profile-icon.jpg'
+        "
         :img-alt="agenda.speaker && agenda.speaker.name"
         img-top
         style="max-width: 20rem;"

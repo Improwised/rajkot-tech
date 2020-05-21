@@ -1,29 +1,50 @@
 {
-    "id": 1,
-    "date": "Deceber 15, 2019",
-    "categories": ["vue"],
-    "name": "Introduction to Vue",
-    "registrations": 32,
-    "attendies":28,
-    "event_details_url": "https://in.explara.com/e/laravelive-india-rajkot-meetup",
-    "live":false,
-    "fileName": "introduction-to-vuejs",
-    "coverimage": "",
-    "agenda": [
-      {
-        "title": "Basic introduction of VueJS",
-        "type": "talk",
-        "speaker": "Harikrushna",
-        "img_url": "https://pbs.twimg.com/profile_images/1205817383568519168/ITjwDZGI_400x400.jpg"
+  "id": 1,
+  "date": "December 15, 2019",
+  "type": "meetup",
+  "categories": ["vue"],
+  "name": "Introduction to Vue",
+  "registrations": 31,
+  "attendies": 27,
+  "gallery": "https://drive.google.com/drive/folders/1-1GHYS9vo3EmY_sqoB9_S6pLREduOWKA",
+  "event_details_url": "https://allevents.in/rajkot/vue-rajkot/80006937726531",
+  "live": false,
+  "about": [
+  ],
+  "fileName": "introduction-to-vue",
+  "coverimage": "",
+  "agenda": [
+    {
+      "title": "Basic introduction of VueJS",
+      "type": "talk",
+      "speaker": {
+        "name": "Harikrushna ",
+        "about": "Senior Software Engineer"
       },
-         {
-        "title": "NuxtJs, SSR and SPAs",
-        "type": "talk",
-        "speaker": "Nikunj Kanetiya",
-        "img_url": ""
-      }
-    ],
-    "venue": "RK University City Campus Mota mava, 2nd Ring Rd, Rajkot 360005, Gujarat, India",
-    "organizers": [
-    ]
-  }
+      "twitter": {
+        "image": "https://pbs.twimg.com/profile_images/1205817383568519168/ITjwDZGI_400x400.jpg",
+        "profile": "https://www.twitter.com/HK_Adiecha"
+      },
+      "time": "10:00AM"
+    },
+    {
+      "title": "NuxtJs, SSR and SPAs",
+      "type": "talk",
+      "speaker": {
+        "name": "Nikunj Kanetiya",
+        "about": "A life student, and a Programmer. Inherently curious. Decision making and investments, self-improvement, distributed systems, and all things software."
+      },
+      "twitter": {
+        "image": "",
+        "profile": ""
+      },
+      "time": "10:00AM"
+    }
+  ],
+  "venue": {
+    "place": "RK University City Campus",
+    "address": "RK University City Campus Mota mava, 2nd Ring Rd, Rajkot 360005, Gujarat, India, India"
+  },
+  "volunteers": [
+  ]
+}
