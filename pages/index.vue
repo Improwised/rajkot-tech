@@ -9,6 +9,7 @@
     <Ticket :event="event" />
     <Venue :event="event" />
     <Volunteers :event="event" />
+    <Community />
     <Footer />
   </div>
 </template>
@@ -18,7 +19,7 @@ import { getLiveMeetup } from '~/static/js/events.js'
 import Social from '~/components/layout/Social.vue'
 import Navbar from '~/components/layout/Navbar.vue'
 import Footer from '~/components/layout/Footer.vue'
-
+import Community from '~/components/layout/Community.vue'
 import HeroUnit from '~/components/event/HeroUnit.vue'
 import About from '~/components/event/About.vue'
 import Schedule from '~/components/event/Schedule.vue'
@@ -32,7 +33,7 @@ export default {
     Social,
     Navbar,
     Footer,
-
+    Community,
     HeroUnit,
     About,
     Schedule,

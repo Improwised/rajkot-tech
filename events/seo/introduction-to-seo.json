@@ -1,27 +1,50 @@
 {
-  "id": 4,
+  "id": 1,
   "date": "February 09, 2020",
+  "type": "meetup",
   "categories": ["seo"],
   "name": "Introduction to SEO",
-  "registrations": 29,
-  "attendies":22,
+  "registrations": 32,
+  "attendies": 28,
+  "event_details_url": "https://allevents.in/rk%20university%20city%20campus%20mota%20mava%202nd%20ring%20rd%20rajkot%20360005%20gujarat%20india/80002782236948",
+  "live": false,
+  "about": [
+  ],
+  "gallery": "https://drive.google.com/drive/folders/1-Gx-PbinjjQ5FOMOV1bfefW9lnYnkmhZ",
   "fileName": "introduction-to-seo",
   "coverimage": "",
   "agenda": [
     {
-      "title": "Demystifying the Laravel Magic",
+      "title": "Basics of SEO",
       "type": "talk",
-      "speaker": "Vivek Sancheti",
-      "img_url": "https://pbs.twimg.com/profile_images/1236336194666893312/1PWzvVie_400x400.jpg"
+      "speaker": {
+        "name": "Vivek Sancheti",
+        "about": "Happy Go Lucky Geek! Co-Founder & CEO EYUVA Ex CEO #CryptoGround"
+      },
+      "twitter": {
+        "image": "https://pbs.twimg.com/profile_images/1236336194666893312/1PWzvVie_400x400.jpg",
+        "profile": "https://twitter.com/evivz"
+      },
+      "time": "10:00AM"
     },
     {
-      "title": "Introduction to GraphQL",
+      "title": "What are the basic SEO mistakes developers should avoid?",
       "type": "talk",
-      "speaker": "Boni Satani",
-      "img_url" : "https://pbs.twimg.com/profile_images/1223153756147073024/QxyvVKCp_400x400.jpg"
+      "speaker": {
+        "name": "Chintan Banugaria",
+        "about": ""
+      },
+      "twitter": {
+        "image": "https://pbs.twimg.com/profile_images/1223153756147073024/QxyvVKCp_400x400.jpg",
+        "profile": "https://twitter.com/bonirulz"
+      },
+      "time": "10:00AM"
     }
   ],
-  "venue": "Improwised Technologies Pvt Ltd <@improwised>",
-  "organizers": [
+  "venue": {
+    "place": "RK University City Campus",
+    "address": "RK University City Campus Mota mava, 2nd Ring Rd, Rajkot 360005, Gujarat, India, India"
+  },
+  "volunteers": [
   ]
 }
