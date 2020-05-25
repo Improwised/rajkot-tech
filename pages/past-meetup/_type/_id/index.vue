@@ -33,7 +33,6 @@ export default {
     Social,
     Navbar,
     Footer,
-
     HeroUnit,
     About,
     Schedule,
