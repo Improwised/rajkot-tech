@@ -1,0 +1,6 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Rajkot-tech'
+timeout = '300000'
+[Params]
+  description = 'Rajkot-tech'
