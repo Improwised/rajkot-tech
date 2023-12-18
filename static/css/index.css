@@ -136,3 +136,15 @@
 
 
 
+
+
+
+.about-meetup {
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+.about-meetup-text {
+  max-width: 505px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}

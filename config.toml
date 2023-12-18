@@ -1,4 +1,4 @@
-baseURL = '/r/'
+baseURL = '/rajkot-tech/'
 languageCode = 'en-us'
 title = 'Rajkot-tech'
 timeout = '300000'
