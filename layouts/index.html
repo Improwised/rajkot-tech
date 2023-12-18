@@ -1,6 +1,40 @@
 {{ define "title" }}{{ .Site.Title }}{{ end }} {{ define "description" }}{{
 .Site.Params.description }}{{ end }} {{ define "main" }}
 
-<div>welcome to rajkot tech</div>
+<div>
+    <div class="event-hero-unit">
+        <div
+          class="event-background"
+        >
+          <div
+            class="event-hero-unit-content d-flex align-items-center justify-content-center"
+          >
+            <div class="text-center">
+              <div class="rt-branding mt-5">
+                <h4 class="fb">RAJKOT TECH</h4>
+              </div>
+    
+              <div
+                v-if="event && !event.live && $route.name === 'index'"
+                class="submit-talk"
+              >
+                <p>
+                  We will be announcing our next meetup / workshop soon. Meanwhile,
+                  if you want to speak on a topic or want to take workshop
+                  <a href="https://forms.gle/DHHBgtPjTd5Gm4hL6" target="_blank"
+                    ><button class="btn btn-warning btn-sm px-2" style="--bs-btn-padding-x:-1"><b>submit your proposal</b></button></a
+                  >
+                  else if you want to request a workshop or a talk on a specific
+                  topic
+                  <a href="https://forms.gle/R1P5nUsSZVWVThwx7" target="_blank"
+                    ><button class="btn btn-warning btn-sm px-2" style="--bs-btn-padding-x:-1"><b>let us know</b></button></a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
 
 {{ end }}

@@ -1,0 +1,17 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }} {{ define "description" }}{{
+    .Site.Params.description }}{{ end }} {{ define "main" }}
+    <div class="past-meetup-title py-5">
+        <h2 class="text-center tu fb m-0 py-4">MEETUPS</h2>
+      </div>
+
+      <main>
+        <!-- <div class="row">{{ partial "meetups/list.html" . }}</div> -->
+        <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative; max-width: 1200px;">
+            <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+                {{ partial "meetups/list.html" . }}
+            </div>
+        </div>
+    </main>
+
+    {{ end }}
+    
