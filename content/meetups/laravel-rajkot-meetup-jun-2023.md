@@ -5,6 +5,8 @@ draft: false
 width: 12
 image: "/images/meetup.webp"
 meetup: "Upcoming"
+price: "INR 100 to 150"
+color: "#8bc24a"
 meetupDate: "12 OCTOBER 2023"
 address: "RK Univercity Rajkot"
 metaTitle: "Laravel Rajkot Meetup July 2023 | Rajkot Tech"

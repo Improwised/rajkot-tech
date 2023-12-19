@@ -7,6 +7,8 @@ image: "/images/meetup.webp"
 meetup: "past"
 meetupDate: "12 OCTOBER 2023"
 address: "RK Univercity Rajkot"
+price: ""
+color: "#ff0001"
 metaTitle: "Laravel Rajkot Meetup March 2023 | Rajkot Tech"
 metaDes: "Laravel Rajkot Meetup March 2023 | Rajkot Tech"
 ---
