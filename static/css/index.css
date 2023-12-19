@@ -50,7 +50,6 @@
   font-size: 1.2rem;
 }
 
-
 .event-hero-unit-content .event-end {
   margin-bottom: 3rem;
 }
@@ -65,32 +64,6 @@
   background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
 }
 
-
-
-
-
-.card {
-  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
-    0.3s box-shadow,
-    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-}
-
-.card h5 {
-  overflow: hidden;
-  font-weight: 900;
-  font-size: 1rem;
-}
-.card-img-top {
-  max-height: 180px;
-  object-fit: contain;
-}
-.card h2 {
-  font-size: 1rem;
-}
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-}
 .label-top {
   position: absolute;
   background-color: #8bc34a;
@@ -104,41 +77,6 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-  .card-img-top {
-    max-height: 250px;
-  }
-}
-
-.btn-warning {
-  box-shadow: -1px 6px 19px rgba(247, 129, 10, 0.25);
-}
-
-.btn-warning:hover {
-  background: none #ff962b;
-  color: #ffffff;
-  box-shadow: -1px 6px 13px rgba(255, 150, 43, 0.35);
-}
-.bg-success {
-  font-size: 1rem;
-  background-color: #f7810a !important;
-}
-.bg-danger {
-  font-size: 1rem;
-}
-
-.fa-question-circle:before {
-  color: darkgray;
-}
-.fa-plus:before {
-  color: darkgray;
-}
-
-
-
-
-
-
 .about-meetup {
   background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 }
@@ -147,4 +85,13 @@
   max-width: 505px !important;
   padding-left: 15px !important;
   padding-right: 15px !important;
+}
+
+.tag-position {
+  position: absolute;
+  transform: rotate(12deg);
+  right: -15px;
+  top: -17px;
+  font-size: 15px;
+  border-radius: 15px;
 }
