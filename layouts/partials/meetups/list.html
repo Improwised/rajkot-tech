@@ -1,7 +1,9 @@
 {{ range .Pages }}
 <div class="col">
   <div class="card h-100 shadow-sm" style="position: relative">
-    <a href="{{ .Permalink }}"><img src="{{.Params.image}}" class="card-img-top" alt="..." /></a>
+    <a href="{{ .Permalink }}"
+      ><img src="{{.Params.image}}" class="card-img-top" alt="..."
+    /></a>
 
     <div class="card-body">
       <div class="clearfix mb-3">
@@ -9,8 +11,15 @@
           >{{.Params.meetupDate}}</span
         >
       </div>
-      <div class="label-top shadow-sm tag-position" style="background-color: {{.Params.color}};">{{.Params.meetup}}</div>
-      <a href="{{ .Permalink }}" style="color: black;"><h5 class="card-title">{{.Params.title}}</h5></a>
+      <div
+        class="label-top shadow-sm tag-position"
+        style="background-color: {{.Params.color}};"
+      >
+        {{.Params.meetup}}
+      </div>
+      <a href="{{ .Permalink }}" style="color: black"
+        ><h5 class="card-title">{{.Params.title}}</h5></a
+      >
       <div style="color: #899fa0" class="py-1">{{.Params.address}}</div>
       {{ if .Params.Price}}
       <p style="color: #666a6a">
@@ -25,3 +34,4 @@
   </div>
 </div>
 {{ end }}
+
