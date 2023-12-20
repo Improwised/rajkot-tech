@@ -10,6 +10,13 @@
         <span class="float-start badge rounded-pill bg-success"
           >{{.Params.meetupDate}}</span
         >
+        <span class="float-end"
+          >{{ if .Params.Price}}
+          <div style="color: #666a6a">
+            <img src="/images/ticket.svg" alt="ticket" /> {{.Params.Price}}
+          </div>
+          {{ end }}</span
+        >
       </div>
       <div
         class="label-top shadow-sm tag-position"
@@ -21,11 +28,7 @@
         ><h5 class="card-title">{{.Params.title}}</h5></a
       >
       <div style="color: #899fa0" class="py-1">{{.Params.address}}</div>
-      {{ if .Params.Price}}
-      <p style="color: #666a6a">
-        <img src="/images/ticket.svg" alt="ticket" /> {{.Params.Price}}
-      </p>
-      {{ end }}
+
       <!-- <div class="text-end" >
         <img src="/images/calander.svg" alt="calander" /> {{.Params.meetupDate}}
       </div> -->
@@ -34,4 +37,3 @@
   </div>
 </div>
 {{ end }}
-
