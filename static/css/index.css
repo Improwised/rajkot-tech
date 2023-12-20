@@ -3,3 +3,95 @@
   padding: 0.5rem 1rem;
   background-color: #eee;
 }
+
+.event-background {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("/images/cover-bg.jpg");
+}
+
+.event-hero-unit-content {
+  width: 100%;
+  color: white;
+  height: fit-content;
+  background-color: #000000b3;
+  min-height: calc(100vh - 98px);
+}
+
+.rt-branding {
+  padding: 15px;
+  margin-bottom: 5rem;
+  display: inline-block;
+  border: 3px solid white;
+}
+
+.rt-branding h4 {
+  margin: 0;
+  color: white;
+  font-size: 1.1rem;
+  display: inline-block;
+}
+
+.meetup-name {
+  font-size: 3rem;
+}
+
+.date-time {
+  margin-top: 1.5rem;
+}
+
+.date-time time {
+  font-size: 2rem;
+}
+
+.date-time address {
+  font-size: 1.2rem;
+}
+
+.event-hero-unit-content .event-end {
+  margin-bottom: 3rem;
+}
+
+.submit-talk {
+  margin: 0 15px;
+  max-width: 500px;
+  font-size: 1.1rem;
+}
+
+.past-meetup-title {
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+}
+
+.label-top {
+  position: absolute;
+  /* background-color: #8bc34a; */
+  color: #fff;
+  top: 8px;
+  right: 8px;
+  padding: 5px 10px 5px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.about-meetup {
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+.about-meetup-text {
+  max-width: 505px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.tag-position {
+  position: absolute;
+  transform: rotate(12deg);
+  right: -15px;
+  top: -17px;
+  font-size: 15px;
+  border-radius: 15px;
+}
