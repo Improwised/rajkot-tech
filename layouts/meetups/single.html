@@ -17,9 +17,11 @@
           <time class="tu">AUGUST 19, 2019</time>
           <address>Improwised Technologies Private Limited.</address>
         </div>
+        {{ if eq .Params.meetup "past" }}
         <span class="py-2 px-3 event-end badge rounded-pill bg-danger"
           >Event Ended</span
         >
+        {{ end }}
       </div>
     </div>
   </div>
@@ -62,7 +64,11 @@
     <h2 class="text-center tu fb py-3 pt-5">SPEAKERS</h2>
     <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative; max-width: 1200px;">
       <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center">
-        {{ range where .Site.Pages "Section" "speakers" }}
+        {{ $currentSpeaker := .Title }}
+  {{ $speakers := where .Site.Pages "Section" "speakers" }}
+  {{ $relatedSpeakers := where $speakers  "Params.meetups" "intersect" (slice $currentSpeaker) }}
+       
+  {{ range $relatedSpeakers }}
           {{ partial "speakers/list.html" . }}
           {{ end }}
       </div>
