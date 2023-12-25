@@ -3,6 +3,8 @@ title: "Laravel Rajkot Meetup April 2023"
 date: 2023-12-15T15:30:28+05:30
 draft: false
 width: 12
+startDate: 2023-12-28T12:00:00+05:30
+endDate: 2023-12-28T14:00:00+05:30
 image: "/images/meetup.webp"
 meetup: "upcoming"
 meetupDate: "12 OCTOBER 2023"

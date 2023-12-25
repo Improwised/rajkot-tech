@@ -8,7 +8,7 @@
       class="event-hero-unit-content d-flex align-items-center justify-content-center"
     >
       <div class="text-center">
-        <div class="rt-branding mt-5">
+        <div class="rt-branding my-4">
           <h4 class="fb">RAJKOT TECH</h4>
         </div>
         <h4 class="tu">MEETUP</h4>
@@ -18,13 +18,15 @@
           <address>{{ .Params.address }}.</address>
         </div>
         {{ if eq .Params.meetup "past" }}
-        <span class="py-2 px-3 event-end badge rounded-pill bg-danger"
+        <span class="py-2 mb-3 px-3 event-end badge rounded-pill bg-danger"
           >Event Ended</span
         >
+        {{ else }}
+        <button class="mb-3 btn-lg btn-success">Buy Ticket</button>
         {{ end }}
+        <div>{{ partial "share-button.html" . }}</div>
       </div>
     </div>
-    <div>{{ partial "share-button.html" . }}</div>
   </div>
 </div>
 
@@ -97,7 +99,7 @@
                     />
                   </div>
                   <div class="align-items-center p-2">
-                    <b>{{.Params.title}}</b>
+                    <b class="speaker-name">{{.Params.title}}</b>
                     <p>{{.Params.position}}</p>
                   </div>
                 </a>
@@ -177,6 +179,33 @@
       ></iframe>
     </div>
   </div>
+</div>
+
+
+{{ $dateString := .Params.startDate }}
+{{ $location := "Asia/Kolkata" }} <!-- Assuming the original date is in Indian Standard Time (IST) -->
+
+{{ $dateObj := time $dateString $location }}
+{{ $utcDate := $dateObj.UTC }}
+
+{{ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }}
+{{ $eventStartDate := dateFormat "20060102T150405Z" $formattedDate }}
+
+
+{{ $dateString := .Params.endDate }}
+{{ $location := "Asia/Kolkata" }} <!-- Assuming the original date is in Indian Standard Time (IST) -->
+
+{{ $dateObj := time $dateString $location }}
+{{ $utcDate := $dateObj.UTC }}
+
+{{ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }}
+{{ $eventendDate := dateFormat "20060102T150405Z" $formattedDate }}
+
+<div class="text-center">
+  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates={{$eventStartDate}}%2F{{$eventendDate}}&details={{.Content}}&location={{.Params.address}}&text={{.Params.title}}"
+  class="addToCalendar"
+  >Add to Calendar</a
+>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
