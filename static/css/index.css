@@ -50,10 +50,6 @@
   font-size: 1.2rem;
 }
 
-.event-hero-unit-content .event-end {
-  margin-bottom: 3rem;
-}
-
 .submit-talk {
   margin: 0 15px;
   max-width: 500px;
@@ -128,4 +124,19 @@
 
 .photo-gallery .item {
   padding-bottom:30px;
+}
+
+iframe{
+  width: 100%;
+}
+
+.alignment-speakers{
+  list-style-type: none; 
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .alignment-speakers {
+    display: block;
+  }
 }

@@ -9,6 +9,7 @@ meetupDate: {{ .Date }}
 address: ""
 price: ""
 color: ""
+locationOnMap: ""
 metaTitle: ""
 metaDes: ""
 ---

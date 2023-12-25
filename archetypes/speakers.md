@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: false
 width: 12
-meetups: 
+talk: 
     - ""
 image: ""
 position: ""
