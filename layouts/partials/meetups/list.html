@@ -1,4 +1,4 @@
-{{ range .Pages }}
+{{ range sort .Pages "Params.meetup" "desc" }}
 <div class="col">
   <div class="card h-100 shadow-sm" style="position: relative">
     <a href="{{ .RelPermalink }}"
