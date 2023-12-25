@@ -1,7 +1,7 @@
 {{ range .Pages }}
 <div class="col">
   <div class="card h-100 shadow-sm" style="position: relative">
-    <a href="{{ .Permalink }}"
+    <a href="{{ .RelPermalink }}"
       ><img src="{{.Params.image}}" class="card-img-top" alt="..."
     /></a>
 
@@ -24,7 +24,7 @@
       >
         {{.Params.meetup}}
       </div>
-      <a href="{{ .Permalink }}" style="color: black"
+      <a href="{{ .RelPermalink }}" style="color: black"
         ><h5 class="card-title">{{.Params.title}}</h5></a
       >
       <div style="color: #899fa0" class="py-1">{{.Params.address}}</div>
