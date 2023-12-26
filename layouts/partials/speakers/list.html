@@ -1,14 +1,23 @@
+{{ range .Pages }}
 <div class="col">
   <div class="card h-100 shadow-sm" style="position: relative">
-    <a href="{{.Permalink}}"><img src="{{.Params.image}}" class="card-img-top" style="height: 400px;" alt="..." /></a>
+    <a href="{{.RelPermalink}}"
+      ><img
+        src="{{.Params.image}}"
+        class="card-img-top"
+        style="height: 300px"
+        alt="..."
+    /></a>
 
-    <div class="card-body">
-      
-      <a href="{{.Permalink}}" style="color: black;"><h5 class="card-title">{{.Params.title}}</h5></a>
-      <div style="color: #899fa0" class="py-1">{{.Params.position}}</div>
-      <p style="color: #2d2f2f">
-         {{.Params.description}}
-      </p>
+    <div class="card-body text-center">
+      <a href="{{.RelPermalink}}" style="color: black"
+        ><h5 class="card-title">{{.Params.title}}</h5></a
+      >
+      <div style="color: #879697" class="py-1 fw-bold">
+        {{.Params.position}}
+      </div>
+      <p style="color: #2d2f2f">{{.Params.description}}</p>
     </div>
   </div>
 </div>
+{{ end }}
