@@ -43,7 +43,7 @@
           >Event Ended</span
         >
         {{ else }}
-        <button class="mb-3 btn-lg btn-success">Buy Ticket</button>
+        <button class="mb-3 btn btn-lg btn-success">Buy Ticket</button>
         {{ end }}
         <h5 class="text-center mb-3">
           <a style="color: white;" href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates={{$eventStartDate}}%2F{{$eventendDate}}&details={{.Content}}&location={{.Params.address}}&text={{.Params.title}}"
@@ -102,7 +102,7 @@
             where $speakers "Params.talk" "intersect" (slice $currentTalk) }} {{
             range $relatedSpeakers }}
 
-            <li class="pr-4 pb-2">
+            <li class="px-2 pb-2">
               <div
                 style="background-color: #f8f8f8"
                 class="p-2 align-items-center"
