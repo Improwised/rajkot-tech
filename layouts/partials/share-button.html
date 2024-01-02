@@ -4,7 +4,7 @@ $textcolor := "#bbb" }} {{ $hoverColor := "#444444" }} {{/* Code */}} {{ $url :=
 printf "%s" .Permalink | absLangURL }} {{ $textBody := print .Title "\n\n"
 (.Summary | truncate 200) "\n\n" $url "\n" }} {{ $encodedSummary :=
 strings.TrimPrefix "=" (querify "" (.Summary | truncate 200)) }}
-<nav class="sharebuttons text-center justify-content-center">
+<nav class="sharebuttons text-center justify-content-center pb-4">
   <div class="text-center justify-content-center">
   <ul style="padding-left: 0;" class="mt-1">
     {{ if $switches.facebook }}
