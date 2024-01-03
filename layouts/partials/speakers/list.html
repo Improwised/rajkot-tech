@@ -1,13 +1,17 @@
 {{ range .Pages }}
 <div class="col">
-  <div class="card h-100 shadow-sm" style="position: relative">
+  <div class="card h-100" style="position: relative; box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;">
+    <div class="justify-content-center text-center">
     <a href="{{.RelPermalink}}"
       ><img
         src="{{.Params.image}}"
         class="card-img-top"
-        style="height: 300px"
-        alt="..."
+        height="300px"
+        width="auto"
+        style="object-fit: cover;"
+        alt={{.Params.Title}}
     /></a>
+  </div>
 
     <div class="card-body text-center">
       <a href="{{.RelPermalink}}" style="color: black"

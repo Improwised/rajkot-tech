@@ -8,6 +8,9 @@ time: "14:00"
 topic: "Introduction to event planing2"
 meetups:
     - Laravel Rajkot Meetup April 2023
+speakers:
+    - Rakshit Menpara
+    - Munir Khakhi
 image: ""
 metaTitle: ""
 metaDes: ""
