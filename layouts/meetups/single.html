@@ -1,27 +1,23 @@
 {{ define "title" }}{{ .Site.Title }}{{ end }} {{ define "description" }}{{
-.Site.Params.description }}{{ end }} {{ define "main" }} 
+.Site.Params.description }}{{ end }} {{ define "main" }} {{ $dateString :=
+.Params.startDate }} {{ $location := "Asia/Kolkata" }}
+<!-- Assuming the original date is in Indian Standard Time (IST) -->
 
+{{ $dateObj := time $dateString $location }} {{ $utcDate := $dateObj.UTC }} {{
+$formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{
+$eventStartDate := dateFormat "20060102T150405Z" $formattedDate }} {{
+$dateString := .Params.endDate }} {{ $location := "Asia/Kolkata" }}
+<!-- Assuming the original date is in Indian Standard Time (IST) -->
 
-{{ $dateString := .Params.startDate }}
-{{ $location := "Asia/Kolkata" }} <!-- Assuming the original date is in Indian Standard Time (IST) -->
+{{ $dateObj := time $dateString $location }} {{ $utcDate := $dateObj.UTC }} {{
+$formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
+:= dateFormat "20060102T150405Z" $formattedDate }} 
 
-{{ $dateObj := time $dateString $location }}
-{{ $utcDate := $dateObj.UTC }}
-
-{{ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }}
-{{ $eventStartDate := dateFormat "20060102T150405Z" $formattedDate }}
-
-
-{{ $dateString := .Params.endDate }}
-{{ $location := "Asia/Kolkata" }} <!-- Assuming the original date is in Indian Standard Time (IST) -->
-
-{{ $dateObj := time $dateString $location }}
-{{ $utcDate := $dateObj.UTC }}
-
-{{ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }}
-{{ $eventendDate := dateFormat "20060102T150405Z" $formattedDate }}
-
-
+{{ $title := ""}} 
+{{ $recentPage := first 1 (where .Site.Pages "Section" "meetups") }} 
+{{ range $recentPage }} 
+{{ $title = .Title }} 
+{{ end }}
 
 <div class="event-hero-unit">
   <div class="event-background">
@@ -38,17 +34,25 @@
           <time class="tu">{{ .Params.meetupDate }}</time>
           <address>{{ .Params.address }}.</address>
         </div>
-        {{ if eq .Params.meetup "past" }}
+        {{ if eq .Title $title }}
+        {{ if gt (time .Params.endDate) now }}
+        <button class="mb-3 btn btn-lg btn-success">Buy Ticket</button>
+        {{ else }}
         <span class="py-2 mb-3 px-3 event-end badge rounded-pill bg-danger"
           >Event Ended</span
         >
+        {{ end }}
         {{ else }}
-        <button class="mb-3 btn btn-lg btn-success">Buy Ticket</button>
+        <span class="py-2 mb-3 px-3 event-end badge rounded-pill bg-danger"
+          >Event Ended</span
+        >
         {{ end }}
         <h5 class="text-center mb-3">
-          <a style="color: white;" href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates={{$eventStartDate}}%2F{{$eventendDate}}&details={{.Content}}&location={{.Params.address}}&text={{.Params.title}}"
-          >Add to Calendar</a
-        >
+          <a
+            style="color: white"
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates={{$eventStartDate}}%2F{{$eventendDate}}&details={{.Content}}&location={{.Params.address}}&text={{.Params.title}}"
+            >Add to Calendar</a
+          >
         </h5>
         <div>{{ partial "share-button.html" . }}</div>
       </div>
@@ -79,28 +83,25 @@
       <!-- <div
         class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center"
       > -->
+      {{ $speakers := where .Site.Pages "Section" "speakers" }} {{ range
+      .Params.talk }} {{ $talkFile := .talkFile }} {{ with site.GetPage
+      $talkFile }}
 
-      {{ $currentMeetup := .Title }} {{ $talks := where .Site.Pages "Section"
-      "talks" }} {{ $speakers := where .Site.Pages "Section" "speakers" }} {{
-      $relatedtalks := where $talks "Params.meetups" "intersect" (slice
-      $currentMeetup) }} {{ range $relatedtalks }}
       <div class="card mb-5" style="font-size: 18px">
         <div class="card-header p-4">
-          {{.Params.talkDate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{.Params.time}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
-            >{{.Params.topic}}</b
+          <b
+            >{{.Title}}</b
           >
         </div>
         <div class="card-body">
           <p class="card-text my-3">{{.Content}}</p>
 
           <ul class="align-items-center alignment-speakers">
-            {{ if ne .Params.topic "Break" }}
             <li class="pr-4 pb-2">
               <h5 style="font-weight: 700">Speakers:</h5>
             </li>
-            {{ end }} {{ $currentTalk := .Params.topic }} {{ $relatedSpeakers :=
-            where $speakers "Params.talk" "intersect" (slice $currentTalk) }} {{
-            range $relatedSpeakers }}
+            {{ range .Params.speakers }} {{ $speakerPath := .speakerPath }} {{
+            with site.GetPage $speakerPath }}
 
             <li class="px-2 pb-2">
               <div
@@ -126,16 +127,16 @@
                   </div>
                   <div class="align-items-center p-2">
                     <b class="speaker-name">{{.Params.title}}</b>
-                    <p>{{.Params.position}}</p>
+                    <p>{{.Params.description}}</p>
                   </div>
                 </a>
               </div>
             </li>
-            {{ end }}
+            {{ end }}{{ end }}
           </ul>
         </div>
       </div>
-      {{ end }}
+      {{ end }} {{ end }}
     </div>
   </div>
 </div>
@@ -148,7 +149,9 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3 text-center">
           <h1 class="pb-2 text-black">{{ .Site.Params.gallery }}</h1>
-          <h1 class="pb-3 text-black h6">{{ .Site.Params.gallerydescription }}</h1>
+          <h1 class="pb-3 text-black h6">
+            {{ .Site.Params.gallerydescription }}
+          </h1>
         </div>
       </div>
       <section class="wave-bk bg--">
@@ -190,35 +193,39 @@
               data-bs-slide-to="4"
               aria-label="Slide 5"
             ></button>
-            
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item  text-center active">
-              
-              <img src="/images/cover-bg.jpg" class="object-fit-cover" alt="Image processing workshop by opencv">
-              
-            </div>
-            <div class="carousel-item text-center" >
-            
-              <img src="/images/cover-bg.jpg" alt="Image processing workshop by opencv">
-              
+            <div class="carousel-item text-center active">
+              <img
+                src="/images/cover-bg.jpg"
+                class="object-fit-cover"
+                alt="Image processing workshop by opencv"
+              />
             </div>
             <div class="carousel-item text-center">
-              
-              <img src="/images/cover-bg.jpg" alt="Image processing workshop by opencv">
-             
+              <img
+                src="/images/cover-bg.jpg"
+                alt="Image processing workshop by opencv"
+              />
             </div>
-            <div class="carousel-item text-center" >
-             
-              <img src="/images/cover-bg.jpg" alt="Image processing workshop by opencv">
-             
+            <div class="carousel-item text-center">
+              <img
+                src="/images/cover-bg.jpg"
+                alt="Image processing workshop by opencv"
+              />
             </div>
-            <div class="carousel-item text-center" >
-             
-              <img src="/images/cover-bg.jpg" alt="Image processing workshop by opencv">
-             
+            <div class="carousel-item text-center">
+              <img
+                src="/images/cover-bg.jpg"
+                alt="Image processing workshop by opencv"
+              />
             </div>
-          
+            <div class="carousel-item text-center">
+              <img
+                src="/images/cover-bg.jpg"
+                alt="Image processing workshop by opencv"
+              />
+            </div>
           </div>
           <button
             class="carousel-control-prev"
@@ -264,6 +271,5 @@
     </div>
   </div>
 </div>
-
 
 {{ end }}

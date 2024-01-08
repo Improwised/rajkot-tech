@@ -1,16 +1,13 @@
 ---
-title: ""
+title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: false
 width: 12
-talkDate: {{ .Date }}
-time: ""
-topic: ""
-meetups:
-    - ""
+speakers:
+    - name: ""
+      speakerPath: ""
 image: ""
 metaTitle: ""
 metaDes: ""
 ---
-
 

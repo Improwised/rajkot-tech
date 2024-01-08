@@ -1,6 +1,6 @@
 ---
-title: "Munir Khakhi"
-date: 2023-12-19T11:40:16+05:30
+title: "Tapan Bavaliya"
+date: 2024-01-05T16:58:29+05:30
 draft: false
 width: 12
 image: "/images/munir.webp"

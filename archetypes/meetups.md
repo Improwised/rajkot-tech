@@ -3,16 +3,15 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: false
 width: 12
-image: ""
-meetup: ""
-meetupDate: {{ .Date }}
 startDate: {{ .Date }}
 endDate: {{ .Date }}
+image: ""
+meetupDate: {{ .Date }}
 address: ""
-price: ""
-color: ""
-locationOnMap: ""
+talk: 
+    - name: ""
+      talkFile: ""
+locationOnMap: ""  
 metaTitle: ""
 metaDes: ""
 ---
-
