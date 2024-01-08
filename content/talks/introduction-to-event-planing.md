@@ -13,6 +13,9 @@ meetups:
     - Laravel Rajkot Meetup July 2023
     - Laravel Rajkot Meetup Jun 2023
     - Laravel Rajkot Meetup March 2023
+speakers:
+    - Rakshit Menpara
+    - Munir Khakhi
 image: ""
 metaTitle: ""
 metaDes: ""
