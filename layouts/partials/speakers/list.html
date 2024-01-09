@@ -1,6 +1,5 @@
-{{ range .Pages }}
+{{ range .Paginator.Pages }}
 <div class="col">
-  
     <div class="justify-content-center text-center">
     <a href="{{.RelPermalink}}"
       ><img
@@ -19,7 +18,6 @@
       <div style="color: #879697" class="py-1 fw-bold">
         {{.Params.description}}
       </div>
-      {{/*  <p style="color: #2d2f2f">{{.Params.text}}</p>  */}}
     </div>
   
 </div>

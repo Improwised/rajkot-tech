@@ -8,7 +8,7 @@ time: "12:00"
 topic: "Docker Advance"
 speakers:
     - name: Munir Khakhi
-      speakerPath: "speakers/munir.md"
+      path: "speakers/munir.md"
 image: ""
 metaTitle: ""
 metaDes: ""

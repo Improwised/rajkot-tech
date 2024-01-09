@@ -8,9 +8,9 @@ time: "14:00"
 topic: "Docker Scrach"
 speakers:
     - name: Rakshit Menpara
-      speakerPath: "speakers/rakshit.md"
+      path: "speakers/rakshit.md"
     - name: Munir Khakhi
-      speakerPath: "speakers/munir.md"
+      path: "speakers/munir.md"
 image: ""
 metaTitle: ""
 metaDes: ""

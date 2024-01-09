@@ -5,7 +5,7 @@ draft: false
 width: 12
 speakers:
     - name: ""
-      speakerPath: ""
+      path: ""
 image: ""
 metaTitle: ""
 metaDes: ""

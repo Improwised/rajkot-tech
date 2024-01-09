@@ -3,8 +3,8 @@ title: "Tapan Bavaliya"
 date: 2024-01-05T16:58:29+05:30
 draft: false
 width: 12
-image: "/images/munir.webp"
-description: "Head of Engineering"
+image: "/images/tapan.webp"
+description: "Product Specialist"
 text: "Discover insights with Roberto Berry, renowned speaker in the events industry. Join us at Eventchamp for an unforgettable experience."
 metaTitle: "Munir Khakhi | Speaker"
 metaDes: "Munir Khakhi | Speaker"

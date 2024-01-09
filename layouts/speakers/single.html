@@ -149,8 +149,8 @@ $relatedtalks | append . }} {{ end }} {{ end }}
             <li class="pr-4 pb-2">
               <h5 style="font-weight: 700">Speakers:</h5>
             </li>
-            {{ range .Params.speakers }} {{ $speakerPath := .speakerPath }} {{
-            with site.GetPage $speakerPath }}
+            {{ range .Params.speakers }} {{ $path := .path }} {{
+            with site.GetPage $path }}
             <li class="px-2 pb-2">
               <div
                 style="background-color: #f8f8f8"

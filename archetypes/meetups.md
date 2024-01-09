@@ -10,7 +10,7 @@ meetupDate: {{ .Date }}
 address: ""
 talk: 
     - name: ""
-      talkFile: ""
+      path: ""
 locationOnMap: ""  
 metaTitle: ""
 metaDes: ""

@@ -36,7 +36,7 @@ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
         </div>
         {{ if eq .Title $title }}
         {{ if gt (time .Params.endDate) now }}
-        <button class="mb-3 btn btn-lg btn-success">Buy Ticket</button>
+        <a href="{{.Params.buyTicket}}" class="mb-3 btn btn-lg btn-success" target="_blank">Buy Ticket</a>
         {{ else }}
         <span class="py-2 mb-3 px-3 event-end badge rounded-pill bg-danger"
           >Event Ended</span
@@ -84,8 +84,8 @@ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
         class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center"
       > -->
       {{ $speakers := where .Site.Pages "Section" "speakers" }} {{ range
-      .Params.talk }} {{ $talkFile := .talkFile }} {{ with site.GetPage
-      $talkFile }}
+      .Params.talk }} {{ $path := .path }} {{ with site.GetPage
+      $path }}
 
       <div class="card mb-5" style="font-size: 18px">
         <div class="card-header p-4">
@@ -100,8 +100,8 @@ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
             <li class="pr-4 pb-2">
               <h5 style="font-weight: 700">Speakers:</h5>
             </li>
-            {{ range .Params.speakers }} {{ $speakerPath := .speakerPath }} {{
-            with site.GetPage $speakerPath }}
+            {{ range .Params.speakers }} {{ $path := .path }} {{
+            with site.GetPage $path }}
 
             <li class="px-2 pb-2">
               <div

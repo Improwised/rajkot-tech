@@ -8,7 +8,7 @@ time: "14:00"
 topic: "Vue3 Beggining"
 speakers:
     - name: Rakshit Menpara
-      speakerPath: "speakers/rakshit.md"
+      path: "speakers/rakshit.md"
 image: ""
 metaTitle: ""
 metaDes: ""

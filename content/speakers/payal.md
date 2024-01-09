@@ -3,8 +3,8 @@ title: "Payal Raviya"
 date: 2024-01-05T16:58:41+05:30
 draft: false
 width: 12
-image: "/images/munir.webp"
-description: "Head of Engineering"
+image: "/images/payal.webp"
+description: "Software Engineer"
 text: "Discover insights with Roberto Berry, renowned speaker in the events industry. Join us at Eventchamp for an unforgettable experience."
 metaTitle: "Munir Khakhi | Speaker"
 metaDes: "Munir Khakhi | Speaker"

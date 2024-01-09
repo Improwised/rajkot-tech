@@ -52,8 +52,8 @@
         <div
           class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-4"
         >
-          {{ range (where .Site.Pages "Section" "meetups") }} {{ partial
-          "meetups/home-meetups.html" . }} {{ end }}
+          {{ $meetupsPaginator := .Paginate (where .Site.RegularPages "Section"
+          "meetups") }} {{ partial "meetups/list.html" . }}
         </div>
       </div>
       <div class="text-center mt-4">
@@ -72,8 +72,11 @@
         <div
           class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center"
         >
-          {{ range (where .Site.Pages "Section" "speakers") }} {{ partial
-          "speakers/home-speakers.html" . }} {{ end }}
+          {{/* {{ $speakersPaginator := .Paginate (where .Site.Pages "Section"
+          "speakers") }} {{ partial "speakers/list.html" . }} */}} {{ $perpage
+          := 5 }} {{ range (last $perpage (first (mul $.Paginator.PageNumber
+          $perpage) (where .Data.Pages "Section" "speakers"))) }} {{ partial
+          "speakers/list.html" . }} {{ end }}
         </div>
       </div>
     </div>
