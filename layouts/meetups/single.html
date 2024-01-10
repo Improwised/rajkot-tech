@@ -150,15 +150,10 @@ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
       <div class="photo-gallery">
         <div class="container">
             <div class="row photos">
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-            </div>
+              {{ with .Params.gallery }} {{ range $index, $gallery := . }}
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href='{{ index $gallery "name" }}' data-lightbox="photos"><img class="img-fluid" src='{{ index $gallery "name" }}'></a></div>
+              {{ end }}{{ end }}
+              </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>

@@ -7,6 +7,9 @@ startDate: {{ .Date }}
 endDate: {{ .Date }}
 image: ""
 meetupDate: {{ .Date }}
+gallery:
+    - name: ""
+buyTicket: ""
 address: ""
 talk: 
     - name: ""
