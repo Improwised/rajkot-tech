@@ -59,6 +59,79 @@
 </div>
 
 <div>
+  <div class="mb-4">
+    <h2 class="text-center tu fb py-2 pt-5">Meetups</h2>
+    <div class="container pb-5">
+      <div class="row justify-content-center">
+        <div class="about-meetup-text"></div>
+        <div
+          class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-4"
+        >
+          {{ $meetupsPaginator := .Paginate (where .Site.RegularPages "Section"
+          "meetups") }} {{ partial "meetups/list.html" . }}
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="/meetups" class="btn btn-success">View more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="background-color: #f5f5f5">
+  <div class="mb-4">
+    <h2 class="text-center tu fb py-2 pt-5">Past Speakers</h2>
+    <div class="container pb-5">
+      <div class="row justify-content-center">
+        <div class="about-meetup-text"></div>
+        <div
+          class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center"
+        >
+          {{/* {{ $speakersPaginator := .Paginate (where .Site.Pages "Section"
+          "speakers") }} {{ partial "speakers/list.html" . }} */}} {{ $perpage
+          := 5 }} {{ range (last $perpage (first (mul $.Paginator.PageNumber
+          $perpage) (where .Data.Pages "Section" "speakers"))) }} {{ partial
+          "speakers/list.html" . }} {{ end }}
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="/speakers" class="btn btn-success">View more</a>
+    </div>
+  </div>
+</div>
+
+<div class="pb-3">
+  <div class="py-5" id="memories">
+    <div class="container">
+      <h2 class="text-center tu fb py-3">Gallery</h2>
+  
+      <div class="photo-gallery">
+        <div class="container">
+            <div class="row photos">
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+  
+</div>
+
+<div style="background-color: #f5f5f5">
   <div>
     <h2 class="text-center tu fb py-3 pt-5">Core Volunteers</h2>
     <div class="container pb-3">
@@ -104,80 +177,6 @@
   </div>
 </div>
 
-
-<div style="background-color: #f5f5f5">
-  <div class="mb-4">
-    <h2 class="text-center tu fb py-2 pt-5">Meetups</h2>
-    <div class="container pb-5">
-      <div class="row justify-content-center">
-        <div class="about-meetup-text"></div>
-        <div
-          class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-4"
-        >
-          {{ $meetupsPaginator := .Paginate (where .Site.RegularPages "Section"
-          "meetups") }} {{ partial "meetups/list.html" . }}
-        </div>
-      </div>
-      <div class="text-center mt-4">
-        <a href="/meetups" class="btn btn-success">View more</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div>
-  <div class="mb-4">
-    <h2 class="text-center tu fb py-2 pt-5">Past Speakers</h2>
-    <div class="container pb-5">
-      <div class="row justify-content-center">
-        <div class="about-meetup-text"></div>
-        <div
-          class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center"
-        >
-          {{/* {{ $speakersPaginator := .Paginate (where .Site.Pages "Section"
-          "speakers") }} {{ partial "speakers/list.html" . }} */}} {{ $perpage
-          := 5 }} {{ range (last $perpage (first (mul $.Paginator.PageNumber
-          $perpage) (where .Data.Pages "Section" "speakers"))) }} {{ partial
-          "speakers/list.html" . }} {{ end }}
-        </div>
-      </div>
-    </div>
-    <div class="text-center">
-      <a href="/speakers" class="btn btn-success">View more</a>
-    </div>
-  </div>
-</div>
-
-<div class="pb-3" style="background-color: #f5f5f5">
-  <div class="py-5" id="memories">
-    <div class="container">
-      <h2 class="text-center tu fb py-3">Gallery</h2>
-  
-      <div class="photo-gallery">
-        <div class="container">
-            <div class="row photos">
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/images/cover-bg.jpg" data-lightbox="photos"><img class="img-fluid" src="/images/cover-bg.jpg"></a></div>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-  
-</div>
-
 <div>
   <div>
     <h2 class="text-center tu fb py-3 pt-5">Contact Us </h2>
@@ -185,7 +184,7 @@
       <div class="row justify-content-center">
         <div class="about-meetup-text text-center">
           <h4>For any inquiries please email</h4>
-          <p>rajkottech@improwised.com</p>
+          <p class="speaker-name"><a href="mailto:rajkottech@improwised.com" class="text-dark text-decoration-none">rajkottech@improwised.com</a></p>
           <div class="text-center">
             <h4 class="pt-3">You want to Submit a Talk</h4>
             <a href='https://forms.gle/DHHBgtPjTd5Gm4hL6' target="_blank"  class="text-center fw-bold btn btn-success px-5 mt-1 mb-3"
