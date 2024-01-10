@@ -139,27 +139,59 @@ iframe{
   }
 }
 
-.addToCalendar {
-  background-color: #44c767;
-  border-radius: 28px;
-  border: 1px solid #18ab29;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 16px;
-  padding: 16px 31px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #2f6627;
-}
-.addToCalendar:hover {
-  background-color: #5cbf2a;
-}
-.addToCalendar:active {
-  position: relative;
-  top: 1px;
-}
-
 .speaker-name:hover{
    text-decoration: underline;
+}
+.image-position{
+  text-align: right;
+}
+
+@media only screen and (max-width: 780px) {
+  .image-position{
+    text-align: center;
+  }
+}
+
+
+.photo-gallery h2 {
+  font-weight:bold;
+  margin-bottom:40px;
+  padding-top:40px;
+  color:inherit;
+}
+
+@media (max-width:767px) {
+  .photo-gallery h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size:24px;
+  }
+}
+
+.photo-gallery .intro {
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto 40px;
+}
+
+.photo-gallery .intro p {
+  margin-bottom:0;
+}
+
+.photo-gallery .photos {
+  padding-bottom:20px;
+}
+
+.photo-gallery .item {
+  padding-bottom:30px;
+}
+
+.pages-display{
+  display: flex;
+}
+
+@media only screen and (max-width: 500px) {
+  .pages-display{
+    display: block;
+  }
 }

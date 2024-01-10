@@ -1,11 +1,11 @@
 ---
-title: "Introduction to Event Planing"
-date: 2023-12-25T10:27:52+05:30
+title: "Docker Advance"
+date: 2024-01-04T18:14:19+05:30
 draft: false
 width: 12
 talkDate: "12 November 2023"
 time: "12:00"
-topic: "Introduction to event planing"
+topic: "Docker Advance"
 speakers:
     - name: Munir Khakhi
       path: "speakers/munir.md"

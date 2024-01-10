@@ -1,16 +1,14 @@
 ---
-title: "Introduction to Event Planing2"
-date: 2023-12-25T08:11:52+05:30
+title: "Vue3 Beggining"
+date: 2024-01-04T18:13:33+05:30
 draft: false
 width: 12
 talkDate: "12 November 2023"
 time: "14:00"
-topic: "Introduction to event planing2"
+topic: "Vue3 Beggining"
 speakers:
     - name: Rakshit Menpara
       path: "speakers/rakshit.md"
-    - name: Munir Khakhi
-      path: "speakers/munir.md"
 image: ""
 metaTitle: ""
 metaDes: ""

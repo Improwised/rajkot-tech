@@ -1,15 +1,25 @@
 ---
 title: "Laravel Rajkot Meetup January 2023"
-date: 2023-12-15T15:30:28+05:30
+date: 2023-12-17T15:30:28+05:30
 draft: false
 width: 12
 startDate: 2023-12-28T15:30:00+05:30
 endDate: 2023-12-28T16:30:00+05:30
 image: "/images/meetup.webp"
-meetup: "past"
-price: ""
-color: "#e94848"
 meetupDate: "12 OCTOBER 2023"
+buyTicket: "https://allevents.in/rajkot/laravel-rajkot-meetup-october-2023/80002722358523"
+talk: 
+    - name: Introduction to Event Planing2
+      path: "talks/introduction-to-event-planing.md"
+gallery:
+    - name: "/images/cover-bg.jpg"
+    - name: "/images/cover-bg.jpg"
+    - name: "/images/cover-bg.jpg"
+    - name: "/images/cover-bg.jpg"
+    - name: "/images/cover-bg.jpg"
+    - name: "/images/cover-bg.jpg"
+    - name: "/images/cover-bg.jpg"
+    - name: "/images/cover-bg.jpg"
 address: "RK Univercity Rajkot"
 locationOnMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.4238969546304!2d70.75028447511475!3d22.261926944285523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cbaf9787c173%3A0x8f107a3a70a8ad61!2sRK%20University%20City%20Campus!5e0!3m2!1sen!2sin!4v1703145039679!5m2!1sen!2sin"
 metaTitle: "Laravel Rajkot Meetup July 2023 | Rajkot Tech"
