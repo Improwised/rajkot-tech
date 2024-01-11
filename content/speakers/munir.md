@@ -3,9 +3,9 @@ title: "Munir Khakhi"
 date: 2023-12-19T11:40:16+05:30
 draft: false
 width: 12
-image: "/images/munir.webp"
-linkedin: "https://www.linkedin.com/in/payal-raviya-b6a085220"
-description: "Head of Engineering"
+image: "/images/speakers/munir.webp"
+linkedin: "https://www.linkedin.com/in/munir-khakhi/"
+description: "Head of Engineering Improwised Technologies"
 text: "Discover insights with Roberto Berry, renowned speaker in the events industry. Join us at Eventchamp for an unforgettable experience."
 metaTitle: "Munir Khakhi | Speaker"
 metaDes: "Munir Khakhi | Speaker"

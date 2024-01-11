@@ -82,6 +82,12 @@
   padding-right: 15px !important;
 }
 
+.about-meetup-text-home {
+  max-width: 800px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
 .tag-position {
   position: absolute;
   transform: rotate(12deg);

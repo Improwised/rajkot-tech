@@ -1,0 +1,11 @@
+---
+title: "Shailesh Davara"
+date: 2024-01-11T11:13:13+05:30
+draft: false
+width: 12
+image: "/images/speakers/shailesh-davara.jpeg"
+linkedin: "https://www.linkedin.com/in/sdavara/"
+description: "CEO Improwised Technologies"
+metaTitle: "Shailesh Davara | Volunteer"
+metaDes: "Shailesh Davara | Volunteer"
+---
