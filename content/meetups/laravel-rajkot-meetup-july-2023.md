@@ -3,42 +3,36 @@ title: "Laravel Rajkot Meetup July 2023"
 date: 2023-12-18T15:30:28+05:30
 draft: false
 width: 12
-startDate: 2023-12-28T15:30:00+05:30
-endDate: 2023-12-28T16:30:00+05:30
-image: "/images/meetup.webp"
-meetupDate: "12 OCTOBER 2023"
-buyTicket: "https://allevents.in/rajkot/laravel-rajkot-meetup-october-2023/80002722358523"
+startDate: 2023-07-09T10:00:00+05:30
+endDate: 2023-07-09T12:30:00+05:30
+image: "/images/meetup/laravel-rajkot-meetup-july-2023.jpg"
+meetupDate: "09 July 2023"
+buyTicket: ""
 talk: 
-    - name: Introduction to Event Planing
-      path: "talks/introduction-to-event-planing2.md"
+    - name: Common Challenges Faced by Web Developers
+      path: "talks/common-challenges-faced-by-web-developers.md"
+    - name: Laravel Development With Docker
+      path: "talks/laravel-development-with-docker.md"
 gallery:
-    - name: "/images/cover-bg.jpg"
-    - name: "/images/cover-bg.jpg"
-    - name: "/images/cover-bg.jpg"
-    - name: "/images/cover-bg.jpg"
-    - name: "/images/cover-bg.jpg"
-    - name: "/images/cover-bg.jpg"
-    - name: "/images/cover-bg.jpg"
-    - name: "/images/cover-bg.jpg"
-address: "RK Univercity Rajkot"
+    - name: "/images/laravel-rajkot-meetup-july-2023/image1.jpeg"
+    - name: "/images/laravel-rajkot-meetup-july-2023/image2.jpeg"
+    
+address: "RK University City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India"
 locationOnMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.4238969546304!2d70.75028447511475!3d22.261926944285523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cbaf9787c173%3A0x8f107a3a70a8ad61!2sRK%20University%20City%20Campus!5e0!3m2!1sen!2sin!4v1703145039679!5m2!1sen!2sin"
 metaTitle: "Laravel Rajkot Meetup July 2023 | Rajkot Tech"
 metaDes: "Laravel Rajkot Meetup July 2023 | Rajkot Tech"
 ---
 
-- This meetup is going to be a special one.
-- Community members from another city are going to visit us. How cool
-  is that? 
--  That is how we all will learn and share. 
-- As always join us to share
-  knowledge and have fun.
--  Per our standards, we will have 2
-   talks a quiz, and Q & A sessions. 
-- Snacks will be served too! 
-- Note 1:
-  We have a WhatsApp group for the community.
-- If you're not part of it
-  yet please use this link to join -
-  chat.whatsapp.com/BQOZJ4OMm545867OzZdB5b (The link doesn't work with
-  HTTPS here) See you all soon. Also check out other Workshops in
-  Rajkot, Meetups in Rajkot, Conferences in Rajkot.
+- It's time again. We are excited to arrange the community gathering.
+
+- Join us let's meet share knowledge and have fun.
+
+- Per our standards, we will have 2 talks a quiz, and Q & A sessions.
+
+- Snacks will be served too!
+
+- Note 1: We have a WhatsApp group for the community. If you're not part of it yet, please use this link to join - chat.whatsapp.com/BQOZJ4OMm545867OzZdB5b (Link doesn't work with HTTPS here)
+
+- Note 2: There is a speakers' lunch arranged after the event. The attendees may also join. If you wish to join, stay around after the event. The volunteers as well as attendees need to pay for their own lunch.
+
+- See you all soon.

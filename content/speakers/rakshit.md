@@ -3,12 +3,13 @@ title: "Rakshit Menpara"
 date: 2023-12-19T11:40:08+05:30
 draft: false
 width: 12
-image: "/images/rakshit.webp"
-linkedin: "https://www.linkedin.com/in/payal-raviya-b6a085220"
-description: "CTO"
+image: "/images/speakers/rakshit.webp"
+linkedin: "https://www.linkedin.com/in/rakshitmenpara/"
+twitter: "https://twitter.com/deltasquare4"
+description: "CTO Improwised Technologies"
 text: "Discover insights with Roberto Berry, renowned speaker in the events industry. Join us at Eventchamp for an unforgettable experience."
-metaTitle: "Rakshit Menpara |Speaker"
-metaDes: "Rakshit Menpara | Speaker"
+metaTitle: "Rakshit Menpara |Speaker | Rajkot tech"
+metaDes: "Rakshit Menpara | Speaker | Rajkot tech"
 ---
 
 

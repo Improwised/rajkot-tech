@@ -11,14 +11,23 @@
     /></a>
   </div>
 
-    <div class="card-body text-center">
-      <a href="{{.RelPermalink}}" style="color: black; text-decoration:none"
-        ><h5 class="card-title mt-2">{{.Params.title}}</h5></a
-      >
-      <div style="color: #879697" class="py-1 fw-bold">
-        {{.Params.description}}
-      </div>
-    </div>
+  <div class="card-body">
+    <a
+      href="{{.RelPermalink}}"
+      style="color: black; text-decoration: none"
+      ><div class="text-center justify-content-center mt-2 px-5">
+        <h5 class="card-title">{{.Title}}</h5>
+                <div class="text-center d-flex justify-content-center mt-2 mb-4">
+          <a href="{{.Params.linkedin}}"
+            ><img src="/images/linkedin.svg" class=""
+          /></a>
+          <a href="{{.Params.twitter}}"
+            ><img src="/images/twitter.svg" class="mx-2"
+          /></a>
+        </div></div
+    ></a>
+    
+  </div>
   
 </div>
 {{ end }}
