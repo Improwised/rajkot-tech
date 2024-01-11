@@ -7,7 +7,7 @@ speakers:
     - name: "Harsh Manvar"
       path: "speakers/harsh-manvar.md"
 image: ""
-metaTitle: "Laravel Development With Docker"
-metaDes: "Laravel Development With Docker"
+metaTitle: "Laravel Development With Docker | Talk | Rajkot tech"
+metaDes: "Laravel Development With Docker | Talk | Rajkot tech"
 ---
 

@@ -5,7 +5,7 @@ draft: false
 width: 12
 startDate: 2019-12-15T10:00:45+05:30
 endDate: 2019-12-15T02:00:45+05:30
-image: "/images/meetup/vue-rajkot.jpg"
+image: "/images/meetup/vue-rajkot.png"
 meetupDate: "15 December 2019"
 gallery:
     - name: ""

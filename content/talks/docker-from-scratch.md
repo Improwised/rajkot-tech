@@ -7,8 +7,8 @@ speakers:
     - name: "Rakshit Menpara"
       path: "speakers/rakshit.md"
 image: ""
-metaTitle: "Docker From Scratch"
-metaDes: "Docker From Scratch"
+metaTitle: "Docker From Scratch | Talk | Rajkot tech"
+metaDes: "Docker From Scratch | Talk | Rajkot tech"
 ---
 
 What is Docker, and how it helps make development and deployment easier

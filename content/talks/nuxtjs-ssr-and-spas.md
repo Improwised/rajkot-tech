@@ -7,7 +7,7 @@ speakers:
     - name: "Nikunj Kanetiya"
       path: "speakers/nikunj-kanetiya.md"
 image: ""
-metaTitle: "Nuxtjs Ssr and Spas"
-metaDes: "Nuxtjs Ssr and Spas"
+metaTitle: "Nuxtjs Ssr and Spas | Talk | Rajkot tech"
+metaDes: "Nuxtjs Ssr and Spas | Talk | Rajkot tech"
 ---
 

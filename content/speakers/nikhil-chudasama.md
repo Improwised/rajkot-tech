@@ -5,7 +5,8 @@ draft: false
 width: 12
 image: "/images/speakers/nikhil-chudasama.jpeg"
 linkedin: "https://www.linkedin.com/in/nikhil-chudasama/"
+twitter: "https://twitter.com/iNikChudasama"
 description: "Full Stack Developer"
-metaTitle: "Nikhil Chudasama | Speaker"
-metaDes: "Nikhil Chudasama | Spekaer"
+metaTitle: "Nikhil Chudasama | Speaker | Rajkot tech"
+metaDes: "Nikhil Chudasama | Spekaer | Rajkot tech"
 ---

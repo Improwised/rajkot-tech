@@ -7,7 +7,7 @@ speakers:
     - name: "Sagar Naliyapara"
       path: "speakers/sagar-naliyapara.md"
 image: ""
-metaTitle: "Build Restful Apis With Improved Dx"
-metaDes: "Build Restful Apis With Improved Dx"
+metaTitle: "Build Restful Apis With Improved Dx | Talk | Rajkot tech"
+metaDes: "Build Restful Apis With Improved Dx | Talk | Rajkot tech"
 ---
 

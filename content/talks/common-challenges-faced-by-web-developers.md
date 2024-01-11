@@ -7,7 +7,7 @@ speakers:
     - name: "Jagruti Varu"
       path: "speakers/jagruti-varu.md"
 image: ""
-metaTitle: "Common Challenges Faced by Web Developers"
-metaDes: "Common Challenges Faced by Web Developers"
+metaTitle: "Common Challenges Faced by Web Developers | Talk | Rajkot tech"
+metaDes: "Common Challenges Faced by Web Developers | Talk | Rajkot tech"
 ---
 

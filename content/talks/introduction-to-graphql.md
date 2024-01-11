@@ -7,7 +7,7 @@ speakers:
     - name: "Chirag Lathiya"
       path: "speakers/chirag-lathiya.md"
 image: ""
-metaTitle: "Introduction to Graphql"
-metaDes: "Introduction to Graphql"
+metaTitle: "Introduction to Graphql | Talk | Rajkot tech"
+metaDes: "Introduction to Graphql | Talk | Rajkot tech"
 ---
 

@@ -9,7 +9,7 @@ speakers:
     - name: "Bonni Satani"
       path: "speakers/bonni-satani.md"
 image: ""
-metaTitle: "Seo for Developers"
-metaDes: "Seo for Developers"
+metaTitle: "Seo for Developers | Talk | Rajkot tech"
+metaDes: "Seo for Developers | Talk | Rajkot tech"
 ---
 

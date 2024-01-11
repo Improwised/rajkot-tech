@@ -7,8 +7,8 @@ speakers:
     - name: "Hari Krushna"
       path: "speakers/hari-krushna.md"
 image: ""
-metaTitle: "Flawless CI/CD via Github Actions"
-metaDes: "Flawless CI/CD via Github Actions"
+metaTitle: "Flawless CI/CD via Github Actions | Talk | Rajkot tech"
+metaDes: "Flawless CI/CD via Github Actions | Talk | Rajkot tech"
 ---
 
 - He will be talking about the Software project delivery process, understanding of 

@@ -5,9 +5,10 @@ draft: false
 width: 12
 image: "/images/speakers/hari-krushna.jpg"
 linkedin: "https://www.linkedin.com/in/harikrushna-adiecha-19434458/"
+twitter: "https://twitter.com/HK_Adiecha"
 description: "Fullstack Developer"
-metaTitle: "Hari Krushna | Speaker"
-metaDes: "Hari Krushna | Speaker"
+metaTitle: "Hari Krushna | Speaker | Rajkot tech"
+metaDes: "Hari Krushna | Speaker | Rajkot tech"
 ---
 
  - He is a passionate software artisan. majorly working with PHP laravel and python. 

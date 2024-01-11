@@ -5,7 +5,7 @@ draft: false
 width: 12
 startDate: 2023-03-26T10:00:00+05:30
 endDate: 2023-03-26T12:00:00+05:30
-image: "/images/meetup/laravel-rajkot-meetup-march-2023.jpg"
+image: "/images/meetup/laravel-rajkot-meetup-march-2023.png"
 meetupDate: "26 March 2023"
 address: "RK University City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India"
 buyTicket: ""

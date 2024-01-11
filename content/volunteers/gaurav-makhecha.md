@@ -5,7 +5,8 @@ draft: false
 width: 12
 image: "/images/speakers/gaurav-makhecha.jpeg"
 linkedin: "https://www.linkedin.com/in/gauravmakhecha/"
+twitter: "https://twitter.com/gauravmakhecha"
 description: "Solving Real-world Challenges with Tech | Process Freak | Reader | Observer"
-metaTitle: "Gaurav Makhecha | Volunteer"
-metaDes: "Gaurav Makhecha | Volunteer"
+metaTitle: "Gaurav Makhecha | Volunteer  | Rajkot tech"
+metaDes: "Gaurav Makhecha | Volunteer  | Rajkot tech"
 ---

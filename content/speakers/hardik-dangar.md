@@ -5,7 +5,8 @@ draft: false
 width: 12
 image: "/images/speakers/hardik-danger.jpeg"
 linkedin: "https://www.linkedin.com/in/hardikdangar/"
+twitter: ""
 description: "Co Founder Sphere Rays, Web Developer"
-metaTitle: "Hardik Dangar | Speaker"
-metaDes: "Hardik Dangar | Speaker"
+metaTitle: "Hardik Dangar | Speaker | Rajkot tech"
+metaDes: "Hardik Dangar | Speaker | Rajkot tech"
 ---

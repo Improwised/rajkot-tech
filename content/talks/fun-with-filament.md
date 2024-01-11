@@ -7,7 +7,7 @@ speakers:
     - name: "Utsav Somaiya"
       path: "speakers/utsav-somaiya.md"
 image: ""
-metaTitle: "Fun With Filament"
-metaDes: "Fun With Filament"
+metaTitle: "Fun With Filament | Talk | Rajkot tech"
+metaDes: "Fun With Filament | Talk | Rajkot tech"
 ---
 

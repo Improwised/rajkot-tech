@@ -7,7 +7,7 @@ speakers:
     - name: "Hardik Dangar"
       path: "speakers/hardik-dangar.md"
 image: ""
-metaTitle: "Dependency Injection and Containers"
-metaDes: "Dependency Injection and Containers"
+metaTitle: "Dependency Injection and Containers | Talk | Rajkot tech"
+metaDes: "Dependency Injection and Containers | Talk | Rajkot tech"
 ---
 

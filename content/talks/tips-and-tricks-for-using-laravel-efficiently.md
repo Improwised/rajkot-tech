@@ -7,7 +7,7 @@ speakers:
     - name: "Hari Krushna"
       path: "speakers/hari-krushna.md"
 image: ""
-metaTitle: "Tips and Tricks for Using Laravel Efficiently"
-metaDes: "Tips and Tricks for Using Laravel Efficiently"
+metaTitle: "Tips and Tricks for Using Laravel Efficiently | Talk | Rajkot tech"
+metaDes: "Tips and Tricks for Using Laravel Efficiently | Talk | Rajkot tech"
 ---
 

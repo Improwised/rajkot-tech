@@ -7,8 +7,8 @@ speakers:
     - name: "Nikhil Chudasama"
       path: "speakers/nikhil-chudasama.md"
 image: ""
-metaTitle: "Laravel Scout With Typesense"
-metaDes: "Laravel Scout With Typesense"
+metaTitle: "Laravel Scout With Typesense | Talk | Rajkot tech"
+metaDes: "Laravel Scout With Typesense | Talk | Rajkot tech"
 ---
 
 - We're honoured to have Nikhil Chudasama 🤩, a seasoned Laravel enthusiast👨🏻‍💻, join us as a speaker🎤. And he is going to share knowledge about Laravel Scout with Typesense!😱

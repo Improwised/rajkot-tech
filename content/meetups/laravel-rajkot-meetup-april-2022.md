@@ -5,7 +5,7 @@ draft: false
 width: 12
 startDate: 2022-04-17T10:00:00+05:30
 endDate: 2022-04-17T12:00:00+05:30
-image: "/images/meetup/laravel-rajkot-meetup-april-2022.jpg"
+image: "/images/meetup/laravel-rajkot-meetup-april-2022.png"
 meetupDate: "17 April 2022"
 gallery:
     - name: ""

@@ -5,7 +5,8 @@ draft: false
 width: 12
 image: "/images/speakers/shailesh-davara.jpeg"
 linkedin: "https://www.linkedin.com/in/sdavara/"
+twitter: "https://twitter.com/sdavara"
 description: "CEO Improwised Technologies"
-metaTitle: "Shailesh Davara | Volunteer"
-metaDes: "Shailesh Davara | Volunteer"
+metaTitle: "Shailesh Davara | Volunteer  | Rajkot tech"
+metaDes: "Shailesh Davara | Volunteer  | Rajkot tech"
 ---

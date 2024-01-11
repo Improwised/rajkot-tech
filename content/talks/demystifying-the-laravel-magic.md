@@ -7,7 +7,7 @@ speakers:
     - name: "Gaurav Makhecha"
       path: "speakers/gaurav-makhecha.md"
 image: ""
-metaTitle: "Demystifying the Laravel Magic"
-metaDes: "Demystifying the Laravel Magic"
+metaTitle: "Demystifying the Laravel Magic | Talk | Rajkot tech"
+metaDes: "Demystifying the Laravel Magic | Talk | Rajkot tech"
 ---
 

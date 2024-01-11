@@ -5,7 +5,7 @@ draft: false
 width: 12
 startDate: 2019-10-20T10:00:30+05:30
 endDate: 2019-10-20T12:00:30+05:30
-image: "/images/meetup/laravel-rajkot-meetup-october-2019.jpg"
+image: "/images/meetup/laravel-rajkot-meetup-october-2019.png"
 meetupDate: "20 October 2019"
 gallery:
     - name: "/images/laravel-rajkot-meetup-october-2019/image1.jpeg"

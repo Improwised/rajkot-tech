@@ -5,7 +5,8 @@ draft: false
 width: 12
 image: "/images/speakers/chintan-banugaria.jpeg"
 linkedin: "https://www.linkedin.com/in/chintanbanugaria/"
+twitter: "https://twitter.com/92tops"
 description: "Full Stack Developer"
-metaTitle: "Chintan Banugaria | Speaker"
-metaDes: "Chintan Banugaria | Speaker"
+metaTitle: "Chintan Banugaria | Speaker | Rajkot tech"
+metaDes: "Chintan Banugaria | Speaker | Rajkot tech"
 ---

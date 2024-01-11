@@ -7,7 +7,7 @@ speakers:
     - name: "Hari Krushna"
       path: "/speakers/hari-krushna.md"
 image: ""
-metaTitle: "Basic Introduction of Vuejs"
-metaDes: "Basic Introduction of Vuejs"
+metaTitle: "Basic Introduction of Vuejs | Talk | Rajkot tech"
+metaDes: "Basic Introduction of Vuejs | Talk | Rajkot tech"
 ---
 

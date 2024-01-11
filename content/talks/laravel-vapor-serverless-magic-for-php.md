@@ -7,7 +7,7 @@ speakers:
     - name: "Chintan Banugaria"
       path: "speakers/chintan-banugaria.md"
 image: ""
-metaTitle: "Laravel Vapor Serverless Magic for Php"
-metaDes: "Laravel Vapor Serverless Magic for Php"
+metaTitle: "Laravel Vapor Serverless Magic for Php | Talk | Rajkot tech"
+metaDes: "Laravel Vapor Serverless Magic for Php | Talk | Rajkot tech"
 ---
 

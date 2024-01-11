@@ -5,7 +5,8 @@ draft: false
 width: 12
 image: "/images/speakers/siddharth-ghediya.jpeg"
 linkedin: "https://www.linkedin.com/in/siddharthghedia/"
+twitter: "https://twitter.com/siddharthghedia"
 description: "Laravel Developer"
-metaTitle: "Siddharth Ghediya | Volunteer"
-metaDes: "Siddharth Ghediya | Volunteer"
+metaTitle: "Siddharth Ghediya | Volunteer  | Rajkot tech"
+metaDes: "Siddharth Ghediya | Volunteer  | Rajkot tech"
 ---

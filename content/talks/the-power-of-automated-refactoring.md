@@ -7,7 +7,7 @@ speakers:
     - name: "Hiren Keraliya"
       path: "speakers/hiren-keraliya.md"
 image: ""
-metaTitle: "The Power of Automated Refactoring"
-metaDes: "The Power of Automated Refactoring"
+metaTitle: "The Power of Automated Refactoring | Talk | Rajkot tech"
+metaDes: "The Power of Automated Refactoring | Talk | Rajkot tech"
 ---
 
