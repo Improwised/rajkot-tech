@@ -7,7 +7,7 @@
 {{ range .Paginator.Pages  }}
 <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4">
   <div class="card h-100 shadow-sm" style="position: relative">
-    <a href="{{ .RelPermalink }}"
+    <a href="{{ .Permalink }}"
     ><img src="{{.Params.image}}" style="object-fit: cover;" class="card-img-top" alt="..."
     /></a>
 
@@ -42,7 +42,7 @@
         Past
       </div>
       {{ end }}
-      <a href="{{ .RelPermalink }}" style="color: black"
+      <a href="{{ .Permalink }}" style="color: black"
         ><h5 class="card-title">{{.Params.title}}</h5></a
       >
       <div style="color: #899fa0" class="py-1">{{.Params.address}}</div>

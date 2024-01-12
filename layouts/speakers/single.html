@@ -79,7 +79,7 @@ $relatedtalks | append . }} {{ end }} {{ end }}
           }} {{ end }} {{ end }} {{ if $found }} {{ $relatedmeetups =
           $relatedmeetups | append . }} {{ end }} {{ end }} {{ range
           $relatedmeetups }}
-          <a href="{{ .RelPermalink }}" class="text-end fw-bold text-black"
+          <a href="{{ .Permalink }}" class="text-end fw-bold text-black"
             >{{ .Title }}</a
           >
           {{ end }}
@@ -99,7 +99,7 @@ $relatedtalks | append . }} {{ end }} {{ end }}
                 class="p-2 align-items-center"
               >
                 <a
-                  href="{{.RelPermalink}}"
+                  href="{{.Permalink}}"
                   class="d-flex align-items-center"
                   style="
                     background-color: #f8f8f8;
