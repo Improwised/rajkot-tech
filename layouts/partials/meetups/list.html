@@ -8,8 +8,14 @@
 <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4">
   <div class="card h-100 shadow-sm" style="position: relative">
     <a href="{{ .Permalink }}"
-    ><img src="{{.Params.image}}" style="object-fit: cover;" class="card-img-top" alt="..."
-    /></a>
+    >
+    {{ $image := resources.Get .Params.image }}
+        {{ $image := $image.Resize "380x webp" }}
+        {{ with $image 
+        }}
+        <img src="{{ .RelPermalink }}" height="203" width="406" style="object-fit: cover;" class="card-img-top" alt="{{.Title}}">
+        {{ end }}
+</a>
 
     <div class="card-body">
       <div class="clearfix mb-3">
