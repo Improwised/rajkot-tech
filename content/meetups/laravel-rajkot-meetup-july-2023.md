@@ -1,6 +1,6 @@
 ---
 title: "Laravel Rajkot Meetup July 2023"
-date: 2023-12-18T15:30:28+05:30
+date: 2023-07-09T10:00:00+05:30
 draft: false
 width: 12
 startDate: 2023-07-09T10:00:00+05:30

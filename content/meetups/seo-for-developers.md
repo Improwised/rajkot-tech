@@ -1,6 +1,6 @@
 ---
 title: "Seo for Developers"
-date: 2024-01-10T21:35:49+05:30
+date: 2020-02-09T10:00:49+05:30
 draft: false
 width: 12
 startDate: 2020-02-09T10:00:49+05:30

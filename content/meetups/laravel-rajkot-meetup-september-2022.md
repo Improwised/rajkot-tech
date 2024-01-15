@@ -1,6 +1,6 @@
 ---
 title: "Laravel Rajkot Meetup September 2022"
-date: 2024-01-10T18:09:08+05:30
+date: 2022-09-25T10:00:08+05:30
 draft: false
 width: 12
 startDate: 2022-09-25T10:00:08+05:30

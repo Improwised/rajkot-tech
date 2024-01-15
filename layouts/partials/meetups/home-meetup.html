@@ -1,0 +1,60 @@
+{{ $title := ""}}
+{{ $recentPage := first 1 (where .Paginator.Pages "Section" "meetups") }}
+{{ range $recentPage }}
+{{ $title = .Title }}
+{{ end }}
+
+{{ range first 3 .Paginator.Pages  }}
+<div class="col-sm-12 col-xs-12 col-md-6 col-lg-4">
+  <div class="card h-100 shadow-sm" style="position: relative">
+    <a href="{{ .Permalink }}"
+    >
+    {{ $image := resources.Get .Params.image }}
+        {{ $image := $image.Resize "380x webp" }}
+        {{ with $image 
+        }}
+        <img src="{{ .RelPermalink }}" height="203" width="406" style="object-fit: cover;" class="card-img-top" alt="{{.Title}}">
+        {{ end }}
+</a>
+
+    <div class="card-body">
+      <div class="clearfix mb-3">
+        <span class="float-start badge rounded-pill bg-success"
+          >{{.Params.meetupDate}}</span
+        >
+      </div>
+      {{ if eq .Title $title }}
+      {{ if gt (time .Params.endDate) now }}
+      <div
+        class="label-top shadow-sm tag-position"
+        style="background-color: #8bc24a;"
+      >
+        Upcoming
+      </div>
+      {{ else }}
+      <div
+        class="label-top shadow-sm tag-position"
+        style="background-color: #e94848;"
+      >
+        Past
+      </div>
+      {{ end }}
+      
+      {{ else }}
+      <div
+        class="label-top shadow-sm tag-position"
+        style="background-color: #e94848;"
+      >
+        Past
+      </div>
+      {{ end }}
+      <a href="{{ .Permalink }}" style="color: black"
+        ><h5 class="card-title">{{.Params.title}}</h5></a
+      >
+      <div style="color: #899fa0" class="py-1">{{.Params.address}}</div>
+
+    </div>
+  </div>
+</div>
+{{ end }}
+

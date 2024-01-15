@@ -1,6 +1,6 @@
 ---
 title: "Laravel Rajkot Meetup October 2019"
-date: 2024-01-10T19:06:30+05:30
+date: 2019-10-20T10:00:30+05:30
 draft: false
 width: 12
 startDate: 2019-10-20T10:00:30+05:30
