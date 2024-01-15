@@ -4,7 +4,7 @@
     <a href="{{.Permalink}}" aria-label="{{ .Title }}">
       {{ $image := resources.Get .Params.image }} {{ $image := $image.Resize
       "400x webp" }} {{ with $image }} 
-      <img src="{{ .RelPermalink }}" height="200" width="200" style=" border-radius:50%; object-fit:cover;" alt={{.Params.Title}}> 
+      <img src="{{ .RelPermalink }}" height="200" width="200" style=" border-radius:50%; object-fit:cover;" alt={{.Title}}> 
       {{ end }}
       </a>
   </div>
