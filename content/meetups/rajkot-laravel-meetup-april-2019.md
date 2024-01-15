@@ -1,6 +1,6 @@
 ---
 title: "Rajkot Laravel Meetup April 2019"
-date: 2024-01-10T21:04:50+05:30
+date: 2019-04-14T10:00:50+05:30
 draft: false
 width: 12
 startDate: 2019-04-14T10:00:50+05:30

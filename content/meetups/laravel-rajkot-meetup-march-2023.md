@@ -1,6 +1,6 @@
 ---
 title: "Laravel Rajkot Meetup March 2023"
-date: 2023-12-20T15:26:08+05:30
+date: 2023-03-26T10:00:00+05:30
 draft: false
 width: 12
 startDate: 2023-03-26T10:00:00+05:30

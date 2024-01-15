@@ -107,7 +107,7 @@
           class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-4"
         >
           {{ $meetupsPaginator := .Paginate (where .Site.RegularPages "Section"
-          "meetups") }} {{ partial "meetups/list.html" . }}
+          "meetups") }} {{ partial "meetups/home-meetup.html" . }}
         </div>
       </div>
       <div class="text-center mt-4">
@@ -130,7 +130,7 @@
           "speakers") }} {{ partial "speakers/list.html" . }} */}} {{ $perpage
           := 5 }} {{ range (last $perpage (first (mul $.Paginator.PageNumber
           $perpage) (where .Data.Pages "Section" "speakers"))) }} {{ partial
-          "speakers/list.html" . }} {{ end }}
+          "speakers/home-speaker.html" . }} {{ end }}
         </div>
       </div>
     </div>
@@ -284,19 +284,22 @@
 <div style="background-color: #f5f5f5">
   <div>
     <h4 class="text-center tu fb py-3 pt-5 h2">Core Volunteers</h4>
-    <div class="container pb-3">
+    <div class="pb-3">
       <div class="row justify-content-center">
         {{range where .Site.Pages "Section" "volunteers"}} {{if eq .RelPermalink
         "/volunteers/"}} {{else}}
-        <div class="col-sm-6 col-xs-2 col-md-4 col-lg-3 mt-4">
+        <div class="col-sm-6 col-xs-2 col-md-4 col-lg-2 mt-4">
           <div class="justify-content-center text-center">
-            <img
-                src="{{.Params.image}}"
+            {{ $image := resources.Get .Params.image }} {{ $image :=
+              $image.Resize "550x webp" }} {{ with $image }}
+              <img
+                src="{{ .RelPermalink }}"
                 height="200px"
                 width="200px"
                 style="object-fit: cover; border-radius:50%;"
                 alt="{{.Params.metaTitle}}"
-            />
+              />
+              {{ end }}
           </div>
 
           <div class="card-body">

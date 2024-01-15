@@ -1,6 +1,6 @@
 ---
 title: "Docker From Scratch"
-date: 2024-01-10T20:33:00+05:30
+date: 2019-08-11T10:00:00+05:30
 draft: false
 width: 12
 startDate: 2019-08-11T10:00:00+05:30
