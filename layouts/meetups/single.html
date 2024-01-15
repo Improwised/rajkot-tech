@@ -11,13 +11,9 @@ $dateString := .Params.endDate }} {{ $location := "Asia/Kolkata" }}
 
 {{ $dateObj := time $dateString $location }} {{ $utcDate := $dateObj.UTC }} {{
 $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
-:= dateFormat "20060102T150405Z" $formattedDate }} 
-
-{{ $title := ""}} 
-{{ $recentPage := first 1 (where .Site.Pages "Section" "meetups") }} 
-{{ range $recentPage }} 
-{{ $title = .Title }} 
-{{ end }}
+:= dateFormat "20060102T150405Z" $formattedDate }} {{ $title := ""}} {{
+$recentPage := first 1 (where .Site.Pages "Section" "meetups") }} {{ range
+$recentPage }} {{ $title = .Title }} {{ end }}
 
 <div class="event-hero-unit">
   <div class="event-background">
@@ -34,26 +30,29 @@ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
           <time class="tu">{{ .Params.meetupDate }}</time>
           <address>{{ .Params.address }}.</address>
         </div>
-        {{ if eq .Title $title }}
-        {{ if gt (time .Params.endDate) now }}
-        <a href="{{.Params.buyTicket}}" class="mb-3 btn btn-lg btn-success" target="_blank">Buy Ticket</a>
+        {{ if eq .Title $title }} {{ if gt (time .Params.endDate) now }}
+        <a
+          href="{{.Params.buyTicket}}"
+          class="mb-3 btn btn-lg btn-success"
+          target="_blank"
+          >Buy Ticket</a
+        >
         {{ else }}
         <span class="py-2 mb-3 px-3 event-end badge rounded-pill bg-danger"
           >Event Ended</span
         >
-        {{ end }}
-        {{ else }}
+        {{ end }} {{ else }}
         <span class="py-2 mb-3 px-3 event-end badge rounded-pill bg-danger"
           >Event Ended</span
         >
         {{ end }}
-        <h5 class="text-center mb-3">
+        <h2 class="text-center mb-3 h5">
           <a
             style="color: white"
             href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates={{$eventStartDate}}%2F{{$eventendDate}}&details={{.Content}}&location={{.Params.address}}&text={{.Params.title}}"
             >Add to Calendar</a
           >
-        </h5>
+        </h2>
         <div>{{ partial "share-button.html" . }}</div>
       </div>
     </div>
@@ -84,24 +83,21 @@ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
         class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center"
       > -->
       {{ $speakers := where .Site.Pages "Section" "speakers" }} {{ range
-      .Params.talk }} {{ $path := .path }} {{ with site.GetPage
-      $path }}
+      .Params.talk }} {{ $path := .path }} {{ with site.GetPage $path }}
 
       <div class="card mb-5" style="font-size: 18px">
         <div class="card-header p-4">
-          <b
-            >{{.Title}}</b
-          >
+          <b>{{.Title}}</b>
         </div>
         <div class="card-body">
           <p class="card-text my-3">{{.Content}}</p>
 
           <ul class="align-items-center alignment-speakers">
             <li class="pr-4 pb-2">
-              <h5 style="font-weight: 700">Speakers:</h5>
+              <h2 style="font-weight: 700" class="h5">Speakers:</h2>
             </li>
-            {{ range .Params.speakers }} {{ $path := .path }} {{
-            with site.GetPage $path }}
+            {{ range .Params.speakers }} {{ $path := .path }} {{ with
+            site.GetPage $path }}
 
             <li class="px-2 pb-2">
               <div
@@ -118,16 +114,19 @@ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
                   "
                 >
                   <div class="p-2">
+                    {{ $image := resources.Get .Params.image }} {{ $image :=
+                    $image.Resize "350x webp" }} {{ with $image }}
                     <img
-                      src="{{.Params.image}}"
+                      src="{{ .RelPermalink }}"
                       height="75"
                       width="75"
-                      style="border-radius: 50px; object-fit:cover"
+                      alt="{{ .Title }}"
+                      style="border-radius: 50px; object-fit: cover"
                     />
+                    {{ end }}
                   </div>
                   <div class="align-items-center d-flex p-2">
                     <b class="speaker-name">{{.Params.title}}</b>
-                   
                   </div>
                 </a>
               </div>
@@ -141,32 +140,49 @@ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
   </div>
 </div>
 
-
+{{ with .Params.gallery }} {{ if and (gt (len .) 0) (ne (index . 0 "name") "")
+}}
 <div class="pb-3" style="background-color: #f5f5f5">
   <div class="py-5" id="memories">
     <div class="container">
       <h2 class="text-center tu fb py-3">Gallery</h2>
-  
+
       <div class="photo-gallery">
         <div class="container">
-            <div class="row photos">
-              {{ with .Params.gallery }} {{ range $index, $gallery := . }}
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href='{{ index $gallery "name" }}' data-lightbox="photos"><img style="object-fit: cover;" class="img-fluid" src='{{ index $gallery "name" }}'></a></div>
-              {{ end }}{{ end }}
-              </div>
+          <div class="row photos">
+            {{ range $index, $gallery := . }} {{ $galleryImage := index $gallery "name"}}
+
+            <div class="col-sm-6 col-md-4 col-lg-3 item">
+              <a href='{{ index $gallery "name" }}' data-lightbox="photos">
+                {{ $image := resources.Get $galleryImage }} {{ $image := $image.Resize
+                "300x webp" }} {{ with $image }}
+                <img
+                  src="{{ .RelPermalink }}"
+                  style="object-fit: cover"
+                  class="img-fluid"
+                  alt="gallery-image | Rajkot tech"
+                />
+                {{ end }}
+              </a>
+            </div>
+            {{ end }}
+          </div>
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-  
 </div>
-
+{{ else }}
+<div></div>
+{{ end }} {{ else }}
+<div></div>
+{{ end }}
 
 <div class="pb-3">
   <div class="container">
@@ -183,7 +199,8 @@ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+        title="Location for meetup"
+      >Location of meetup</iframe>
     </div>
   </div>
 </div>
