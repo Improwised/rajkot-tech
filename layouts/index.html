@@ -159,43 +159,107 @@
           <div class="row photos">
             <div class="col-sm-6 col-md-4 col-lg-3 item">
               <a href="/images/home-gallery/image1.jpeg" data-lightbox="photos" title="home-gallery"
-                ><img class="img-fluid" src="/images/home-gallery/image1.jpeg" alt="home-gallery" 
-              /></a>
+                >
+                {{ $image := resources.Get "/images/home-gallery/image1.jpeg" }} {{ $image :=
+                  $image.Resize "550x webp" }} {{ with $image }}
+                  <img
+                    src="{{ .RelPermalink }}"
+                    class="img-fluid" 
+                    alt="home-gallery"
+                  />
+                  {{ end }}
+              </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
               <a href="/images/home-gallery/image2.jpeg" data-lightbox="photos" title="home-gallery"
-                ><img class="img-fluid" src="/images/home-gallery/image2.jpeg" alt="home-gallary"
-              /></a>
+                >
+                {{ $image := resources.Get "/images/home-gallery/image2.jpeg" }} {{ $image :=
+                  $image.Resize "550x webp" }} {{ with $image }}
+                  <img
+                    src="{{ .RelPermalink }}"
+                    class="img-fluid" 
+                    alt="home-gallery"
+                  />
+                  {{ end }}
+              </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
               <a href="/images/home-gallery/image3.jpg" data-lightbox="photos" title="home-gallery"
-                ><img class="img-fluid" src="/images/home-gallery/image3.jpg" alt="home-gallary"
-              /></a>
+                >
+                {{ $image := resources.Get "/images/home-gallery/image3.jpg" }} {{ $image :=
+                  $image.Resize "550x webp" }} {{ with $image }}
+                  <img
+                    src="{{ .RelPermalink }}"
+                    class="img-fluid" 
+                    alt="home-gallery"
+                  />
+                  {{ end }}
+              </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
               <a href="/images/home-gallery/image4.jpg" data-lightbox="photos" title="home-gallery"
-                ><img class="img-fluid" src="/images/home-gallery/image4.jpg" alt="home-gallary"
-              /></a>
+                >
+                {{ $image := resources.Get "/images/home-gallery/image4.jpg" }} {{ $image :=
+                  $image.Resize "550x webp" }} {{ with $image }}
+                  <img
+                    src="{{ .RelPermalink }}"
+                    class="img-fluid" 
+                    alt="home-gallery"
+                  />
+                  {{ end }}
+              </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
               <a href="/images/home-gallery/image5.jpg" data-lightbox="photos" title="home-gallery"
-                ><img class="img-fluid" src="/images/home-gallery/image5.jpg" alt="home-gallary"
-              /></a>
+                >
+                {{ $image := resources.Get "/images/home-gallery/image5.jpg" }} {{ $image :=
+                  $image.Resize "550x webp" }} {{ with $image }}
+                  <img
+                    src="{{ .RelPermalink }}"
+                    class="img-fluid" 
+                    alt="home-gallery"
+                  />
+                  {{ end }}
+              </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
               <a href="/images/home-gallery/image6.jpg" data-lightbox="photos" title="home-gallery"
-                ><img class="img-fluid" src="/images/home-gallery/image6.jpg" alt="home-gallary"
-              /></a>
+                >
+                {{ $image := resources.Get "/images/home-gallery/image6.jpg" }} {{ $image :=
+                  $image.Resize "550x webp" }} {{ with $image }}
+                  <img
+                    src="{{ .RelPermalink }}"
+                    class="img-fluid" 
+                    alt="home-gallery"
+                  />
+                  {{ end }}
+              </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
               <a href="/images/home-gallery/image7.jpg" data-lightbox="photos" title="home-gallery"
-                ><img class="img-fluid" src="/images/home-gallery/image7.jpg" alt="home-gallary"
-              /></a>
+                >
+                {{ $image := resources.Get "/images/home-gallery/image7.jpg" }} {{ $image :=
+                  $image.Resize "550x webp" }} {{ with $image }}
+                  <img
+                    src="{{ .RelPermalink }}"
+                    class="img-fluid" 
+                    alt="home-gallery"
+                  />
+                  {{ end }}
+              </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
               <a href="/images/home-gallery/image8.jpg" data-lightbox="photos" title="home-gallery"
-                ><img class="img-fluid" src="/images/home-gallery/image8.jpg" alt="home-gallary"
-              /></a>
+                >
+                {{ $image := resources.Get "/images/home-gallery/image8.jpg" }} {{ $image :=
+                  $image.Resize "550x webp" }} {{ with $image }}
+                  <img
+                    src="{{ .RelPermalink }}"
+                    class="img-fluid" 
+                    alt="home-gallery"
+                  />
+                  {{ end }}
+              </a>
             </div>
           </div>
         </div>

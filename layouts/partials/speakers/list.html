@@ -1,7 +1,7 @@
 {{ range .Paginator.Pages }}
 <div class="col-sm-6 col-xs-2 col-md-4 col-lg-3">
   <div class="justify-content-center text-center">
-    <a href="{{.Permalink}}">
+    <a href="{{.Permalink}}" aria-label="{{ .Title }}">
       {{ $image := resources.Get .Params.image }} {{ $image := $image.Resize
       "400x webp" }} {{ with $image }} 
       <img src="{{ .RelPermalink }}" height="200" width="200" style=" border-radius:50%; object-fit:cover;" alt={{.Params.Title}}> 

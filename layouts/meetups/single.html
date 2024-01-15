@@ -46,13 +46,13 @@ $recentPage }} {{ $title = .Title }} {{ end }}
           >Event Ended</span
         >
         {{ end }}
-        <h5 class="text-center mb-3">
+        <h2 class="text-center mb-3 h5">
           <a
             style="color: white"
             href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates={{$eventStartDate}}%2F{{$eventendDate}}&details={{.Content}}&location={{.Params.address}}&text={{.Params.title}}"
             >Add to Calendar</a
           >
-        </h5>
+        </h2>
         <div>{{ partial "share-button.html" . }}</div>
       </div>
     </div>
@@ -94,7 +94,7 @@ $recentPage }} {{ $title = .Title }} {{ end }}
 
           <ul class="align-items-center alignment-speakers">
             <li class="pr-4 pb-2">
-              <h5 style="font-weight: 700">Speakers:</h5>
+              <h2 style="font-weight: 700" class="h5">Speakers:</h2>
             </li>
             {{ range .Params.speakers }} {{ $path := .path }} {{ with
             site.GetPage $path }}
@@ -114,12 +114,13 @@ $recentPage }} {{ $title = .Title }} {{ end }}
                   "
                 >
                   <div class="p-2">
-                    {{ $image := resources.Get .Params.image }} {{
-                    $image := $image.Resize "350x webp" }} {{ with $image }}
+                    {{ $image := resources.Get .Params.image }} {{ $image :=
+                    $image.Resize "350x webp" }} {{ with $image }}
                     <img
                       src="{{ .RelPermalink }}"
                       height="75"
                       width="75"
+                      alt="{{ .Title }}"
                       style="border-radius: 50px; object-fit: cover"
                     />
                     {{ end }}
@@ -139,6 +140,8 @@ $recentPage }} {{ $title = .Title }} {{ end }}
   </div>
 </div>
 
+{{ with .Params.gallery }} {{ if and (gt (len .) 0) (ne (index . 0 "name") "")
+}}
 <div class="pb-3" style="background-color: #f5f5f5">
   <div class="py-5" id="memories">
     <div class="container">
@@ -147,16 +150,22 @@ $recentPage }} {{ $title = .Title }} {{ end }}
       <div class="photo-gallery">
         <div class="container">
           <div class="row photos">
-            {{ with .Params.gallery }} {{ range $index, $gallery := . }}
+            {{ range $index, $gallery := . }} {{ $galleryImage := index $gallery "name"}}
+
             <div class="col-sm-6 col-md-4 col-lg-3 item">
-              <a href='{{ index $gallery "name" }}' data-lightbox="photos"
-                ><img
+              <a href='{{ index $gallery "name" }}' data-lightbox="photos">
+                {{ $image := resources.Get $galleryImage }} {{ $image := $image.Resize
+                "300x webp" }} {{ with $image }}
+                <img
+                  src="{{ .RelPermalink }}"
                   style="object-fit: cover"
                   class="img-fluid"
-                  src='{{ index $gallery "name" }}'
-              /></a>
+                  alt="gallery-images"
+                />
+                {{ end }}
+              </a>
             </div>
-            {{ end }}{{ end }}
+            {{ end }}
           </div>
         </div>
       </div>
@@ -169,6 +178,11 @@ $recentPage }} {{ $title = .Title }} {{ end }}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 </div>
+{{ else }}
+<div></div>
+{{ end }} {{ else }}
+<div></div>
+{{ end }}
 
 <div class="pb-3">
   <div class="container">
@@ -185,7 +199,8 @@ $recentPage }} {{ $title = .Title }} {{ end }}
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+        title="Location for meetup"
+      >Location of meetup</iframe>
     </div>
   </div>
 </div>
