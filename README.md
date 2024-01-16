@@ -60,21 +60,22 @@ endDate: 2023-12-16T15:30:28+05:30  // already given when created
 							And time
 
 
-image: "/images/april.png" // this image you can store inside 
-					  static/images
+image: "/images/meetups/april.png" // this image you can store inside assets/images/
+                                        meetups  and give path like this
 meetupDate: 2023-12-16T15:30:28+05:30  // already given when created
 							Need to replace just date 
 							And time
 gallery:
-   - name: "/images/—--.webp"  // images that you want to show in 
-   - name: "/images/—--.webp"	gallery
+   - name: "/images/{meetup-name}/—--.webp"  //  this image you can store after    
+                                   creating folder inside assets/images/{meetup-name} and give path like this
+   - name: "/images/{meetup-name}/—--.webp"	
 buyTicket: "https://allevents.in/rajkot/laravel-rajkot-meetup-october-2023/80002722358523"  // link from that user can buy ticket
 address: "RK University Main Campus" // location of meetup
 talk: // if there is more than one talk add name and path as below
    - name: Docker From Scratch   // talk name/title
      path: "talks/docker-from-scrach.md"  // talk path that you give
    						    After hugo new command 
-locationOnMap: "insert embedded path from map" 
+locationOnMap: "insert embedded path's src atribute's value from map" 
 metaTitle: "Laravel Rajkot Meetup April 2023 | Rajkot-tech"
 metaDes: "Laravel Rajkot Meetup April 2023 | Rajkot-tech"
 —--
@@ -174,8 +175,8 @@ title: "Rakshit Menpara" //already given when created
 date: 2023-12-19T11:40:08+05:30  // already given when created
 draft: false  // already given when created
 width: 12  // already given when created
-image: "/images/rakshit.webp" // give image path like this and store
-                                this image inside static/images 
+image: "/images/speakers/rakshit.webp" // give image path like this and store
+                                this image inside assets/images/speakers 
                                  folder
 linkedin: "https://www.linkedin.com/in/—--"  // linkedin
 description: "CTO | Improwised Technologies Pvt Ltd"  // position
@@ -186,3 +187,6 @@ metaDes: "Rakshit Menpara | Speaker"
 Add speaker description here
 
 ```
+
+**Document in wiki**:
+https://wiki.improwised.com/s/119e7852-2fd2-4dfc-854a-445c8191f9ec
