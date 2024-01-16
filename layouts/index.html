@@ -149,10 +149,10 @@
         <div class="container">
           <div class="row photos">
             <div class="col-sm-6 col-md-4 col-lg-3 item">
-              <a href="/images/home-gallery/image1.jpeg" data-lightbox="photos" title="home-gallery"
+              {{ $image := resources.Get "/images/home-gallery/image1.jpeg" }} {{ $image :=
+                $image.Resize "550x webp" }} {{ with $image }}
+              <a href="{{ .RelPermalink }}" data-lightbox="photos" title="home-gallery"
                 >
-                {{ $image := resources.Get "/images/home-gallery/image1.jpeg" }} {{ $image :=
-                  $image.Resize "550x webp" }} {{ with $image }}
                   <img
                     src="{{ .RelPermalink }}"
                     class="img-fluid"
@@ -160,14 +160,14 @@
                     width="300" 
                     alt="home-gallery | Rajkot tech"
                   />
-                  {{ end }}
-              </a>
+                </a>
+                {{ end }}
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
-              <a href="/images/home-gallery/image2.jpeg" data-lightbox="photos" title="home-gallery"
+              {{ $image := resources.Get "/images/home-gallery/image2.jpeg" }} {{ $image :=
+                $image.Resize "550x webp" }} {{ with $image }}
+              <a href="{{ .RelPermalink }}" data-lightbox="photos" title="home-gallery"
                 >
-                {{ $image := resources.Get "/images/home-gallery/image2.jpeg" }} {{ $image :=
-                  $image.Resize "550x webp" }} {{ with $image }}
                   <img
                     src="{{ .RelPermalink }}"
                     class="img-fluid" 
@@ -175,29 +175,14 @@
                     width="300" 
                     alt="home-gallery | Rajkot tech"
                   />
-                  {{ end }}
-              </a>
+                </a>
+                {{ end }}
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
-              <a href="/images/home-gallery/image3.jpg" data-lightbox="photos" title="home-gallery"
+              {{ $image := resources.Get "/images/home-gallery/image3.jpg" }} {{ $image :=
+                $image.Resize "550x webp" }} {{ with $image }}
+              <a href="{{ .RelPermalink }}" data-lightbox="photos" title="home-gallery"
                 >
-                {{ $image := resources.Get "/images/home-gallery/image3.jpg" }} {{ $image :=
-                  $image.Resize "550x webp" }} {{ with $image }}
-                  <img
-                    src="{{ .RelPermalink }}"
-                    class="img-fluid"
-                    height="225" 
-                    width="300"  
-                    alt="home-gallery | Rajkot tech"
-                  />
-                  {{ end }}
-              </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item">
-              <a href="/images/home-gallery/image4.jpg" data-lightbox="photos" title="home-gallery"
-                >
-                {{ $image := resources.Get "/images/home-gallery/image4.jpg" }} {{ $image :=
-                  $image.Resize "550x webp" }} {{ with $image }}
                   <img
                     src="{{ .RelPermalink }}"
                     class="img-fluid"
@@ -205,14 +190,29 @@
                     width="300"  
                     alt="home-gallery | Rajkot tech"
                   />
-                  {{ end }}
-              </a>
+                </a>
+                {{ end }}
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
-              <a href="/images/home-gallery/image5.jpg" data-lightbox="photos" title="home-gallery"
+              {{ $image := resources.Get "/images/home-gallery/image4.jpg" }} {{ $image :=
+                $image.Resize "550x webp" }} {{ with $image }}
+              <a href="{{ .RelPermalink }}" data-lightbox="photos" title="home-gallery"
                 >
-                {{ $image := resources.Get "/images/home-gallery/image5.jpg" }} {{ $image :=
-                  $image.Resize "550x webp" }} {{ with $image }}
+                  <img
+                    src="{{ .RelPermalink }}"
+                    class="img-fluid"
+                    height="225" 
+                    width="300"  
+                    alt="home-gallery | Rajkot tech"
+                  />
+                </a>
+                {{ end }}
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 item">
+              {{ $image := resources.Get "/images/home-gallery/image5.jpg" }} {{ $image :=
+                $image.Resize "550x webp" }} {{ with $image }}
+              <a href="{{ .RelPermalink }}" data-lightbox="photos" title="home-gallery"
+                >
                   <img
                     src="{{ .RelPermalink }}"
                     class="img-fluid" 
@@ -220,14 +220,14 @@
                     width="300" 
                     alt="home-gallery | Rajkot tech"
                   />
-                  {{ end }}
-              </a>
+                </a>
+                {{ end }}
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
-              <a href="/images/home-gallery/image6.jpg" data-lightbox="photos" title="home-gallery"
+              {{ $image := resources.Get "/images/home-gallery/image6.jpg" }} {{ $image :=
+                $image.Resize "550x webp" }} {{ with $image }}
+              <a href="{{ .RelPermalink }}" data-lightbox="photos" title="home-gallery"
                 >
-                {{ $image := resources.Get "/images/home-gallery/image6.jpg" }} {{ $image :=
-                  $image.Resize "550x webp" }} {{ with $image }}
                   <img
                     src="{{ .RelPermalink }}"
                     class="img-fluid" 
@@ -235,14 +235,14 @@
                     width="300" 
                     alt="home-gallery | Rajkot tech"
                   />
-                  {{ end }}
-              </a>
+                </a>
+                {{ end }}
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
-              <a href="/images/home-gallery/image7.jpg" data-lightbox="photos" title="home-gallery"
+              {{ $image := resources.Get "/images/home-gallery/image7.jpg" }} {{ $image :=
+                $image.Resize "550x webp" }} {{ with $image }}
+              <a href="{{ .RelPermalink }}" data-lightbox="photos" title="home-gallery"
                 >
-                {{ $image := resources.Get "/images/home-gallery/image7.jpg" }} {{ $image :=
-                  $image.Resize "550x webp" }} {{ with $image }}
                   <img
                     src="{{ .RelPermalink }}"
                     class="img-fluid" 
@@ -250,14 +250,14 @@
                     width="300" 
                     alt="home-gallery | Rajkot tech"
                   />
-                  {{ end }}
-              </a>
+                </a>
+                {{ end }}
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 item">
-              <a href="/images/home-gallery/image8.jpg" data-lightbox="photos" title="home-gallery"
+              {{ $image := resources.Get "/images/home-gallery/image8.jpg" }} {{ $image :=
+                $image.Resize "550x webp" }} {{ with $image }}
+              <a href="{{ .RelPermalink }}" data-lightbox="photos" title="home-gallery"
                 >
-                {{ $image := resources.Get "/images/home-gallery/image8.jpg" }} {{ $image :=
-                  $image.Resize "550x webp" }} {{ with $image }}
                   <img
                     src="{{ .RelPermalink }}"
                     class="img-fluid" 
@@ -265,8 +265,8 @@
                     width="300" 
                     alt="home-gallery | Rajkot tech"
                   />
-                  {{ end }}
-              </a>
+                </a>
+                {{ end }}
             </div>
           </div>
         </div>
