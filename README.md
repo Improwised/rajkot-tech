@@ -35,8 +35,7 @@ gallery:
 address: ""
 buyTicket: “”
 talk:
-   - name: ""
-     path: ""
+   - path: ""
 locationOnMap: "" 
 metaTitle: ""
 metaDes: ""
@@ -71,9 +70,8 @@ gallery:
    - name: "/images/{meetup-name}/—--.webp"	
 buyTicket: "https://allevents.in/rajkot/laravel-rajkot-meetup-october-2023/80002722358523"  // link from that user can buy ticket
 address: "RK University Main Campus" // location of meetup
-talk: // if there is more than one talk add name and path as below
-   - name: Docker From Scratch   // talk name/title
-     path: "talks/docker-from-scrach.md"  // talk path that you give
+talk: // if there is more than one talk add path as below
+   - path: "talks/docker-from-scrach.md"  // talk path that you give
    						    After hugo new command 
 locationOnMap: "insert embedded path's src atribute's value from map" 
 metaTitle: "Laravel Rajkot Meetup April 2023 | Rajkot-tech"
@@ -104,8 +102,7 @@ date: {{ .Date }}
 draft: false
 width: 12
 speakers:
-   - name: ""
-     path: ""
+   - path: ""
 image: ""
 metaTitle: ""
 metaDes: ""
@@ -123,12 +120,9 @@ title: "Docker From Scratch" //already given when created | mention this
  date: 2024-01-04T18:14:13+05:30  //already given when created
 draft: false  //already given when created
 width: 12   //already given when created
-Speakers:  // mention respective speakers name/Title and their md file 
-             path 
-   - name: Rakshit Menpara   
-     path: "speakers/rakshit.md"
-   - name: Munir Khakhi
-     path: "speakers/munir.md"
+Speakers:  // mention respective speakers md file path 
+   - path: "speakers/rakshit.md"
+   - path: "speakers/munir.md"
 image: ""
 metaTitle: "Docker From Scratch | Rajkot tech"
 metaDes: "Docker From Scratch | Rajkot tech"

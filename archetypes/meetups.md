@@ -6,14 +6,13 @@ width: 12
 startDate: {{ .Date }}
 endDate: {{ .Date }}
 image: ""
-meetupDate: {{ .Date }}
+meetupDate: ""
 gallery:
     - name: ""
 buyTicket: ""
 address: ""
 talk: 
-    - name: ""
-      path: ""
+    - path: ""
 locationOnMap: ""  
 metaTitle: ""
 metaDes: ""
