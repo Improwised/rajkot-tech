@@ -1,10 +1,10 @@
 {{ define "title" }}{{ .Site.Title }}{{ end }} {{ define "description" }}{{
-.Site.Params.description }}{{ end }} {{ define "main" }} {{ $currentSpeaker :=
-.Title }} {{ $talks := where .Site.Pages "Section" "talks" }} {{ $relatedtalks
-:= slice }} {{ range $talks }} {{ $talkSpeakers := .Params.speakers }} {{ $found
-:= false }} {{ range $talkSpeakers }} {{ if eq .name $currentSpeaker }} {{
-$found = true }} {{ end }} {{ end }} {{ if $found }} {{ $relatedtalks =
-$relatedtalks | append . }} {{ end }} {{ end }}
+.Site.Params.description }}{{ end }} {{ define "main" }} {{ $currentSpeakerPath
+:= .File.Path}} {{ $talks := where .Site.Pages "Section" "talks" }} {{
+$relatedtalks:= slice }} {{ range $talks }} {{ $talkSpeakers := .Params.speakers
+}} {{ $found:= false }} {{ range $talkSpeakers }} {{ if eq .path
+$currentSpeakerPath }} {{$found = true }} {{ end }} {{ end }} {{ if $found }} {{
+$relatedtalks =$relatedtalks | append . }} {{ end }} {{ end }}
 
 <div class="event-hero-unit">
   <div class="event-background">
@@ -46,8 +46,13 @@ $relatedtalks | append . }} {{ end }} {{ end }}
             {{.Title }}
             <div>
               <a href="{{.Params.linkedin}}"
-                ><img src="/images/linkedin.svg" height="25" width="25" class="mx-2" alt="linkedin"
-             ></a>
+                ><img
+                  src="/images/linkedin.svg"
+                  height="25"
+                  width="25"
+                  class="mx-2"
+                  alt="linkedin"
+              /></a>
             </div>
           </h2>
 
@@ -81,11 +86,11 @@ $relatedtalks | append . }} {{ end }} {{ end }}
             <b>{{.Title}}</b>
           </div>
 
-          {{ $currentTalk := .Title }} {{ $meetups := where .Site.Pages
+          {{$currentTalkPath := .File.Path}} {{ $meetups := where .Site.Pages
           "Section" "meetups" }} {{ $relatedmeetups := slice }} {{ range
           $meetups }} {{ $meetupTalk := .Params.talk }} {{ $found := false }} {{
-          range $meetupTalk }} {{ if eq .name $currentTalk }} {{ $found = true
-          }} {{ end }} {{ end }} {{ if $found }} {{ $relatedmeetups =
+          range $meetupTalk }} {{ if eq .path $currentTalkPath }} {{ $found =
+          true }} {{ end }} {{ end }} {{ if $found }} {{ $relatedmeetups =
           $relatedmeetups | append . }} {{ end }} {{ end }} {{ range
           $relatedmeetups }}
           <a href="{{ .Permalink }}" class="text-end fw-bold text-black"
@@ -125,7 +130,7 @@ $relatedtalks | append . }} {{ end }} {{ end }}
                       width="75"
                       alt="{{.Title}}"
                       style="border-radius: 50px; object-fit: cover"
-                   >
+                    >
                     {{ end }}
                   </div>
                   <div class="align-items-center d-flex p-2">

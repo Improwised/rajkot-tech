@@ -4,8 +4,7 @@ date: 2024-01-10T20:40:09+05:30
 draft: false
 width: 12
 speakers:
-    - name: "Rakshit Menpara"
-      path: "speakers/rakshit.md"
+    - path: "speakers/rakshit.md"
 image: ""
 metaTitle: "Docker From Scratch | Talk | Rajkot tech"
 metaDes: "Docker From Scratch | Talk | Rajkot tech"

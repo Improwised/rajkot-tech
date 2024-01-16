@@ -10,10 +10,8 @@ meetupDate: "26 March 2023"
 address: "RK University City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India"
 buyTicket: ""
 talk: 
-    - name: Flawless CI/CD via Github Actions
-      path: "talks/flawless-ci-cd-via-github-actions.md"
-    - name: Crush Complexity With Domain Driven Developer
-      path: "talks/crush-complexity-with-domain-driven-developer.md"
+    - path: "talks/flawless-ci-cd-via-github-actions.md"
+    - path: "talks/crush-complexity-with-domain-driven-developer.md"
 gallery:
     - name: "/images/laravel-rajkot-meetup-march-2023/image1.jpg"
     - name: "/images/laravel-rajkot-meetup-march-2023/image2.jpg"

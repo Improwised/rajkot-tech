@@ -9,10 +9,8 @@ image: "/images/meetup/laravel-rajkot-meetup-july-2023.jpg"
 meetupDate: "09 July 2023"
 buyTicket: ""
 talk: 
-    - name: Common Challenges Faced by Web Developers
-      path: "talks/common-challenges-faced-by-web-developers.md"
-    - name: Laravel Development With Docker
-      path: "talks/laravel-development-with-docker.md"
+    - path: "talks/common-challenges-faced-by-web-developers.md"
+    - path: "talks/laravel-development-with-docker.md"
 gallery:
     - name: "/images/laravel-rajkot-meetup-july-2023/image1.jpeg"
     - name: "/images/laravel-rajkot-meetup-july-2023/image2.jpeg"
