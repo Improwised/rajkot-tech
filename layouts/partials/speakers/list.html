@@ -10,18 +10,19 @@
   </div>
 
   <div class="card-body">
-    <a href="{{.Permalink}}" style="color: black; text-decoration: none"
-      ><div class="text-center justify-content-center mt-2 px-5">
+    <div class="text-center justify-content-center mt-2 px-5">
+        <a href="{{.Permalink}}" style="color: black; text-decoration: none">
         <h5 class="card-title">{{.Title}}</h5>
+      </a>
         <div class="text-center d-flex justify-content-center mt-2 mb-4">
           <a href="{{.Params.linkedin}}" title="linkedin"
             ><img src="/images/linkedin.svg" height="25" width="25" class="" alt="linkedin" 
-          /></a>
+         ></a>
           <a href="{{.Params.twitter}}" title="twitter"
             ><img src="/images/twitter.svg" height="25" width="25" class="mx-2" alt="twitter" 
-          /></a>
+         ></a>
         </div></div
-    ></a>
+    >
   </div>
 </div>
 {{ end }}

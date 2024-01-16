@@ -4,8 +4,7 @@ date: {{ .Date }}
 draft: false
 width: 12
 speakers:
-    - name: ""
-      path: ""
+    - path: ""
 image: ""
 metaTitle: ""
 metaDes: ""

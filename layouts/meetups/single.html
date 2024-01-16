@@ -122,7 +122,7 @@ $recentPage }} {{ $title = .Title }} {{ end }}
                       width="75"
                       alt="{{ .Title }}"
                       style="border-radius: 50px; object-fit: cover"
-                    />
+                   >
                     {{ end }}
                   </div>
                   <div class="align-items-center d-flex p-2">
@@ -161,7 +161,7 @@ $recentPage }} {{ $title = .Title }} {{ end }}
                   style="object-fit: cover"
                   class="img-fluid"
                   alt="gallery-image | Rajkot tech"
-                />
+               >
               </a>
               {{ end }}
             </div>
@@ -189,7 +189,7 @@ $recentPage }} {{ $title = .Title }} {{ end }}
     <h2 class="text-center tu fb py-3 pt-5">Location</h2>
     <div class="text-center">
       <p style="color: #666a6a">
-        <img src="/images/location.svg" alt="location" /> {{.Params.address}}
+        <img src="/images/location.svg" alt="location"> {{.Params.address}}
       </p>
       <iframe
         src="{{.Params.locationOnMap}}"
@@ -200,7 +200,7 @@ $recentPage }} {{ $title = .Title }} {{ end }}
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         title="Location for meetup"
-      >Location of meetup</iframe>
+      ></iframe>
     </div>
   </div>
 </div>

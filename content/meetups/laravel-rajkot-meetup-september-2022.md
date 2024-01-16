@@ -13,10 +13,8 @@ gallery:
 buyTicket: ""
 address: "RK University City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India"
 talk: 
-    - name: "Build Restful Apis With Improved Dx"
-      path: "talks/build-restful-apis-with-improved-dx.md"
-    - name: "Fun With Filament"
-      path: "talks/fun-with-filament.md"
+    - path: "talks/build-restful-apis-with-improved-dx.md"
+    - path: "talks/fun-with-filament.md"
 locationOnMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.4238969546304!2d70.75028447511475!3d22.261926944285523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cbaf9787c173%3A0x8f107a3a70a8ad61!2sRK%20University%20City%20Campus!5e0!3m2!1sen!2sin!4v1704881177360!5m2!1sen!2sin"  
 metaTitle: "Laravel Rajkot Meetup September 2022 | Rajkot tech"
 metaDes: "Laravel Rajkot Meetup September 2022 | Rajkot tech"

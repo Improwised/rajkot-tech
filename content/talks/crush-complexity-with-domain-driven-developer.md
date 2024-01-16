@@ -4,8 +4,7 @@ date: 2024-01-10T15:34:06+05:30
 draft: false
 width: 12
 speakers:
-    - name: "Hiren Keraliya"
-      path: "speakers/hiren-keraliya.md"
+    - path: "speakers/hiren-keraliya.md"
 image: ""
 metaTitle: "Crush Complexity With Domain Driven Developer | Talk | Rajkot tech"
 metaDes: "Crush Complexity With Domain Driven Developer | Talk | Rajkot tech"
