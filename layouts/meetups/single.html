@@ -153,17 +153,17 @@ $recentPage }} {{ $title = .Title }} {{ end }}
             {{ range $index, $gallery := . }} {{ $galleryImage := index $gallery "name"}}
 
             <div class="col-sm-6 col-md-4 col-lg-3 item">
-              <a href='{{ index $gallery "name" }}' data-lightbox="photos">
-                {{ $image := resources.Get $galleryImage }} {{ $image := $image.Resize
-                "300x webp" }} {{ with $image }}
+              {{ $image := resources.Get $galleryImage }} {{ $image := $image.Resize
+              "700x webp" }} {{ with $image }}
+              <a href='{{ .RelPermalink }}' data-lightbox="photos">
                 <img
                   src="{{ .RelPermalink }}"
                   style="object-fit: cover"
                   class="img-fluid"
                   alt="gallery-image | Rajkot tech"
                 />
-                {{ end }}
               </a>
+              {{ end }}
             </div>
             {{ end }}
           </div>
