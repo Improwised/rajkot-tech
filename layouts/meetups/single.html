@@ -37,6 +37,13 @@ $recentPage }} {{ $title = .Title }} {{ end }}
           target="_blank"
           >Buy Ticket</a
         >
+        <h2 class="text-center mb-3 h5">
+          <a
+            style="color: white"
+            href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates={{$eventStartDate}}%2F{{$eventendDate}}&details={{.Content}}&location={{.Params.address}}&text={{.Params.title}}"
+            >Add to Calendar</a
+          >
+        </h2>
         {{ else }}
         <span class="py-2 mb-3 px-3 event-end badge rounded-pill bg-danger"
           >Event Ended</span
@@ -46,13 +53,6 @@ $recentPage }} {{ $title = .Title }} {{ end }}
           >Event Ended</span
         >
         {{ end }}
-        <h2 class="text-center mb-3 h5">
-          <a
-            style="color: white"
-            href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates={{$eventStartDate}}%2F{{$eventendDate}}&details={{.Content}}&location={{.Params.address}}&text={{.Params.title}}"
-            >Add to Calendar</a
-          >
-        </h2>
         <div>{{ partial "share-button.html" . }}</div>
       </div>
     </div>
