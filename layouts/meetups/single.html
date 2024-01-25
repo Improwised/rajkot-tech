@@ -83,7 +83,14 @@ $recentPage }} {{ $title = .Title }} {{ end }}
         class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center"
       > -->
       {{ $speakers := where .Site.Pages "Section" "speakers" }} {{ range
-      .Params.talk }} {{ $path := .path }} {{ with site.GetPage $path }}
+      .Params.talk }} {{ $path := .path }} 
+      
+      {{ if eq .path "" }}
+      <div class="text-center text-decoration-underline">
+      <h3>TBA</h3>
+    </div>
+      {{else}}
+      {{ with site.GetPage $path }}
 
       <div class="card mb-5" style="font-size: 18px">
         <div class="card-header p-4">
@@ -135,7 +142,7 @@ $recentPage }} {{ $title = .Title }} {{ end }}
           </ul>
         </div>
       </div>
-      {{ end }} {{ end }}
+      {{ end }} {{end}}{{ end }}
     </div>
   </div>
 </div>
