@@ -4,7 +4,7 @@
 
 {{ $meetupsPaginator :=
 .Paginate (where .Site.RegularPages "Section" "meetups") }} {{ $recentPage :=
-first 1 (where .Paginator.Pages "Section" "meetups") }} {{ $recentPage }}
+first 1 (where .Paginator.Pages "Section" "meetups") }} 
 {{ range $recentPage }}
 {{ if gt (time .Params.endDate) now }}
 <div class="event-hero-unit">
