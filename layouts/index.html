@@ -1,6 +1,41 @@
 {{ define "title" }}{{ .Site.Title }}{{ end }} {{ define "description" }}{{
-.Site.Params.description }}{{ end }} {{ define "main" }}
+.Site.Params.description }}{{ end }} {{ define "main" }} 
 
+
+{{ $meetupsPaginator :=
+.Paginate (where .Site.RegularPages "Section" "meetups") }} {{ $recentPage :=
+first 1 (where .Paginator.Pages "Section" "meetups") }} 
+{{ range $recentPage }}
+{{ if gt (time .Params.endDate) now }}
+<div class="event-hero-unit">
+  <div class="event-background">
+    <div
+      class="event-hero-unit-content d-flex align-items-center justify-content-center"
+    >
+      <div class="text-center mb-3 pt-4">
+        <div class="rt-branding my-4">
+          <h4 class="fb">RAJKOT TECH</h4>
+        </div>
+        <h4 class="tu">UPCOMING MEETUP</h4>
+        <h1 class="meetup-name tu fb">{{ .Title }}</h1>
+        <div class="date-time">
+          <time class="tu">{{ .Params.meetupDate }}</time>
+          <address>{{ .Params.address }}.</address>
+        </div>
+         {{ if gt (time .Params.endDate) now }}
+        <a
+          href="{{.Params.buyTicket}}"
+          class="mb-3 btn btn-lg btn-success"
+          target="_blank"
+          >Buy Ticket</a
+        >
+        {{ end }}
+        <div>{{ partial "share-button.html" . }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ else }}
 <div>
   <div class="event-hero-unit">
     <div class="event-background">
@@ -45,6 +80,9 @@
   </div>
 </div>
 
+{{ end }}
+{{ end }}
+
 <div style="background-color: #f5f5f5">
   <div>
     <h2 class="text-center tu fb py-3 pt-5">About</h2>
@@ -78,7 +116,7 @@
                 happen. Rajkot.tech will provide an opportunity to arrange
                 Meetups on various technologies in a single platform.
               </p>
-             </div>
+            </div>
           </div>
           <div class="card m-3" style="width: 30rem">
             <div class="card-body">
@@ -96,7 +134,7 @@
                 Requesting Meetup topic.<br />
                 Adding more ideas here :)<br />
               </p>
-              </div>
+            </div>
           </div>
         </div>
         <div class="row mt-5 pt-3 mb-5">
