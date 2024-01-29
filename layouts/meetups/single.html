@@ -79,19 +79,57 @@ $recentPage }} {{ $title = .Title }} {{ end }}
       class="container-fluid bg-trasparent my-4 p-3"
       style="position: relative; max-width: 1200px"
     >
-      <!-- <div
-        class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center"
-      > -->
+      
       {{ $speakers := where .Site.Pages "Section" "speakers" }} {{ range
       .Params.talk }} {{ $path := .path }} 
       
       {{ if eq .path "" }}
-      <div class="text-center text-decoration-underline">
-      <h3>TBA</h3>
-    </div>
+      <div class="card mb-5" style="font-size: 18px">
+        <div class="card-header p-4">
+          <b>Stay Tuned for Talks Update!</b>
+        </div>
+        <div class="card-body">
+          <p class="card-text my-3">{{.Content}}</p>
+
+          <ul class="align-items-center alignment-speakers">
+            <li class="pr-4 pb-2">
+              <h2 style="font-weight: 700" class="h5">Speakers:</h2>
+            </li>
+          
+            <li class="px-2 pb-2">
+              <div
+                style="background-color: #f8f8f8"
+                class="p-2 align-items-center"
+              >
+                <a
+                  href="{{.Permalink}}"
+                  class="d-flex align-items-center"
+                  style="
+                    background-color: #f8f8f8;
+                    color: black;
+                    text-decoration: none;
+                  "
+                >
+                  <div class="p-2">
+                    <img
+                      src="/images/dummy-profile-pic.jpg"
+                      height="50"
+                      width="50"
+                      alt="TBA"
+                      style="border-radius: 50px; object-fit: cover"
+                   >
+                  </div>
+                  <div class="align-items-center d-flex p-2">
+                    <b class="speaker-name">TBA</b>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
       {{else}}
       {{ with site.GetPage $path }}
-
       <div class="card mb-5" style="font-size: 18px">
         <div class="card-header p-4">
           <b>{{.Title}}</b>
