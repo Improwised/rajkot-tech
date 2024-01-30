@@ -120,7 +120,7 @@ $recentPage }} {{ $title = .Title }} {{ end }}
                    >
                   </div>
                   <div class="align-items-center d-flex p-2">
-                    <b class="speaker-name">TBA</b>
+                    <b class="speaker-name">Unrevealed Presenter</b>
                   </div>
                 </a>
               </div>
@@ -183,6 +183,24 @@ $recentPage }} {{ $title = .Title }} {{ end }}
       {{ end }} {{end}}{{ end }}
     </div>
   </div>
+</div>
+
+<div class="event-hero-unit">
+<div class="event-background" style="background-color: #f5f5f5">
+  <div class="event-hero-unit-content d-flex align-items-center justify-content-center">
+  {{ if eq .Title $title }} {{ if gt (time .Params.endDate) now }}
+  <div class="text-center py-5">
+  <h2>Secure Your Seat Now: Grab Your Tickets for an Unforgettable Experience!</h2>
+  <a
+          href="{{.Params.buyTicket}}"
+          class="mb-3 btn btn-lg btn-success"
+          target="_blank"
+          >Buy Ticket</a
+        >
+      </div>
+  {{ end }}{{ end }}
+</div>
+</div>
 </div>
 
 {{ with .Params.gallery }} {{ if and (gt (len .) 0) (ne (index . 0 "name") "")
