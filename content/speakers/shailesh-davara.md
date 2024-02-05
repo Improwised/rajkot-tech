@@ -1,6 +1,6 @@
 ---
 title: "Shailesh Davara"
-date: 2024-01-11T11:13:13+05:30
+date: 2019-01-11T11:13:13+05:30
 draft: false
 width: 12
 image: "/images/speakers/shailesh-davara.jpeg"

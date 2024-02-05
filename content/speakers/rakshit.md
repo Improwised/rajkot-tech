@@ -1,6 +1,6 @@
 ---
 title: "Rakshit Menpara"
-date: 2023-12-19T11:40:08+05:30
+date: 2019-08-11T11:40:08+05:30
 draft: false
 width: 12
 image: "/images/speakers/rakshit.webp"

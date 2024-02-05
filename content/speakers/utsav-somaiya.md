@@ -1,6 +1,6 @@
 ---
 title: "Utsav Somaiya"
-date: 2024-01-10T18:28:58+05:30
+date: 2022-09-25T18:28:58+05:30
 draft: false
 width: 12
 image: "/images/speakers/utsav-somaiya.jpg"
