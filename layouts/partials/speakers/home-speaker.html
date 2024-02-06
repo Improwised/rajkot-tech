@@ -1,46 +1,135 @@
-{{ $speakers := shuffle .Paginator.Pages }} {{ range first 4 $speakers }}
-<div class="col-sm-6 col-xs-2 col-md-4 col-lg-3">
-  <div class="justify-content-center text-center">
-    <a href="{{.Permalink}}" aria-label="{{ .Title }}">
-      {{ $image := resources.Get .Params.image }} {{ $image := $image.Resize
-      "400x webp" }} {{ with $image }}
-      <img
-        src="{{ .RelPermalink }}"
-        height="200"
-        width="200"
-        style="border-radius: 50%; object-fit: cover"
-        alt="{{.Title}}"
-     >
-      {{ end }}
-    </a>
-  </div>
+<div id="carouselExample" class="carousel slide carousel-dark">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row justify-content-center">
+        {{ range $index, $page:= first 8 .Paginator.Pages }} {{
+        $speakerIsVolunteer := false }} {{ $speakerTitle := .Title }} {{ range
+        where .Site.Pages "Section" "volunteers" }} {{ if eq .Title
+        $speakerTitle }} {{ $speakerIsVolunteer = true }} {{ end }} {{ end }} {{
+        if $speakerIsVolunteer }} {{ else }} {{ if le $index 3 }}
+        <div class="col-sm-6 col-xs-2 col-md-4 col-lg-3" style="width: auto">
+          <div class="justify-content-center text-center">
+            <a href="{{.Permalink}}" aria-label="{{ .Title }}">
+              {{ $image := resources.Get .Params.image }} {{ $image :=
+              $image.Resize "400x webp" }} {{ with $image }}
+              <img
+                src="{{ .RelPermalink }}"
+                height="200"
+                width="200"
+                style="border-radius: 50%; object-fit: cover"
+                alt="{{.Title}}"
+              />
+              {{ end }}
+            </a>
+          </div>
 
-  <div class="card-body">
-    <div class="text-center justify-content-center mt-2 px-5">
-      <a href="{{.Permalink}}" style="color: black; text-decoration: none">
-        <h5 class="card-title">{{.Title}}</h5>
-      </a>
-      <div class="text-center d-flex justify-content-center mt-2 mb-4">
-        <a href="{{.Params.linkedin}}" title="linkedin"
-          ><img
-            src="/images/linkedin.svg"
-            height="25"
-            width="25"
-            class=""
-            alt="linkedin"
-         >
-        </a>
-        <a href="{{.Params.twitter}}" title="twitter"
-          ><img
-            src="/images/twitter.svg"
-            height="25"
-            width="25"
-            class="mx-2"
-            alt="twitter"
-         >
-        </a>
+          <div class="card-body">
+            <div class="text-center justify-content-center mt-2 px-5">
+              <a
+                href="{{.Permalink}}"
+                style="color: black; text-decoration: none"
+              >
+                <h5 class="card-title">{{.Title}}</h5>
+              </a>
+              <div class="text-center d-flex justify-content-center mt-2 mb-4">
+                <a href="{{.Params.linkedin}}" title="linkedin"
+                  ><img
+                    src="/images/linkedin.svg"
+                    height="25"
+                    width="25"
+                    class=""
+                    alt="linkedin"
+                  />
+                </a>
+                <a href="{{.Params.twitter}}" title="twitter"
+                  ><img
+                    src="/images/twitter.svg"
+                    height="25"
+                    width="25"
+                    class="mx-2"
+                    alt="twitter"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ else }} {{ end }} {{ end }} {{ end }}
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+        {{ range $index, $page:= first 8 .Paginator.Pages }} {{
+        $speakerIsVolunteer := false }} {{ $speakerTitle := .Title }} {{ range
+        where .Site.Pages "Section" "volunteers" }} {{ if eq .Title
+        $speakerTitle }} {{ $speakerIsVolunteer = true }} {{ end }} {{ end }} {{
+        if $speakerIsVolunteer }} {{ else }} {{ if le $index 3 }} {{ else }}
+        <div class="col-sm-6 col-xs-2 col-md-4 col-lg-3" style="width: auto">
+          <div class="justify-content-center text-center">
+            <a href="{{.Permalink}}" aria-label="{{ .Title }}">
+              {{ $image := resources.Get .Params.image }} {{ $image :=
+              $image.Resize "400x webp" }} {{ with $image }}
+              <img
+                src="{{ .RelPermalink }}"
+                height="200"
+                width="200"
+                style="border-radius: 50%; object-fit: cover"
+                alt="{{.Title}}"
+              />
+              {{ end }}
+            </a>
+          </div>
+
+          <div class="card-body">
+            <div class="text-center justify-content-center mt-2 px-5">
+              <a
+                href="{{.Permalink}}"
+                style="color: black; text-decoration: none"
+              >
+                <h5 class="card-title">{{.Title}}</h5>
+              </a>
+              <div class="text-center d-flex justify-content-center mt-2 mb-4">
+                <a href="{{.Params.linkedin}}" title="linkedin"
+                  ><img
+                    src="/images/linkedin.svg"
+                    height="25"
+                    width="25"
+                    class=""
+                    alt="linkedin"
+                  />
+                </a>
+                <a href="{{.Params.twitter}}" title="twitter"
+                  ><img
+                    src="/images/twitter.svg"
+                    height="25"
+                    width="25"
+                    class="mx-2"
+                    alt="twitter"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ end }} {{ end }} {{ end }}
       </div>
     </div>
   </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
 </div>
-{{ end }}

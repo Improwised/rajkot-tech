@@ -1,6 +1,6 @@
 ---
 title: "Chirag Lathiya"
-date: 2024-01-10T21:13:32+05:30
+date: 2019-06-23T21:13:32+05:30
 draft: false
 width: 12
 image: "/images/speakers/chirag-lathiya.webp"

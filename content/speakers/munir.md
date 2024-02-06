@@ -1,6 +1,6 @@
 ---
 title: "Munir Khakhi"
-date: 2023-12-19T11:40:16+05:30
+date: 2023-10-08T11:40:16+05:30
 draft: false
 width: 12
 image: "/images/speakers/munir.webp"

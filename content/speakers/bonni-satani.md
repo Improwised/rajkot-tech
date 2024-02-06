@@ -1,6 +1,6 @@
 ---
 title: "Bonni Satani"
-date: 2024-01-10T21:45:59+05:30
+date: 2020-02-09T21:45:59+05:30
 draft: false
 width: 12
 image: "/images/speakers/bonni-satani.jpeg"

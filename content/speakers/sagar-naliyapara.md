@@ -1,6 +1,6 @@
 ---
 title: "Sagar Naliyapara"
-date: 2024-01-10T18:28:23+05:30
+date: 2022-09-25T18:28:23+05:30
 draft: false
 width: 12
 image: "/images/speakers/sagar-naliyapara.jpg"
