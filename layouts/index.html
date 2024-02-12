@@ -6,6 +6,10 @@
 .Paginate (where .Site.RegularPages "Section" "meetups") }} {{ $recentPage :=
 first 1 (where .Paginator.Pages "Section" "meetups") }} 
 {{ range $recentPage }}
+
+{{ $currentDate := dateFormat "2006-01-02" now }}
+{{ $meetupDate := .Params.endDate | dateFormat "2006-01-02" }}
+
 {{ if gt (time .Params.endDate) now }}
 <div class="event-hero-unit">
   <div class="event-background">
@@ -35,6 +39,32 @@ first 1 (where .Paginator.Pages "Section" "meetups") }}
           >Check Details</a
         >
         {{ end }}
+        <div>{{ partial "share-button.html" . }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ else if eq $currentDate $meetupDate }}
+<div class="event-hero-unit">
+  <div class="event-background">
+    <div
+      class="event-hero-unit-content d-flex align-items-center justify-content-center"
+    >
+      <div class="text-center mb-3 pt-4">
+        <div class="rt-branding my-4">
+          <h4 class="fb">RAJKOT TECH</h4>
+        </div>
+        <h4 class="tu">ONGOING...</h4>
+        <h1 class="meetup-name tu fb">{{ .Title }}</h1>
+        <div class="date-time">
+          <time class="tu">{{ .Params.meetupDate }}</time>
+          <address>{{ .Params.address }}.</address>
+        </div>
+        <a
+          href="{{.Permalink }}"
+          class="mb-3 btn btn-lg btn-success"
+          >Check Details</a
+        >
         <div>{{ partial "share-button.html" . }}</div>
       </div>
     </div>

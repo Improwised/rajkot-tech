@@ -15,6 +15,9 @@ $formattedDate := dateFormat "2006-01-02T15:04:05Z" $utcDate }} {{ $eventendDate
 $recentPage := first 1 (where .Site.Pages "Section" "meetups") }} {{ range
 $recentPage }} {{ $title = .Title }} {{ end }}
 
+{{ $currentDate := dateFormat "2006-01-02" now }}
+{{ $meetupDate := .Params.endDate | dateFormat "2006-01-02" }}
+
 <div class="event-hero-unit">
   <div class="event-background">
     <div
@@ -44,6 +47,10 @@ $recentPage }} {{ $title = .Title }} {{ end }}
             >Add to Calendar</a
           >
         </h2>
+        {{ else if eq $currentDate $meetupDate }}
+        <span class="py-2 mb-3 px-3 event-end badge rounded-pill bg-warning"
+          >Event Ongoing...</span
+        >
         {{ else }}
         <span class="py-2 mb-3 px-3 event-end badge rounded-pill bg-danger"
           >Event Ended</span

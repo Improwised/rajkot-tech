@@ -5,6 +5,10 @@
 {{ end }}
 
 {{ range first 3 .Paginator.Pages  }}
+
+{{ $currentDate := dateFormat "2006-01-02" now }}
+{{ $meetupDate := .Params.endDate | dateFormat "2006-01-02" }}
+
 <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4">
   <div class="card h-100 shadow-sm" style="position: relative">
     <a href="{{ .Permalink }}"
@@ -30,6 +34,13 @@
         style="background-color: #8bc24a;"
       >
         Upcoming
+      </div>
+      {{ else if eq $currentDate $meetupDate }}
+      <div
+        class="label-top shadow-sm tag-position"
+        style="background-color: #f7b402;"
+      >
+        ONGOING...
       </div>
       {{ else }}
       <div
