@@ -33,7 +33,7 @@ $recentPage }} {{ $title = .Title }} {{ end }}
           <time class="tu">{{ .Params.meetupDate }}</time>
           <address>{{ .Params.address }}.</address>
         </div>
-        {{ if eq .Title $title }} {{ if gt (time .Params.endDate) now }}
+        {{ if eq .Title $title }} {{ if lt $currentDate $meetupDate }}
         <a
           href="{{.Params.buyTicket}}"
           class="mb-3 btn btn-lg btn-success"
@@ -195,7 +195,7 @@ $recentPage }} {{ $title = .Title }} {{ end }}
 <div class="event-hero-unit">
 <div class="event-background" style="background-color: #f5f5f5">
   <div class="event-hero-unit-content d-flex align-items-center justify-content-center">
-  {{ if eq .Title $title }} {{ if gt (time .Params.endDate) now }}
+  {{ if eq .Title $title }} {{ if lt $currentDate $meetupDate }}
   <div class="text-center py-5">
   <h2>Secure Your Seat Now: Grab Your Tickets for an Unforgettable Experience!</h2>
   <a

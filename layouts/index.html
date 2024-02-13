@@ -10,7 +10,7 @@ first 1 (where .Paginator.Pages "Section" "meetups") }}
 {{ $currentDate := dateFormat "2006-01-02" now }}
 {{ $meetupDate := .Params.endDate | dateFormat "2006-01-02" }}
 
-{{ if gt (time .Params.endDate) now }}
+{{ if lt $currentDate $meetupDate }}
 <div class="event-hero-unit">
   <div class="event-background">
     <div
@@ -20,13 +20,13 @@ first 1 (where .Paginator.Pages "Section" "meetups") }}
         <div class="rt-branding my-4">
           <h4 class="fb">RAJKOT TECH</h4>
         </div>
-        <h4 class="tu">UPCOMING MEETUP</h4>
+        <h4 class="tu">UPCOMING</h4>
         <h1 class="meetup-name tu fb">{{ .Title }}</h1>
         <div class="date-time">
           <time class="tu">{{ .Params.meetupDate }}</time>
           <address>{{ .Params.address }}.</address>
         </div>
-         {{ if gt (time .Params.endDate) now }}
+         {{ if lt $currentDate $meetupDate }}
         <a
           href="{{.Params.buyTicket}}"
           class="mb-3 btn btn-lg btn-success"
