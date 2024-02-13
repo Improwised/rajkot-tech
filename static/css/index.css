@@ -201,3 +201,12 @@ iframe{
     display: block;
   }
 }
+
+.tag-position-rt {
+  position: absolute;
+  transform: rotate(21deg);
+  right: -33px;
+  top: -22px;
+  font-size: 15px;
+  border-radius: 15px;
+}

@@ -10,15 +10,16 @@ first 1 (where .Paginator.Pages "Section" "meetups") }}
 {{ $currentDate := dateFormat "2006-01-02" now }}
 {{ $meetupDate := .Params.endDate | dateFormat "2006-01-02" }}
 
-{{ if gt (time .Params.endDate) now }}
+{{ if lt $currentDate $meetupDate }}
 <div class="event-hero-unit">
   <div class="event-background">
     <div
       class="event-hero-unit-content d-flex align-items-center justify-content-center"
     >
       <div class="text-center mb-3 pt-4">
-        <div class="rt-branding my-4">
+        <div class="rt-branding my-4" style="position: relative;">
           <h4 class="fb">RAJKOT TECH</h4>
+          <div class="label-top shadow-sm tag-position-rt" style="background-color: #47de47; font-size:13px">UPCOMING</div>
         </div>
         <h4 class="tu">UPCOMING MEETUP</h4>
         <h1 class="meetup-name tu fb">{{ .Title }}</h1>
@@ -51,8 +52,9 @@ first 1 (where .Paginator.Pages "Section" "meetups") }}
       class="event-hero-unit-content d-flex align-items-center justify-content-center"
     >
       <div class="text-center mb-3 pt-4">
-        <div class="rt-branding my-4">
+        <div class="rt-branding my-4" style="position: relative;">
           <h4 class="fb">RAJKOT TECH</h4>
+          <div class="label-top shadow-sm tag-position-rt" style="background-color: #0e8d01; font-size:13px">ONGOING...</div>
         </div>
         <h4 class="tu">ONGOING...</h4>
         <h1 class="meetup-name tu fb">{{ .Title }}</h1>

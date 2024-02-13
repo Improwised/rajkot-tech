@@ -24,8 +24,11 @@ $recentPage }} {{ $title = .Title }} {{ end }}
       class="event-hero-unit-content d-flex align-items-center justify-content-center"
     >
       <div class="text-center mb-3 pt-4">
-        <div class="rt-branding my-4">
+        
+        {{ if eq .Title $title }} {{ if lt $currentDate $meetupDate }}
+        <div class="rt-branding my-4" style="position: relative;">
           <h4 class="fb">RAJKOT TECH</h4>
+          <div class="label-top shadow-sm tag-position-rt" style="background-color: #47de47;">UPCOMING</div>
         </div>
         <h4 class="tu">MEETUP</h4>
         <h1 class="meetup-name tu fb">{{ .Title }}</h1>
@@ -33,7 +36,6 @@ $recentPage }} {{ $title = .Title }} {{ end }}
           <time class="tu">{{ .Params.meetupDate }}</time>
           <address>{{ .Params.address }}.</address>
         </div>
-        {{ if eq .Title $title }} {{ if gt (time .Params.endDate) now }}
         <a
           href="{{.Params.buyTicket}}"
           class="mb-3 btn btn-lg btn-success"
@@ -48,10 +50,30 @@ $recentPage }} {{ $title = .Title }} {{ end }}
           >
         </h2>
         {{ else if eq $currentDate $meetupDate }}
+        <div class="rt-branding my-4" style="position: relative;">
+          <h4 class="fb">RAJKOT TECH</h4>
+          <div class="label-top shadow-sm tag-position-rt" style="background-color: #0e8d01; font-size:13px">ONGOING...</div>
+        </div>
+        <h4 class="tu">MEETUP</h4>
+        <h1 class="meetup-name tu fb">{{ .Title }}</h1>
+        <div class="date-time">
+          <time class="tu">{{ .Params.meetupDate }}</time>
+          <address>{{ .Params.address }}.</address>
+        </div>
         <span class="py-2 mb-3 px-3 event-end badge rounded-pill bg-success" style="font-size: 16px;"
           >ONGOING...</span
         >
         {{ else }}
+        <div class="rt-branding my-4" style="position: relative;">
+          <h4 class="fb">RAJKOT TECH</h4>
+          <div class="label-top shadow-sm tag-position-rt" style="background-color: #e94848; font-size:13px">PAST</div>
+        </div>
+        <h4 class="tu">MEETUP</h4>
+        <h1 class="meetup-name tu fb">{{ .Title }}</h1>
+        <div class="date-time">
+          <time class="tu">{{ .Params.meetupDate }}</time>
+          <address>{{ .Params.address }}.</address>
+        </div>
         <span class="py-2 mb-3 px-3 event-end badge rounded-pill bg-danger"
           >Event Ended</span
         >
@@ -195,7 +217,7 @@ $recentPage }} {{ $title = .Title }} {{ end }}
 <div class="event-hero-unit">
 <div class="event-background" style="background-color: #f5f5f5">
   <div class="event-hero-unit-content d-flex align-items-center justify-content-center">
-  {{ if eq .Title $title }} {{ if gt (time .Params.endDate) now }}
+  {{ if eq .Title $title }} {{ if lt $currentDate $meetupDate }}
   <div class="text-center py-5">
   <h2>Secure Your Seat Now: Grab Your Tickets for an Unforgettable Experience!</h2>
   <a
