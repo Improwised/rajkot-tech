@@ -27,7 +27,7 @@
         >
       </div>
       {{ if eq .Title $title }}
-      {{ if gt (time .Params.endDate) now }}
+      {{ if lt $currentDate $meetupDate }}
       <div
         class="label-top shadow-sm tag-position"
         style="background-color: #47de47;"
