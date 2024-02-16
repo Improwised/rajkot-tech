@@ -16,7 +16,12 @@ $recentPage := first 1 (where .Site.Pages "Section" "meetups") }} {{ range
 $recentPage }} {{ $title = .Title }} {{ end }}
 
 {{ $currentDate := dateFormat "2006-01-02" now }}
-{{ $meetupDate := .Params.endDate | dateFormat "2006-01-02" }}
+{{ $meetupDate := .Params.startDate | dateFormat "2006-01-02" }}
+{{ $formattedDate := dateFormat "2 January 2006" $meetupDate }}
+
+{{$dateOfMeetup := .Params.startDate}}
+{{$parsedDate := time $dateOfMeetup}}
+{{$meetupTime := dateFormat "3:04 PM" $parsedDate}}
 
 <div class="event-hero-unit">
   <div class="event-background">
@@ -30,7 +35,7 @@ $recentPage }} {{ $title = .Title }} {{ end }}
         <h4 class="tu">MEETUP</h4>
         <h1 class="meetup-name tu fb">{{ .Title }}</h1>
         <div class="date-time">
-          <time class="tu">{{ .Params.meetupDate }}</time>
+          <time class="tu">{{ $formattedDate }} | {{$meetupTime}}</time>
           <address>{{ .Params.address }}.</address>
         </div>
         {{ if eq .Title $title }} {{ if lt $currentDate $meetupDate }}
