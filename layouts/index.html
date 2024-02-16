@@ -8,7 +8,12 @@ first 1 (where .Paginator.Pages "Section" "meetups") }}
 {{ range $recentPage }}
 
 {{ $currentDate := dateFormat "2006-01-02" now }}
-{{ $meetupDate := .Params.endDate | dateFormat "2006-01-02" }}
+{{ $meetupDate := .Params.startDate | dateFormat "2006-01-02" }}
+{{ $formattedDate := dateFormat "2 January 2006" $meetupDate }}
+
+{{$dateOfMeetup := .Params.startDate}}
+{{$parsedDate := time $dateOfMeetup}}
+{{$meetupTime := dateFormat "3:04 PM" $parsedDate}}
 
 {{ if lt $currentDate $meetupDate }}
 <div class="event-hero-unit">
@@ -23,7 +28,7 @@ first 1 (where .Paginator.Pages "Section" "meetups") }}
         <h4 class="tu">UPCOMING</h4>
         <h1 class="meetup-name tu fb">{{ .Title }}</h1>
         <div class="date-time">
-          <time class="tu">{{ .Params.meetupDate }}</time>
+          <time class="tu">{{ $formattedDate }} | {{ $meetupTime }}</time>
           <address>{{ .Params.address }}.</address>
         </div>
          {{ if lt $currentDate $meetupDate }}
