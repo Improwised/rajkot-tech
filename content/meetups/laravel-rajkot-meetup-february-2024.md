@@ -3,8 +3,8 @@ title: "Laravel Rajkot Meetup February 2024"
 date: 2024-01-25T20:20:02+05:30
 draft: false
 width: 12
-startDate: 2024-02-18T10:00:00+05:30
-endDate: 2024-02-18T14:00:00+05:30
+startDate: 2024-02-20T10:00:00+05:30
+endDate: 2024-02-20T14:00:00+05:30
 image: "/images/meetup/laravel-rajkot-meetup-february-2024.webp"
 meetupDate: "18 February 2024"
 gallery:
