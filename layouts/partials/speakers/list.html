@@ -1,6 +1,4 @@
 {{ range .Paginator.Pages }}
-{{ if eq .Title "Priyank Gohil" }}
-{{ else }}
 <div class="col-sm-6 col-xs-2 col-md-4 col-lg-3">
   <div class="justify-content-center text-center">
     <a href="{{.Permalink}}" aria-label="{{ .Title }}">
@@ -27,5 +25,4 @@
     >
   </div>
 </div>
-{{ end }}
 {{ end }}
