@@ -8,7 +8,9 @@ endDate: 2024-02-18T14:00:00+05:30
 image: "/images/meetup/laravel-rajkot-meetup-february-2024.webp"
 meetupDate: "18 February 2024"
 gallery:
-    - name: ""
+    - name: "/images/laravel-rajkot-meetup-february-2024/image1.jpeg"
+    - name: "/images/laravel-rajkot-meetup-february-2024/image2.jpeg"
+    - name: "/images/laravel-rajkot-meetup-february-2024/image3.jpeg"
 buyTicket: "https://allevents.in/rajkot/laravel-rajkot-meetup-february-2024/80002086944116"
 address: "RK University City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India"
 talk: 
