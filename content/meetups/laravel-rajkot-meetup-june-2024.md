@@ -3,8 +3,8 @@ title: "Laravel Rajkot Meetup June 2024"
 date: 2024-05-24T14:37:56+05:30
 draft: false
 width: 12
-startDate: 2024-06-09T10:37:56+05:30
-endDate: 2024-06-09T13:37:56+05:30
+startDate: 2024-06-09T10:00:00+05:30
+endDate: 2024-06-09T13:00:00+05:30
 image: "/images/meetup/laravel-rajkot-meetup-june-2024.jpeg"
 meetupDate: "09 June 2024"
 buyTicket: "https://allevents.in/rajkot/laravel-rajkot-meetup-june-2024/80002513422490"
