@@ -9,7 +9,8 @@ image: "/images/meetup/laravel-rajkot-meetup-june-2024.jpeg"
 meetupDate: "09 June 2024"
 buyTicket: "https://allevents.in/rajkot/laravel-rajkot-meetup-june-2024/80002513422490"
 talk: 
-    - path: ""
+    - path: "talks/do-not-make-users-wait-the-laravel-speedsters.md"
+    - path: "talks/real-time-validation-with-laravel-precognition-with-alpinejs.md"
 gallery:
     - name: ""
 address: "RK University City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India"
