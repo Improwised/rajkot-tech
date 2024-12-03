@@ -93,7 +93,9 @@ $relatedtalks =$relatedtalks | append . }} {{ end }} {{ end }}
           true }} {{ end }} {{ end }} {{ if $found }} {{ $relatedmeetups =
           $relatedmeetups | append . }} {{ end }} {{ end }} {{ range
           $relatedmeetups }}
-          <a href="{{ .Permalink }}" class="text-end fw-bold text-black">{{ .Title }}</a>
+          <a href="{{ .Permalink }}" class="text-end fw-bold text-black"
+            >{{ .Title }}</a
+          >
           {{ end }}
         </div>
         <div class="card-body">
