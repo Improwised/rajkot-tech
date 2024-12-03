@@ -46,13 +46,13 @@ $relatedtalks =$relatedtalks | append . }} {{ end }} {{ end }}
             {{.Title }}
             <div>
               <a href="{{.Params.linkedin}}"
-              ><img
-                src="/images/linkedin.svg"
-                height="25"
-                width="25"
-                class="mx-2"
-                alt="linkedin"
-            /></a>
+                ><img
+                  src="/images/linkedin.svg"
+                  height="25"
+                  width="25"
+                  class="mx-2"
+                  alt="linkedin"
+              /></a>
             </div>
           </h2>
 
@@ -123,12 +123,12 @@ $relatedtalks =$relatedtalks | append . }} {{ end }} {{ end }}
                     {{ $image := resources.Get .Params.image }} {{ $image :=
                     $image.Resize "400x webp" }} {{ with $image }}
                     <img
-                    src="{{ .RelPermalink }}"
-                    height="75"
-                    width="75"
-                    alt="{{.Title}}"
-                    style="border-radius: 50px; object-fit: cover"
-                  >
+                      src="{{ .RelPermalink }}"
+                      height="75"
+                      width="75"
+                      alt="{{.Title}}"
+                      style="border-radius: 50px; object-fit: cover"
+                    >
                     {{ end }}
                   </div>
                   <div class="align-items-center d-flex p-2">
