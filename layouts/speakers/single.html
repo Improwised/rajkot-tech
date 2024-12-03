@@ -8,7 +8,9 @@ $relatedtalks =$relatedtalks | append . }} {{ end }} {{ end }}
 
 <div class="event-hero-unit">
   <div class="event-background">
-    <div class="event-hero-unit-content d-flex align-items-center justify-content-center">
+    <div
+      class="event-hero-unit-content d-flex align-items-center justify-content-center"
+    >
       <div class="text-center mb-3 pt-4">
         <div class="rt-branding my-4">
           <h4 class="fb">RAJKOT TECH</h4>
@@ -27,7 +29,13 @@ $relatedtalks =$relatedtalks | append . }} {{ end }} {{ end }}
           <figure>
             {{ $image := resources.Get .Params.image }} {{ $image :=
             $image.Resize "936x webp" }} {{ with $image }}
-            <img src="{{ .RelPermalink }}" height="300" width="300" style="object-fit: cover" alt="{{ .Title }}">
+            <img
+              src="{{ .RelPermalink }}"
+              height="300"
+              width="300"
+              style="object-fit: cover"
+              alt="{{ .Title }}"
+           >
             {{ end }}
           </figure>
         </div>
@@ -37,8 +45,14 @@ $relatedtalks =$relatedtalks | append . }} {{ end }} {{ end }}
           <h2 class="title d-flex mt-5 pt-4">
             {{.Title }}
             <div>
-              <a href="{{.Params.linkedin}}"><img src="/images/linkedin.svg" height="25" width="25" class="mx-2"
-                  alt="linkedin" /></a>
+              <a href="{{.Params.linkedin}}"
+              ><img
+                src="/images/linkedin.svg"
+                height="25"
+                width="25"
+                class="mx-2"
+                alt="linkedin"
+            /></a>
             </div>
           </h2>
 
@@ -56,7 +70,10 @@ $relatedtalks =$relatedtalks | append . }} {{ end }} {{ end }}
 <div class="pb-3">
   <div class="speakers">
     <h4 class="text-center tu fb py-3 pt-5 h2">Talks</h4>
-    <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative; max-width: 1200px">
+    <div
+      class="container-fluid bg-trasparent my-4 p-3"
+      style="position: relative; max-width: 1200px"
+    >
       <!-- <div
         class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center"
       > -->
@@ -89,17 +106,29 @@ $relatedtalks =$relatedtalks | append . }} {{ end }} {{ end }}
             {{ range .Params.speakers }} {{ $path := .path }} {{ with
             site.GetPage $path }}
             <li class="px-2 pb-2">
-              <div style="background-color: #f8f8f8" class="p-2 align-items-center">
-                <a href="{{.Permalink}}" class="d-flex align-items-center" style="
+              <div
+                style="background-color: #f8f8f8"
+                class="p-2 align-items-center"
+              >
+                <a
+                  href="{{.Permalink}}"
+                  class="d-flex align-items-center"
+                  style="
                     background-color: #f8f8f8;
                     color: black;
                     text-decoration: none;
-                  ">
+                  "
+                >
                   <div class="p-2">
                     {{ $image := resources.Get .Params.image }} {{ $image :=
                     $image.Resize "400x webp" }} {{ with $image }}
-                    <img src="{{ .RelPermalink }}" height="75" width="75" alt="{{.Title}}"
-                      style="border-radius: 50px; object-fit: cover">
+                    <img
+                    src="{{ .RelPermalink }}"
+                    height="75"
+                    width="75"
+                    alt="{{.Title}}"
+                    style="border-radius: 50px; object-fit: cover"
+                  >
                     {{ end }}
                   </div>
                   <div class="align-items-center d-flex p-2">
