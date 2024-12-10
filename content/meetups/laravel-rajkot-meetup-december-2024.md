@@ -10,6 +10,7 @@ meetupDate: "15 December 2024"
 buyTicket: "https://allevents.in/rajkot/laravel-rajkot-meetup-december-2024/80002513422490"
 talk: 
     - path: "talks/micro-service-in-laravel.md"
+    - path: "talks/the-one-minute-manager.md"
 gallery:
     - name: ""
 address: "RK University City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India"
