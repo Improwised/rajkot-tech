@@ -8,7 +8,16 @@ endDate: 2025-02-23T10:00:00+05:30
 image: "/images/meetup/laravel-rajkot-meetup-february-2025.png"
 meetupDate: "23 February 2025"
 gallery:
-    - name: ""
+    - name: "/images/laravel-rajkot-meetup-february-2025/image1.jpeg"
+    - name: "/images/laravel-rajkot-meetup-february-2025/image2.jpeg"
+    - name: "/images/laravel-rajkot-meetup-february-2025/image3.jpeg"
+    - name: "/images/laravel-rajkot-meetup-february-2025/image4.jpeg"
+    - name: "/images/laravel-rajkot-meetup-february-2025/image5.jpeg"
+    - name: "/images/laravel-rajkot-meetup-february-2025/image6.jpeg"
+    - name: "/images/laravel-rajkot-meetup-february-2025/image7.jpeg"
+    - name: "/images/laravel-rajkot-meetup-february-2025/image8.jpeg"
+    - name: "/images/laravel-rajkot-meetup-february-2025/image9.jpeg"
+    - name: "/images/laravel-rajkot-meetup-february-2025/image10.jpeg"
 buyTicket: "https://allevents.in/rajkot/laravel-rajkot-meetup-february-2025/80003680520647"
 address: "RK University City Campus, 2nd Ring Rd, Mota Mava, Rajkot, Gujarat 360005, India"
 talk: 
