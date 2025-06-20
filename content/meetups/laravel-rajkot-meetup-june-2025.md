@@ -13,6 +13,7 @@ buyTicket: "https://allevents.in/rajkot/laravel-rajkot-meetup-june-2025-tickets/
 address: "RK University City Campus, 2nd Ring Rd, Mota Mava, Gujarat 360005, Rajkot, India"
 talk: 
     - path: "talks/tools-plus-automation-for-efficient-laravel-development-for-teams.md"
+    - path: "talks/building-ai-agents-in-laravel.md"
 locationOnMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4610.722027577522!2d70.75028447604265!3d22.261926944283733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cbaf9787c173%3A0x8f107a3a70a8ad61!2sRK%20University%20City%20Campus!5e1!3m2!1sen!2sin!4v1750342361995!5m2!1sen!2sin"  
 metaTitle: "Laravel Rajkot Meetup June 2025 | Rajkot Tech"
 metaDes: "Laravel Rajkot Meetup February 2025 | Rajkot Tech"
